@@ -4,12 +4,14 @@
 
     .left {
         flex: 0 1 40%;
-        padding: 40px 20px;
-        background-color: #3d3d3d;
+        
+        
 
         .top {
             color: #fff;
             font-family: "Montserrat";
+            background-color: #3d3d3d;
+            padding: 40px 20px;
 
             h1 {
                 font-family: "Bebas Neue", sans-serif;
@@ -45,11 +47,17 @@
                     margin: 20px 0;
                 }
     
-                
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    margin-bottom: 10px;
+                }
             }
+        }
 
-            
-
+        .bottom {
+            padding: 40px 20px;
+            background-color:#dee0dc;
         }
     }
 }
@@ -62,7 +70,6 @@ body {
         color: #fff;
         text-decoration: none;
         margin-bottom: 10px;
-        
     }
 }
 
