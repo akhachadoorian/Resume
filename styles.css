@@ -1,0 +1,62 @@
+.flex-container {
+
+    display: flex;
+
+    .left {
+        padding: 40px 20px;
+        background-color: #3d3d3d;
+
+        .top {
+            color: #fff;
+            font-family: "Montserrat";
+            /* font-weight: 100; */
+
+            h1 {
+                font-family: "Bebas Neue", sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 5.0px;
+                font-size: 46px;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                letter-spacing: 8px;
+                font-size: 30px;
+            }
+
+            .contacts {
+                .contact {
+                    display: flex;
+
+                    margin-bottom: 10px;
+                    /* margin-left: 3px; */
+                    a, span {
+                        color: #fff;
+                        text-decoration: none;
+
+                        margin-left: 15px
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+body {
+    margin: 0
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .montserrat-thin {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
