@@ -5,19 +5,18 @@
     .left {
         flex: 0 1 40%;
         
-        
-
         .top {
             color: #fff;
             font-family: "Montserrat";
             background-color: #3d3d3d;
-            padding: 40px 20px;
+            padding: 40px;
 
             h1 {
                 font-family: "Bebas Neue", sans-serif;
                 text-transform: uppercase;
                 letter-spacing: 5.0px;
-                font-size: 46px;
+                font-size: 70px;
+                margin-block: 0;
             }
 
             h2 {
@@ -31,10 +30,12 @@
                     display: flex;
 
                     margin-bottom: 10px;
+
                     /* margin-left: 3px; */
                     a, span {
                         color: #fff;
                         text-decoration: none;
+                        font-size: 22px;
 
                         margin-left: 15px
                     }
@@ -56,8 +57,163 @@
         }
 
         .bottom {
-            padding: 40px 20px;
+            padding: 40px;
             background-color:#dee0dc;
+
+            .education, .awards, .skills {
+
+                h2 {
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 30px;
+
+                    margin-block: 0;
+                    margin-bottom: 15px;
+                }
+
+                h3 {
+                    text-transform: uppercase;
+                    margin-block: 0;
+                    font-size: 22px;
+                }
+
+                h4 {
+                    font-weight: 400;
+                    font-size: 18px;
+
+                    margin-block: 0;
+                    margin: 10px 0;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    margin-block: 0;
+                    margin-bottom: 30px;
+                }
+
+                ul {
+                    font-size: 18px;
+
+                    li {
+                        font-weight: 400;
+
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .line {
+                height: 2px;
+                background-color: #3d3d3d;
+                margin-bottom: 30px;
+            }
+
+            .skill {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 10px;
+            }
+        }
+    }
+
+    .right {
+        flex: 0 2 60%;
+        padding: 40px;
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 30px;
+
+            margin-block: 0;
+            margin-bottom: 15px;
+        }
+
+        .experience {
+            h3 {
+                text-transform: uppercase;
+                margin-block: 0;
+                font-size: 22px;
+            }
+
+            h4 {
+                font-weight: 400;
+                font-size: 18px;
+
+                margin-block: 0;
+                margin: 10px 0;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                margin-block: 0;
+                margin-bottom: 30px;
+            }
+
+            ul {
+                li {
+                    font-size: 18px;
+                    font-weight: 400;
+
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .spacer {
+            height: 20px;
+        }
+
+        .project {
+            position: relative;
+
+            h3 {
+                text-transform: uppercase;
+                margin-block: 0;
+                font-size: 22px;
+            }
+
+            h4 {
+                font-weight: 400;
+                font-size: 18px;
+
+                margin-block: 0;
+                margin: 10px 0;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                margin-block: 0;
+                margin-bottom: 30px;
+            }
+
+            ul {
+                
+                li {
+                    font-size: 18px;
+                    font-weight: 400;
+
+                    margin-bottom: 10px;
+                }
+            }
+
+            a {
+                color: black;
+                font-size: 18px;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+
+            .project-title {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
         }
     }
 }
