@@ -1,7 +1,7 @@
 .flex-container {
     display: flex;
 
-    @media (max-width: 1000px) {
+    @media screen  {
         flex-direction: column;
     }
 
@@ -22,12 +22,20 @@
                 letter-spacing: 5.0px;
                 font-size: 70px;
                 margin-block: 0;
+
+                @media screen {
+                    font-size: 50px
+                }
             }
 
             h2 {
                 text-transform: uppercase;
                 letter-spacing: 8px;
                 font-size: 30px;
+
+                @media screen {
+                    font-size: 20px;
+                }
             }
 
             .contacts {
@@ -42,7 +50,11 @@
                         text-decoration: none;
                         font-size: 22px;
 
-                        margin-left: 15px
+                        margin-left: 15px;
+
+                        @media screen {
+                            font-size: 16px;
+                        }
                     }
                 }
 
@@ -52,11 +64,12 @@
     
                     margin: 20px 0;
                 }
-    
-                a {
-                    color: #fff;
-                    text-decoration: none;
-                    margin-bottom: 10px;
+
+                a.extra-links {
+                    font-size: 22px;
+                    @media screen {
+                        font-size: 16px;
+                    }
                 }
             }
         }
