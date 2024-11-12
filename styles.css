@@ -5,11 +5,13 @@
     .left {
         flex: 0 1 40%;
         
+        
         .top {
             color: #fff;
             font-family: "Montserrat";
             background-color: #3d3d3d;
             padding: 40px;
+            
 
             h1 {
                 font-family: "Bebas Neue", sans-serif;
@@ -59,6 +61,7 @@
         .bottom {
             padding: 40px;
             background-color:#dee0dc;
+            height: 100%;
 
             .education, .awards, .skills {
 
@@ -163,10 +166,6 @@
             }
         }
 
-        .spacer {
-            height: 20px;
-        }
-
         .project {
             position: relative;
 
@@ -227,6 +226,10 @@ body {
         text-decoration: none;
         margin-bottom: 10px;
     }
+}
+
+.spacer {
+    height: 20px;
 }
 
 .bebas-neue-regular {
