@@ -1,0 +1,97 @@
+
+/* /////////////////// */
+/* HeaderWithLine */
+/* /////////////////// */
+
+.header_with_line {
+
+    h1, h2 {
+        border-bottom: 2px solid var(--white);
+        padding: 0 60px 32px 0;
+    }
+
+    h4.subtext {
+        font-size: clamp(36px, 2.5vw, 41px);
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+
+        margin-top: 32px;
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+/* Socials */
+/* /////////////////// */
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+
+    .social {
+        padding: 20px;
+        border-radius: 100%;
+        background: #282828;
+        aspect-ratio: 1 / 1;
+
+        display: flex;
+        justify-content: center;
+
+        .icon {
+            height: 40px;
+            
+        }
+    }
+    
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+/* Card */
+/* /////////////////// */
+
+.card {
+    background-color: var(--lighter-black);
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+
+    .card_header {
+        font-size: clamp(48px, 3.333vw, 52px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .card_subtext {
+        font-size: clamp(32px, 2.222vw, 37px);
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .body {
+        color: var(--white);
+        font-family: Urbanist;
+
+        font-size: clamp(20px, 1.389vw, 25px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120.114%; /* 24.023px */
+        letter-spacing: 0.4px;
+    }
+
+}
+
+/* /////////////////// */
