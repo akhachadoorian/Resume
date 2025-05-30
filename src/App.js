@@ -33,7 +33,7 @@ function App() {
         <Router basename="/Resume">
           {/* <Navigation /> */}
           <Routes>
-            <Route path="/Resume" element={<Home />} />
+            <Route path="/" element={<Home />} />
           </Routes>
           {/* <Footer /> */}
         </Router>
