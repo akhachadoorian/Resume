@@ -1,4 +1,9 @@
 
+/* .home {
+    height: 100vh;
+    overflow: hidden
+} */
+
 section {
     padding: 120px 60px;
 
@@ -9,11 +14,13 @@ section {
 }
 
 #name {
-
+    min-height: 100vh;
 }
 
 
 #education {
+    background-color: var(--light-gray);
+    gap: 6vw;
 
     .cards {
         flex: 1 1 467px;
@@ -21,5 +28,9 @@ section {
         display: flex;
         flex-direction: column;
         gap: 60px;
+    }
+
+    .header_with_line {
+        color: var(---);
     }
 }

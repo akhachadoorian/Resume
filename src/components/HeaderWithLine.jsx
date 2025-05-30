@@ -1,18 +1,23 @@
 import React from "react";
 
-function HeaderWithLine({ header, subtext, h_level = "h2" }) {
+function HeaderWithLine({
+  header_line_1,
+  header_line_2,
+  subtext,
+  h_level = "h2",
+}) {
   return (
-    <div className="header_with_line">
+    <div className="header_with_line" data-scroll>
       {h_level === "h1" ? (
-        <h1
-          className="large_header"
-          dangerouslySetInnerHTML={{ __html: header }}
-        />
+        <div className="header_with_line-inner">
+          <h1 className="large_header" data-scroll-speed="3">{header_line_1}</h1>
+          <h1 className="large_header" data-scroll-speed="2">{header_line_2}</h1>
+        </div>
       ) : (
-        <h2
-          className="large_header"
-          dangerouslySetInnerHTML={{ __html: header }}
-        />
+        <div className="header_with_line-inner">
+          <h2 className="large_header">{header_line_1}</h2>
+          <h2 className="large_header">{header_line_2}</h2>
+        </div>
       )}
 
       {subtext ? <h4 className="subtext">{subtext}</h4> : ""}

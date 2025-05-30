@@ -5,7 +5,7 @@
 
 .header_with_line {
 
-    h1, h2 {
+    .header_with_line-inner {
         border-bottom: 2px solid var(--white);
         padding: 0 60px 32px 0;
     }
@@ -74,7 +74,7 @@
     }
 
     .card_subtext {
-        font-size: clamp(32px, 2.222vw, 37px);
+        font-size: clamp(30px, 2.083vw, 35px);
         font-style: italic;
         font-weight: 400;
         line-height: normal;

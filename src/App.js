@@ -6,6 +6,9 @@ import './css/App.css';
 import './css/components.css';
 import './css/general.css';
 import './css/Home.css';
+import './css/loco.css';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+
 
 import Home from './pages/Home';
 

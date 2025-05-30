@@ -5,6 +5,7 @@
     --lighter-black: #282828;
 
     --white: #F0F0F0;
+    --light-gray: #B7B7B7;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -19,6 +20,17 @@ h1, h2, h3, h4, h5, h6, p, a {
     line-height: 100%; /* 146px */
     letter-spacing: 7.3px;
 }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+[data-scroll-container] {
+  min-height: 100vh;
+  position: relative;
+}
+
 
 body {
     background-color: var(--black);
