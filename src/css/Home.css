@@ -19,7 +19,8 @@ section {
 
 
 #education {
-    background-color: var(--light-gray);
+    min-height: 100vh;
+    background-color: var(--darker-white);
     gap: 6vw;
 
     .cards {
@@ -30,7 +31,51 @@ section {
         gap: 60px;
     }
 
-    .header_with_line {
-        color: var(---);
+}
+
+#experience {
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .jobs {
+        width: 100%;
+
+        .job {
+            display: flex;
+            justify-content: space-between;
+            gap: 5.556vw;
+        }
+
+        .card {
+            flex: 1 1 481px;
+            height: fit-content;
+
+            margin: 48px 0;
+
+            /* position: relative; */
+            /* top: 24px; */
+        }
+
+        .descriptions {
+            flex: 1 1 759px;
+            padding: 48px 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .description {
+                .list {
+
+                }
+            }
+        }
     }
+}
+
+#projects {
+    min-height: 100vh;
+    background-color: var(--darker-white);
 }

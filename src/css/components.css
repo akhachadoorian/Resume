@@ -1,23 +1,39 @@
-
 /* /////////////////// */
 /* HeaderWithLine */
 /* /////////////////// */
 
 .header_with_line {
-
     .header_with_line-inner {
         border-bottom: 2px solid var(--white);
         padding: 0 60px 32px 0;
     }
-
-    h4.subtext {
-        font-size: clamp(36px, 2.5vw, 41px);
-        font-style: italic;
+    .subtext {
+        font-family: Urbanist;
         font-weight: 400;
-        line-height: normal;
+        font-size: clamp(48px, 3.333vw, 52px);
+        font-style: italic;
         text-transform: uppercase;
 
-        margin-top: 32px;
+        margin-top: 24px;
+    }
+
+    .body_text {
+        max-width: 60.486vw;
+        margin-top: 16px;
+
+        font-size: clamp(24px, 1.667vw, 29px);
+    }
+
+    &.white {
+        .header_with_line-inner {
+            border-color: var(--black);
+
+            h1,
+            h2,
+            .body_text {
+                color: var(--black);
+            }
+        }
     }
 }
 
@@ -44,10 +60,8 @@
 
         .icon {
             height: 40px;
-            
         }
     }
-    
 }
 
 /* /////////////////// */
@@ -57,7 +71,7 @@
 /* /////////////////// */
 
 .card {
-    background-color: var(--lighter-black);
+    border-radius: 30px;
     padding: 24px;
 
     display: flex;
@@ -66,7 +80,17 @@
     align-items: flex-start;
     gap: 10px;
 
+    &.white {
+        background-color: var(--light-gray);
+        border: 2px solid var(--black);
+    }
+
+    &.black {
+        background-color: var(--darker-white);
+    }
+
     .card_header {
+        color: var(--black);
         font-size: clamp(48px, 3.333vw, 52px);
         font-style: normal;
         font-weight: 600;
@@ -74,6 +98,7 @@
     }
 
     .card_subtext {
+        color: var(--black);
         font-size: clamp(30px, 2.083vw, 35px);
         font-style: italic;
         font-weight: 400;
@@ -81,8 +106,8 @@
         text-transform: uppercase;
     }
 
-    .body {
-        color: var(--white);
+    .body > * {
+        color: var(--black);
         font-family: Urbanist;
 
         font-size: clamp(20px, 1.389vw, 25px);
@@ -91,7 +116,6 @@
         line-height: 120.114%; /* 24.023px */
         letter-spacing: 0.4px;
     }
-
 }
 
 /* /////////////////// */

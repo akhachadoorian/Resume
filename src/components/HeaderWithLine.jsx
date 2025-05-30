@@ -5,22 +5,25 @@ function HeaderWithLine({
   header_line_2,
   subtext,
   h_level = "h2",
+  body,
+  theme = 'dark',
 }) {
   return (
-    <div className="header_with_line" data-scroll>
+    <div className={`header_with_line ${theme}`} data-scroll>
       {h_level === "h1" ? (
-        <div className="header_with_line-inner">
-          <h1 className="large_header" data-scroll-speed="3">{header_line_1}</h1>
+        <div className="header_with_line-inner" data-scroll>
+          <h1 className="large_header" data-scroll-speed="4">{header_line_1}</h1>
           <h1 className="large_header" data-scroll-speed="2">{header_line_2}</h1>
         </div>
       ) : (
         <div className="header_with_line-inner">
-          <h2 className="large_header">{header_line_1}</h2>
-          <h2 className="large_header">{header_line_2}</h2>
+          <h2 className="large_header" data-scroll-speed="3">{header_line_1}</h2>
+          <h2 className="large_header" data-scroll-speed="2">{header_line_2}</h2>
         </div>
       )}
 
       {subtext ? <h4 className="subtext">{subtext}</h4> : ""}
+      {body ? <p className="body_text">{body}</p> : ''}
     </div>
   );
 }
