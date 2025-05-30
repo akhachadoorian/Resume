@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --black: #101010;
+    --light-black: #282828;
+
+    --white: #F0F0F0;
+    /* --darker-white: #C0C0C0; */
+    --darker-white: #CCCCCC; 
+    --light-gray: #B7B7B7;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+    color: var(--white);
+    font-family: Urbanist;
+    margin: 0;
+}
+
+p, li {
+    line-height: 140%; /* 25.2px */
+    letter-spacing: 0.36px;
+}
+
+.large_header {
+    font-size: clamp(125px, 9.375vw, 145px);
+    font-weight: 600;
+    line-height: 100%; /* 146px */
+    letter-spacing: 7.3px;
+}
+
+.sub_header {
+    font-family: Urbanist;
+    font-size: clamp(30px, 2.083vw, 35px);
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+html, body {
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+[data-scroll-container] {
+  min-height: 100vh;
+  position: relative;
+}
+
+
+body {
+    background-color: var(--black);
+}

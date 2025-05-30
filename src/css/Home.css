@@ -1,0 +1,81 @@
+
+/* .home {
+    height: 100vh;
+    overflow: hidden
+} */
+
+section {
+    padding: 120px 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+}
+
+#name {
+    min-height: 100vh;
+}
+
+
+#education {
+    min-height: 100vh;
+    background-color: var(--darker-white);
+    gap: 6vw;
+
+    .cards {
+        flex: 1 1 467px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+}
+
+#experience {
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .jobs {
+        width: 100%;
+
+        .job {
+            display: flex;
+            justify-content: space-between;
+            gap: 5.556vw;
+        }
+
+        .card {
+            flex: 1 1 481px;
+            height: fit-content;
+
+            margin: 48px 0;
+
+            /* position: relative; */
+            /* top: 24px; */
+        }
+
+        .descriptions {
+            flex: 1 1 759px;
+            padding: 48px 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .description {
+                .list {
+
+                }
+            }
+        }
+    }
+}
+
+#projects {
+    min-height: 100vh;
+    background-color: var(--darker-white);
+}
