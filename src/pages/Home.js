@@ -29,14 +29,6 @@ function Home({}) {
 
   return (
     <div data-scroll-container ref={scrollRef}>
-      <section
-        data-scroll-section
-        style={{ height: "200vh", backgroundColor: "lightgray" }}
-      >
-        <h2 data-scroll data-scroll-speed="2">
-          Scroll me!
-        </h2>
-      </section>
       <section id="name" data-scroll-section>
         <HeaderWithLine
           header_line_1={"Alex"}
