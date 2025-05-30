@@ -30,7 +30,7 @@ function App() {
       containerRef={containerRef}
     >
       <main data-scroll-container ref={containerRef}>
-        <Router>
+        <Router basename="/Resume">
           {/* <Navigation /> */}
           <Routes>
             <Route path="/Resume" element={<Home />} />
