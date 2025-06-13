@@ -41,7 +41,7 @@ export const experience = [
         description: [
             {
                 header: 'Leadership & Team Management',
-                list: "<li>Co-led the web development department</li><li>Oversaw team operations</li><li>Set technical direction</li><li>Led a team of 2 developers</li><li>Delegated tasks</li><li>Conducted weekly planning sessions</li><li>Used Notion and ClickUp</li>"
+                list: "<li>Oversaw team operations</li><li>Set technical direction</li><li>Led a team of 2 developers</li><li>Delegated tasks</li><li>Conducted weekly planning sessions</li><li>Used Notion and ClickUp</li>"
             },
             {
                 header: 'Project Execution & Delivery',
