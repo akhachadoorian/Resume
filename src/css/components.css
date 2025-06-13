@@ -8,12 +8,12 @@
         padding: 0 60px 32px 0;
     }
     .subtext {
-        font-family: Urbanist;
+        font-family: Ostrich Sans;
         font-weight: 400;
         font-size: clamp(48px, 3.333vw, 52px);
-        font-style: italic;
+        /* font-style: italic; */
         text-transform: uppercase;
-
+        letter-spacing: 27.84px;
         margin-top: 24px;
     }
 
@@ -99,10 +99,12 @@
 
     .card_subtext {
         color: var(--black);
+        font-family: Ostrich Sans;
         font-size: clamp(30px, 2.083vw, 35px);
-        font-style: italic;
+        /* font-style: italic; */
         font-weight: 400;
         line-height: normal;
+        letter-spacing: 4.2px;
         text-transform: uppercase;
     }
 

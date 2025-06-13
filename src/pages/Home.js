@@ -25,8 +25,8 @@ function Home({}) {
                     {education.map((e, idx) => (
                         <Card
                             key={idx}
-                            header={e.type}
-                            subtext={e.major}
+                            subtext={e.type}
+                            header={e.major}
                             body={e.university}
                             theme="white"
                         />

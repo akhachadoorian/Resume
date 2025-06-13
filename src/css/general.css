@@ -29,9 +29,10 @@ p, li {
 }
 
 .sub_header {
-    font-family: Urbanist;
+    font-family: Ostrich Sans;
     font-size: clamp(30px, 2.083vw, 35px);
-    font-style: italic;
+    /* font-style: italic; */
+    letter-spacing: 4.2px;
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;

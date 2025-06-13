@@ -27,7 +27,7 @@ export const education = [
     },
     {
         type: 'Bachelor of Science',
-        major: 'Commerce and Business Administration (Marketing)',
+        major: 'Marketing',
         university: '<p>University of Alabama</p>'
     },
 ]
