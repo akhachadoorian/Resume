@@ -6,7 +6,7 @@ export const basic_info = {
     socials: [
          {
             icon: 'envelope',
-            link: 'alexkhachadoorian@gmail.com'
+            link: 'mailto:alexkhachadoorian@gmail.com'
         },
         {
             icon: 'github',
