@@ -40,17 +40,28 @@ export const experience = [
         time: '<p>May 2024 - Present</p>',
         description: [
             {
-                header: 'Leadership & Team Management',
-                list: "<li>Oversaw team operations</li><li>Set technical direction</li><li>Led a team of 2 developers</li><li>Delegated tasks</li><li>Conducted weekly planning sessions</li><li>Used Notion and ClickUp</li>"
+                heading: "Leadership & Team Management",
+                list: [
+                "Co-led the web development department, overseeing team operations, setting technical direction, and aligning engineering execution with creative vision.",
+                "Managed project scope and task delegation; led weekly planning sessions to coordinate concurrent website builds with the Creative Director.",
+                "Led a team of developers to launch 16+ custom websites using agile methodologies—completing 100% of projects on time."
+                ]
             },
             {
-                header: 'Project Execution & Delivery',
-                list: "<li>Ensured alignment between creative vision and engineering execution</li><li>Managed project scope</li><li>Completed 100% of projects on time</li><li>Worked on concurrent website builds</li><li>Utilized agile methodologies</li>"
+                heading: "Technical Contributions",
+                list: [
+                "Built reusable CMS blocks using responsive design principles—flexbox layouts, adaptive grids, and optimized media—for seamless cross-device experiences.",
+                "Developed and maintained key modules within the Caboose CMS, adding dynamic content features that reduced manual updates.",
+                "Improved internal CMS tooling (Caboose CMS) and introduced new development standards to speed up timelines and elevate quality."
+                ]
             },
             {
-                header: 'Technical Implementation',
-                list: "      <li>Built reusable CMS blocks</li><li>Applied responsive design principles</li><li>Used flexbox layouts, adaptive grids, and optimized media</li><li>Implemented pixel-perfect designs from Figma to deployment</li><li>Maintained key modules within the Caboose CMS</li><li>Developed dynamic content features</li>"
-            },
+                heading: "Cross-Functional Collaboration",
+                list: [
+                "Worked closely with the Creative Director to streamline workflows and ensure design consistency across projects.",
+                "Assisted the sales team by providing technical insights during the quoting process and contributing to project proposals."
+                ]
+            }
         ]
     }
 ]

@@ -60,11 +60,12 @@ function Home({}) {
                             <div className="descriptions">
                                 {e.description.map((ee, ee_index) => (
                                     <div className="description" key={ee_index}>
-                                        <h6 className="sub_header">{ee.header}</h6>
-                                        <ul
-                                            className="list"
-                                            dangerouslySetInnerHTML={{ __html: ee.list }}
-                                        />
+                                        <h6 className="sub_header">{ee.heading}</h6>
+                                        <ul>
+                                            {ee.list.map((l, l_index) => {
+                                                return <li key={l_index}>{l}</li>;
+                                            })}
+                                        </ul>
                                     </div>
                                 ))}
                             </div>

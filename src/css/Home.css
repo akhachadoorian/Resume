@@ -68,8 +68,12 @@ section {
             gap: 24px;
 
             .description {
-                .list {
-
+                h6 {
+                    margin-bottom: 8px;
+                }
+                
+                ul {
+                    padding-left: 24px;
                 }
             }
         }
