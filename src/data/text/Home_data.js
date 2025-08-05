@@ -65,3 +65,22 @@ export const experience = [
         ]
     }
 ]
+
+export const skills = [
+    {
+        title: 'Languages',
+        body: 'HTML, CSS, JavaScript, TypeScript, Python, Ruby, Java, SQL (PostgreSQL), NoSQL (MongoDB), Liquid'
+    },
+    {
+        title: 'Frameworks & Libraries',
+        body: 'React, Next.js, Node.js, Ruby on Rails',
+    },
+    {
+        title: 'CMS & Platforms',
+        body: 'Payload CMS, Caboose CMS, WordPress, Shopify',
+    },
+    {
+        title: 'Tools & Technologies',
+        body: 'Git, Docker, AWS, Axios, Visual Studio Code, Postico',
+    },
+]

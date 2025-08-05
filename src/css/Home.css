@@ -84,3 +84,26 @@ section {
     min-height: 100vh;
     background-color: var(--darker-white);
 }
+
+#skills {
+    min-height: 100vh;
+    background-color: var(--darker-white);
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px;
+
+    .skill_box {
+        padding: 60px;
+        background-color: var(--black);
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+
+        h4 {
+            margin-bottom: 10px;
+        }
+    }   
+}

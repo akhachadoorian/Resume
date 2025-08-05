@@ -3,7 +3,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
 import HeaderWithLine from "../components/HeaderWithLine";
-import { basic_info, education, experience } from "../data/text/Home_data";
+import { basic_info, education, experience, skills } from "../data/text/Home_data";
 import Socials from "../components/Socials";
 import Card from "../components/Card";
 
@@ -53,9 +53,9 @@ function Home({}) {
                                 subtext={e.title}
                                 body={e.time}
                                 scroll_speed="1"
-                                sticky={true}
-                                scroll_target=".job"
-                                scroll_offset="24"
+                                // sticky={true}
+                                // scroll_target=".job"
+                                // scroll_offset="0"
                             />
                             <div className="descriptions">
                                 {e.description.map((ee, ee_index) => (
@@ -71,6 +71,23 @@ function Home({}) {
                             </div>
                         </div>
                     ))}
+                </div>
+            </section>
+
+            <section id="skills" data-scroll-section>
+                <HeaderWithLine
+                    header_line_1={"03"}
+                    header_line_2={"Skills & Qualification"}
+                    theme="white"
+                />
+                <div className="skill_box">
+                    {skills.map((s, s_index) => (
+                        <div className="" key={s_index}>
+                            <h4 className="sub_header">{s.title}</h4>
+                            <p>{s.body}</p>
+                        </div>
+                    ))}
+                    
                 </div>
             </section>
 

@@ -71,7 +71,7 @@
 /* /////////////////// */
 
 .card {
-    border-radius: 30px;
+    /* border-radius: 30px; */
     padding: 24px;
 
     display: flex;
