@@ -28,14 +28,13 @@ function Home({}) {
                             subtext={e.type}
                             header={e.major}
                             body={e.university}
-                            theme="white"
+                            theme="black"
                         />
                     ))}
                 </div>
                 <HeaderWithLine
                     header_line_1={"01"}
                     header_line_2={"Education"}
-                    theme="white"
                 />
             </section>
 
@@ -78,7 +77,6 @@ function Home({}) {
                 <HeaderWithLine
                     header_line_1={"03"}
                     header_line_2={"Skills & Qualification"}
-                    theme="white"
                 />
                 <div className="skill_box">
                     {skills.map((s, s_index) => (

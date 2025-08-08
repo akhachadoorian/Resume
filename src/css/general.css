@@ -22,6 +22,7 @@ p, li {
 }
 
 .large_header {
+    font-family: Black Mango;
     font-size: clamp(125px, 9.375vw, 145px);
     font-weight: 600;
     line-height: 100%; /* 146px */

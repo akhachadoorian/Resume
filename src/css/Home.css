@@ -20,7 +20,7 @@ section {
 
 #education {
     min-height: 100vh;
-    background-color: var(--darker-white);
+    /* background-color: var(--darker-white); */
     gap: 6vw;
 
     .cards {
@@ -29,6 +29,10 @@ section {
         display: flex;
         flex-direction: column;
         gap: 60px;
+    }
+
+    .header_with_line-inner {
+        padding: 0 0 32px 0;
     }
 
 }
@@ -87,7 +91,7 @@ section {
 
 #skills {
     min-height: 100vh;
-    background-color: var(--darker-white);
+    /* background-color: var(--darker-white); */
 
     flex-direction: column;
     justify-content: flex-start;
@@ -95,8 +99,10 @@ section {
     gap: 60px;
 
     .skill_box {
+        /* flex: 1; */
+        width: 100%;
         padding: 60px;
-        background-color: var(--black);
+        background-color: var(--light-black);
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);

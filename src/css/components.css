@@ -54,6 +54,7 @@
         border-radius: 100%;
         background: #282828;
         aspect-ratio: 1 / 1;
+        transition: all ease-in-out 300ms;
 
         display: flex;
         justify-content: center;
@@ -61,6 +62,10 @@
         .icon {
             height: 40px;
         }
+
+        /* &:hover { */
+            /* box-shadow: 0 0 48.485px 0 #404040, 0 0 27.706px 0 #404040, 0 0 16.162px 0 #404040, 0 0 8.081px 0 #404040, 0 0 2.309px 0 #404040, 0 0 1.154px 0 #404040; */
+        /* } */
     }
 }
 
@@ -86,19 +91,21 @@
     }
 
     &.black {
-        background-color: var(--darker-white);
+        background-color: var(--light-black);
     }
 
     .card_header {
-        color: var(--black);
+        font-family: Black Mango;
+        color: var(--white);
         font-size: clamp(48px, 3.333vw, 52px);
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        letter-spacing: 5px;
     }
 
     .card_subtext {
-        color: var(--black);
+        color: var(--white);
         font-family: Ostrich Sans;
         font-size: clamp(30px, 2.083vw, 35px);
         /* font-style: italic; */
@@ -109,7 +116,7 @@
     }
 
     .body > * {
-        color: var(--black);
+        color: var(--white);
         font-family: Urbanist;
 
         font-size: clamp(20px, 1.389vw, 25px);

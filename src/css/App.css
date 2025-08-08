@@ -43,3 +43,9 @@
   src: local("ostrich-sans-black"),
     url(../fonts/ostrich-sans-black.woff) ;
 }
+
+@font-face {
+  font-family: "Black Mango";
+  src: local("black-mango"),
+    url(../fonts/Black\ Mango\ Regular.ttf) ;
+}
