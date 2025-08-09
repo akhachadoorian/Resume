@@ -13,11 +13,13 @@ section {
     gap: 3vw; 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     section {
-        padding: 80px 16px;
+        padding: 60px 16px;
 
         flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
     }
 }
 
@@ -25,6 +27,17 @@ section {
     min-height: 100vh;
 }
 
+@media (max-width: 1000px) {
+    #name {
+        min-height: auto;
+
+        .header_with_line {
+            h1 {
+                font-size: clamp(30px, 9vw, 60px) !important;
+            }
+        }
+    }
+}
 
 #education {
     min-height: 100vh;
@@ -43,6 +56,24 @@ section {
         padding: 0 0 32px 0;
     }
 
+}
+
+@media (max-width: 1000px) {
+    #education {
+        min-height: auto;
+
+        .cards {
+            flex: 1 !important;
+            order: 2;
+
+            gap: 24px !important;
+        }
+
+        .header_with_line-inner {
+            flex: 1 !important;
+            order: 1;
+        }
+    }
 }
 
 #experience {
@@ -66,9 +97,6 @@ section {
             height: fit-content;
 
             margin: 48px 0;
-
-            /* position: relative; */
-            /* top: 24px; */
         }
 
         .descriptions {
@@ -92,6 +120,24 @@ section {
     }
 }
 
+@media (max-width: 1000px) {
+    .jobs {
+        .job {
+            flex-direction: column;
+            /* align-items: flex-start !important; */
+        }
+
+        .card {
+            flex: 1 !important;
+            width: 100%;
+            margin: 0;
+        }
+        .descriptions {
+            flex: 1 !important;
+        }
+    }
+}
+
 #projects {
     min-height: 100vh;
     background-color: var(--darker-white);
@@ -99,7 +145,6 @@ section {
 
 #skills {
     min-height: 100vh;
-    /* background-color: var(--darker-white); */
 
     flex-direction: column;
     justify-content: flex-start;
@@ -107,11 +152,6 @@ section {
     gap: 60px;
 
     .skill_box {
-        /* flex: 1; */
-        /* width: 100%; */
-        /* padding: 60px; */
-        /* background-color: var(--light-black); */
-
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0px;
@@ -140,9 +180,28 @@ section {
                 text-transform: uppercase;
             }
         }
-
-        /* h4 {
-            margin-bottom: 10px;
-        } */
     }   
+}
+
+@media (max-width: 1000px) {
+    #skills {
+        .skill_box {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 0 16px;
+
+            .box_unit {
+                min-height: 166px;
+                border-top: none !important;
+                border-right: none !important;
+                
+                &:not(:last-of-type) {
+                    border-bottom: 3px solid var(--Blacks-Lighter-Black, #282828);
+                }
+
+                p {
+                    font-size: clamp(16px, 4.267vw, 20px);
+                }
+            }
+        }
+    }
 }

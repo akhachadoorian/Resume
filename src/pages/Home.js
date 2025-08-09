@@ -17,6 +17,7 @@ function Home({}) {
                     header_line_2={"Khachadoorian"}
                     subtext={basic_info.title}
                     body={basic_info.blurb}
+                    h_level="h1"
                 />
                 <Socials socials={basic_info.socials} />
                 {/* </div> */}
@@ -31,6 +32,7 @@ function Home({}) {
                             header={e.major}
                             body={e.university}
                             theme="black"
+                            scroll_speed="1"
                         />
                     ))}
                 </div>
