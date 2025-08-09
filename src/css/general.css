@@ -21,9 +21,9 @@ p, li {
     letter-spacing: 0.36px;
 }
 
-.large_header {
+.xl_header {
     font-family: Black Mango;
-    font-size: clamp(125px, 9.375vw, 145px);
+    font-size: clamp(85px, 9.375vw, 145px);
     font-weight: 600;
     line-height: 100%; /* 146px */
     letter-spacing: 7.3px;
@@ -37,6 +37,13 @@ p, li {
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
+}
+
+.l_header {
+    font-size: clamp(48px, 3.333vw, 53px);
+    font-family: Black Mango;
+    font-weight: 400;
+    line-height: 100%
 }
 
 html, body {

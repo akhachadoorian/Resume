@@ -11,6 +11,7 @@ function Home({}) {
     return (
         <div id="home">
             <section id="name" data-scroll-section>
+                {/* <div class=""> */}
                 <HeaderWithLine
                     header_line_1={"Alex"}
                     header_line_2={"Khachadoorian"}
@@ -18,6 +19,7 @@ function Home({}) {
                     body={basic_info.blurb}
                 />
                 <Socials socials={basic_info.socials} />
+                {/* </div> */}
             </section>
 
             <section id="education" data-scroll-section>
@@ -80,8 +82,8 @@ function Home({}) {
                 />
                 <div className="skill_box">
                     {skills.map((s, s_index) => (
-                        <div className="" key={s_index}>
-                            <h4 className="sub_header">{s.title}</h4>
+                        <div className="box_unit" key={s_index}>
+                            <h4 className="l_header">{s.title}</h4>
                             <p>{s.body}</p>
                         </div>
                     ))}
