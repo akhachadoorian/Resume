@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     margin: 0;
 }
 
-p, li {
+p, li, .body {
     color: var(--white);
     font-family: "DM Sans";
     font-size: clamp(18px, 1.25vw, 22px);

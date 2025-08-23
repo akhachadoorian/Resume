@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 
 import HeaderWithLine from "../components/HeaderWithLine";
-import { basic_info, education, experience, skills } from "../data/text/Home_data";
+import { basic_info, education, experience, skills, case_studies } from "../data/text/Home_data";
 import Socials from "../components/Socials";
 import Card from "../components/Card";
 import CopyOnly from "../components/CopyOnly";
 import CopyCard from "../components/CopyCard";
+import CardWithImage from "../components/CardWithImage";
 
 function Home({}) {
     var curr_job = experience[0];
@@ -92,12 +93,18 @@ function Home({}) {
                 </div>
             </section>
 
-            <section id="">
+            <section id="case_studies">
                 <CopyOnly
                     header={"Case Studies"}
                     style={"l"}
                 />
-                
+                <CardWithImage 
+                    header={case_studies[0].name}
+                    tags={case_studies[0].tags}
+                    image={case_studies[0].image}
+                    body={case_studies[0].body}
+                    link={case_studies[0].link}
+                />
             </section>
         </div>
     );

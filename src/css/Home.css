@@ -1,6 +1,6 @@
 section {
     padding: 120px 60px;
-
+    /* width: 100%; */
     /* display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,11 +95,21 @@ section {
                     text-transform: uppercase;
                 } */
             }
-    }   
+        }   
+    }
+
+    #case_studies {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
     }
 }
 
 @media all and (max-width: 800px) {
+    section {
+        padding: 60px 16px;
+    }
+    
     .home_page {
         #education {
             .cards {

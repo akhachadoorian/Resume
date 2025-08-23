@@ -1,4 +1,4 @@
-import smartfusion
+import SmartFusion_CardImage from "../images/home/SmartFusion_CardImage.png"
 
 export const basic_info = {
     title: 'Lead Website Developer',
@@ -122,9 +122,17 @@ export const skills = [
 export const case_studies = [
     {
         name: "Smart Fusion Website",
-        tags: "",
+        tags: [
+            "Website Development",
+            "New CMS Features",
+            "Full Stack Development",
+            "Workflow Improvements",
+        ],
         image: {
-
-        }
+            image: SmartFusion_CardImage,
+            alt_text: "Image of Smart Fusion's Home Page"
+        },
+        body: "Case Study Coming Soon, but for now, check out their site!",
+        link: "https://smartfusiongov.com/"
     }
 ]
