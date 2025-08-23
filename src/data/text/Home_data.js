@@ -1,4 +1,4 @@
-
+import smartfusion
 
 export const basic_info = {
     title: 'Lead Website Developer',
@@ -117,4 +117,14 @@ export const skills = [
         title: 'Tools & Technologies',
         body: 'Git, Docker, AWS, Axios, Visual Studio Code, Postico',
     },
+]
+
+export const case_studies = [
+    {
+        name: "Smart Fusion Website",
+        tags: "",
+        image: {
+
+        }
+    }
 ]

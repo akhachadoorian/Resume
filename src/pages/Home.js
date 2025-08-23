@@ -91,6 +91,14 @@ function Home({}) {
                     
                 </div>
             </section>
+
+            <section id="">
+                <CopyOnly
+                    header={"Case Studies"}
+                    style={"l"}
+                />
+                
+            </section>
         </div>
     );
     }
