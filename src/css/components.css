@@ -1,4 +1,82 @@
 /* /////////////////// */
+/* Navigation */
+/* /////////////////// */
+
+.navigation {
+    padding: 16px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    .left {
+        /* flex: 1; */
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav {
+        /* flex: 1; */
+
+        ul {
+            list-style-type: none;
+
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            li {
+                a {
+                    font-family: "Ostrich Proper";
+                    font-weight: 500;
+                    letter-spacing: 3.36px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+
+                    &.active {
+                        text-decoration: underline;
+                        text-underline-offset: 5px;
+                        /* text-decoration-thickness: 2px; */
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+/* Copy Only */
+/* /////////////////// */
+
+.copy_only {
+    
+}
+
+/* /////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////// */
+
+
+
+/* /////////////////// */
 /* HeaderWithLine */
 /* /////////////////// */
 
@@ -55,7 +133,6 @@
             letter-spacing: 7.04px;
         }
     }
-
 }
 
 /* /////////////////// */
@@ -88,7 +165,7 @@
         }
 
         /* &:hover { */
-            /* box-shadow: 0 0 48.485px 0 #404040, 0 0 27.706px 0 #404040, 0 0 16.162px 0 #404040, 0 0 8.081px 0 #404040, 0 0 2.309px 0 #404040, 0 0 1.154px 0 #404040; */
+        /* box-shadow: 0 0 48.485px 0 #404040, 0 0 27.706px 0 #404040, 0 0 16.162px 0 #404040, 0 0 8.081px 0 #404040, 0 0 2.309px 0 #404040, 0 0 1.154px 0 #404040; */
         /* } */
     }
 }

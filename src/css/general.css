@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root {
     --black: #101010;
@@ -13,21 +14,150 @@
 
 h1, h2, h3, h4, h5, h6, p, a, li {
     color: var(--white);
-    font-family: Urbanist;
     margin: 0;
 }
 
 p, li {
     font-family: "DM Sans";
-    line-height: 140%; /* 25.2px */
+    font-size: clamp(18px, 1.25vw, 22px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
     letter-spacing: 0.36px;
 }
 
-.xl_header {
+@media all and (max-width: 800px) {
+    p, li {
+        font-size: clamp(16px, 4.267vw, 18px);
+        letter-spacing: 0.32px;
+    }
+}
+
+.code,
+.code p {
+    font-family: "DM Mono", monospace;
+    font-size: clamp(14px, 0.972vw, 18);
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+    letter-spacing: 0.28px;
+}
+
+
+/* /////////////////// */
+/* Header Styles */
+/* /////////////////// */
+
+/* //////// */
+/* Desktop */
+/* //////// */
+
+.xl_header, h1 {
+    font-family: "Black Mango";
+    font-size: clamp(100px, 9.444vw, 145px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 6.8px;
+}
+
+.l_header, h2, h3 {
+    font-family: "Black Mango";
+    font-size: clamp(90px, 6.667vw, 101px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 1.92px;
+}
+
+.m_header, h4 {
+    font-family: "Black Mango";
+    font-size: clamp(60px, 4.444vw, 70px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 1.28px;
+}
+
+.s_header, h5, h6 {
+    font-family: "Black Mango";
+    font-size: clamp(45px, 3.333vw, 55px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.96px;
+}
+
+.subtext {
+    font-family: "Ostrich Sans";
+    font-size: clamp(40px, 2.778vw, 45px);
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 18px;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    font-family: "Ostrich Sans";
+    font-size: clamp(20px, 1.667vw, 30px);
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 3.36px;
+    text-transform: uppercase;
+}
+
+/* //////// */
+
+/* //////// */
+/* Mobile */
+/* //////// */
+
+@media all and (max-width: 800px) {
+    .xl_header, h1 {
+        font-size: clamp(50px, 13.333vw, 60px);
+        letter-spacing: 2.5px;
+    }
+
+    .l_header, h2, h3 {
+        font-size: clamp(40px, 11.2vw, 50px);
+        letter-spacing: 0.84px;
+    }
+
+    .m_header, h4 {
+        font-size: clamp(30px, 8.533vw, 40px);
+        letter-spacing: 0.64px;
+    }
+
+    .s_header, h5, h6 {
+        font-size: clamp(25px, 6.933vw, 35px);
+        letter-spacing: 0.52px;
+    }
+
+    .subtext {
+        font-size: clamp(20px, 5.867vw, 30px,);
+        letter-spacing: 5.28px;
+    }
+
+    .eyebrow {
+        font-size: clamp(15px, 4.8vw, 25px);
+        letter-spacing: 4.32px;
+    }
+}
+
+/* //////// */
+
+/* /////////////////// */
+
+/* /////////////////// */
+/* Old Header Styles */
+/* /////////////////// */
+
+/* .xl_header {
     font-family: Black Mango;
     font-size: clamp(85px, 9.375vw, 145px);
     font-weight: 600;
-    line-height: 100%; /* 146px */
+    line-height: 100%; 
     letter-spacing: 7.3px;
 }
 
@@ -40,14 +170,11 @@ p, li {
 .sub_header {
     font-family: Ostrich Sans;
     font-size: clamp(30px, 2.083vw, 35px);
-    /* font-style: italic; */
     letter-spacing: 4.2px;
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
 }
-
-
 
 .l_header {
     font-size: clamp(48px, 3.333vw, 53px);
@@ -60,7 +187,13 @@ p, li {
     .l_header {
         font-size: clamp(32px, 8.533vw, 37px);
     }
-}
+} */
+
+/* /////////////////// */
+
+/* /////////////////// */
+/* Overall Styling */
+/* /////////////////// */
 
 html, body {
   height: 100%;
@@ -76,3 +209,5 @@ html, body {
 body {
     background-color: var(--black);
 }
+
+/* /////////////////// */

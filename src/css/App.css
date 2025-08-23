@@ -49,3 +49,19 @@
   src: local("black-mango"),
     url(../fonts/Black\ Mango\ Regular.ttf) ;
 }
+
+@font-face {
+  font-family: "Ostrich Proper";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Ostrich Proper Regular"),
+       url("../fonts/OstrichProper-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Ostrich Proper";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Ostrich Proper Semibold"),
+       url("../fonts/OstrichProper-SemiBold.woff") format("woff");
+}

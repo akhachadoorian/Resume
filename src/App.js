@@ -7,28 +7,30 @@ import "./css/App.css";
 import "./css/components.css";
 import "./css/general.css";
 import "./css/Home.css";
+import "./css/Home_old.css";
 
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css";
+// import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+// import "locomotive-scroll/dist/locomotive-scroll.css";
 
+import Navigation from "./components/Navigation"
 import Home from "./pages/Home";
 
 function App() {
   const containerRef = useRef(null);
 
   return (
-    <LocomotiveScrollProvider
-      options={{
-        smooth: true,
-        smartphone: {
-          smooth: true,
-        },
-        tablet: {
-          smooth: true,
-        },
-      }}
-      containerRef={containerRef}
-    >
+    // <LocomotiveScrollProvider
+    //   options={{
+    //     smooth: true,
+    //     smartphone: {
+    //       smooth: true,
+    //     },
+    //     tablet: {
+    //       smooth: true,
+    //     },
+    //   }}
+    //   containerRef={containerRef}
+    // >
       <main data-scroll-container ref={containerRef}>
         <Router basename="/Resume">
           {/* <Navigation /> */}
@@ -36,9 +38,10 @@ function App() {
             <Route path="/" element={<Home />} />
           </Routes>
           {/* <Footer /> */}
+          <Navigation />
         </Router>
       </main>
-    </LocomotiveScrollProvider>
+    // </LocomotiveScrollProvider>
   );
 }
 
