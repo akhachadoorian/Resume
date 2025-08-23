@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/Resume/static/css/main.ac6f9643.css",
-    "main.js": "/Resume/static/js/main.9473b128.js",
+    "main.css": "/Resume/static/css/main.6fa6ee12.css",
+    "main.js": "/Resume/static/js/main.dd56a0a9.js",
     "static/js/453.ed3810f9.chunk.js": "/Resume/static/js/453.ed3810f9.chunk.js",
+    "static/media/SmartFusion_CardImage.png": "/Resume/static/media/SmartFusion_CardImage.e1510db70aad6c836498.png",
     "static/media/Black Mango Regular.ttf": "/Resume/static/media/Black Mango Regular.93e0b8cb943e082319e4.ttf",
     "static/media/OstrichProper-SemiBold.woff": "/Resume/static/media/OstrichProper-SemiBold.daa00513e18b22703d78.woff",
     "static/media/OstrichProper-Regular.woff": "/Resume/static/media/OstrichProper-Regular.4c988a92cb258729ab1a.woff",
     "static/media/ostrich-sans-black.woff": "/Resume/static/media/ostrich-sans-black.eec1ce9a59405a01c3fd.woff",
+    "static/media/Right_arrow.svg": "/Resume/static/media/Right_arrow.a74a09d4f7c9b04032d3.svg",
     "index.html": "/Resume/index.html",
-    "main.ac6f9643.css.map": "/Resume/static/css/main.ac6f9643.css.map",
-    "main.9473b128.js.map": "/Resume/static/js/main.9473b128.js.map",
+    "main.6fa6ee12.css.map": "/Resume/static/css/main.6fa6ee12.css.map",
+    "main.dd56a0a9.js.map": "/Resume/static/js/main.dd56a0a9.js.map",
     "453.ed3810f9.chunk.js.map": "/Resume/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac6f9643.css",
-    "static/js/main.9473b128.js"
+    "static/css/main.6fa6ee12.css",
+    "static/js/main.dd56a0a9.js"
   ]
 }
