@@ -12,7 +12,7 @@ import "./css/Home_old.css";
 // import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 // import "locomotive-scroll/dist/locomotive-scroll.css";
 
-import Navigation from "./components/Navigation"
+import Navigation from "./components/global/Navigation"
 import Home from "./pages/Home";
 
 function App() {

@@ -9,7 +9,7 @@ import Card from "../components/Card";
 
 function Home({}) {
     return (
-        <div id="home">
+        <div id="home_old">
             <section id="name" data-scroll-section>
                 {/* <div class=""> */}
                 <HeaderWithLine
@@ -23,7 +23,7 @@ function Home({}) {
                 {/* </div> */}
             </section>
 
-            <section id="education" data-scroll-section>
+            <section id="education_old" data-scroll-section>
                 <div className="cards">
                     {education.map((e, idx) => (
                         <Card
@@ -42,7 +42,7 @@ function Home({}) {
                 />
             </section>
 
-            <section id="experience" data-scroll-section>
+            <section id="experience_old" data-scroll-section>
                 <HeaderWithLine
                     header_line_1={"02"}
                     header_line_2={"Work Experience"}
@@ -77,7 +77,7 @@ function Home({}) {
                 </div>
             </section>
 
-            <section id="skills" data-scroll-section>
+            <section id="skills_old" data-scroll-section>
                 <HeaderWithLine
                     header_line_1={"03"}
                     header_line_2={"Skills & Qualification"}

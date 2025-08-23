@@ -1,16 +1,18 @@
 import React, { useEffect, useRef } from "react";
-// import LocomotiveScroll from "locomotive-scroll";
-// import "locomotive-scroll/dist/locomotive-scroll.css";
 
 import HeaderWithLine from "../components/HeaderWithLine";
 import { basic_info, education, experience, skills } from "../data/text/Home_data";
 import Socials from "../components/Socials";
 import Card from "../components/Card";
+import CopyOnly from "../components/CopyOnly";
+import CopyCard from "../components/CopyCard";
 
 function Home({}) {
+    var curr_job = experience[0];
+
     return (
-        <div id="home">
-            <section id="name" data-scroll-section>
+        <div className="home_page" id="home">
+            <section id="name" >
                 {/* <div class=""> */}
                 <HeaderWithLine
                     header_line_1={"Alex"}
@@ -23,7 +25,11 @@ function Home({}) {
                 {/* </div> */}
             </section>
 
-            <section id="education" data-scroll-section>
+            <section id="education" >
+                <CopyOnly
+                    header={"Education"}
+                    style={"l"}
+                />
                 <div className="cards">
                     {education.map((e, idx) => (
                         <Card
@@ -36,10 +42,54 @@ function Home({}) {
                         />
                     ))}
                 </div>
-                <HeaderWithLine
-                    header_line_1={"01"}
-                    header_line_2={"Education"}
+            </section>
+
+            <section id="experience">
+                <CopyOnly
+                    header={"Work Experience"}
+                    style={"l"}
+                    id={"work_experience"}
+                    // contain={false}
                 />
+
+                <div className="jobs">
+                    <div className="job">
+                        <CopyOnly 
+                            eyebrow={curr_job.time}
+                            header={curr_job.title}
+                            subtext={curr_job.company}
+                            style="m"
+                        />
+
+                        <div className="job_cards">
+                            {curr_job.description.map((ee, ee_index) => (
+                                <CopyCard 
+                                    key={ee_index}
+                                    header={ee.heading}
+                                    body={ee.list}
+                                    style="left"
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <CopyOnly
+                    header={"Skills & Qualification"}
+                    style={"l"}
+                />
+
+                <div className="skill_box">
+                    {skills.map((s, s_index) => (
+                        <div className="box_unit" key={s_index}>
+                            <h4 className="s_header">{s.title}</h4>
+                            <p className="eyebrow">{s.body}</p>
+                        </div>
+                    ))}
+                    
+                </div>
             </section>
         </div>
     );

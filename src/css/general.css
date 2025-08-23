@@ -4,12 +4,12 @@
 
 :root {
     --black: #101010;
+    --code-black: #1E1E1E;
     --light-black: #282828;
 
     --white: #F0F0F0;
-    /* --darker-white: #C0C0C0; */
-    --darker-white: #CCCCCC; 
-    --light-gray: #B7B7B7;
+    --light-gray: #CCCCCC; 
+    --gray: #B7B7B7;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, li {
@@ -18,12 +18,23 @@ h1, h2, h3, h4, h5, h6, p, a, li {
 }
 
 p, li {
+    color: var(--white);
     font-family: "DM Sans";
     font-size: clamp(18px, 1.25vw, 22px);
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 0.36px;
+}
+
+ul {
+    margin: 0;
+    /* padding: 0; */
+    padding-left: 25px;
+
+    li {
+        margin-bottom: 5px;
+    }
 }
 
 @media all and (max-width: 800px) {
@@ -92,7 +103,7 @@ p, li {
     font-size: clamp(40px, 2.778vw, 45px);
     font-style: normal;
     font-weight: 900;
-    line-height: normal;
+    line-height: 120%;
     letter-spacing: 18px;
     text-transform: uppercase;
 }
@@ -102,7 +113,7 @@ p, li {
     font-size: clamp(20px, 1.667vw, 30px);
     font-style: normal;
     font-weight: 900;
-    line-height: normal;
+    line-height: 120%;
     letter-spacing: 3.36px;
     text-transform: uppercase;
 }
@@ -135,7 +146,7 @@ p, li {
     }
 
     .subtext {
-        font-size: clamp(20px, 5.867vw, 30px,);
+        font-size: clamp(20px, 5.867vw, 30px);
         letter-spacing: 5.28px;
     }
 

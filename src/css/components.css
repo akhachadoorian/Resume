@@ -53,18 +53,57 @@
 /* /////////////////// */
 
 .copy_only {
-    
+    .eyebrow {
+        margin-bottom: 16px;
+    }
+
+    .div_line {
+        margin: 16px 0;
+        height: 2.5px;
+        background-color: var(--white);
+    }
+
+    &.contain {
+        max-width: 72.222vw;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .copy_only {
+        &.contain {
+            max-width: none;
+        }
+    }
 }
 
 /* /////////////////// */
 
+/* /////////////////// */
+/* Copy Card */
+/* /////////////////// */
 
+.copy_card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 
+    background-color: var(--light-black);
+    padding: 32px 24px;
 
+    &.center {
+        align-items: center;
+        text-align: center;
+        border-top: 3px solid var(--white);
+        border-bottom: 3px solid var(--white);
+    }
 
+    &.left {
+        border-left: 3px solid var(--white);
+        border-right: 3px solid var(--white);
+    }
+}
 
-
-
+/* /////////////////// */
 
 
 
@@ -212,35 +251,11 @@
     }
 
     .card_header {
-        font-family: Black Mango;
-        color: var(--white);
-        font-size: clamp(48px, 3.333vw, 52px);
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        letter-spacing: 5px;
+        margin-bottom: 8px;
     }
 
     .card_subtext {
-        color: var(--white);
-        font-family: Ostrich Sans;
         font-size: clamp(30px, 2.083vw, 35px);
-        /* font-style: italic; */
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 4.2px;
-        text-transform: uppercase;
-    }
-
-    .body > * {
-        color: var(--white);
-        font-family: Urbanist;
-
-        font-size: clamp(20px, 1.389vw, 25px);
-        font-style: normal;
-        font-weight: 500;
-        line-height: 120.114%; /* 24.023px */
-        letter-spacing: 0.4px;
     }
 }
 
