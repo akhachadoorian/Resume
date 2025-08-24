@@ -6,9 +6,9 @@ function CardWithImage({ header, tags, body, image, media_side = "left", link })
 
     return (
         <a target="_blank" href={link} className="card_w_image">
-            {/* <div className=""> */}
-                <img src={image.image} alt={image.alt_text} />
-            {/* </div> */}
+            <div className="img_holder" style={{backgroundImage: `url("${image.image}")`}}>
+                {/* <img src={image.image} alt={image.alt_text} /> */}
+            </div>
 
             <div className="text">
                 <div className="upper_text">

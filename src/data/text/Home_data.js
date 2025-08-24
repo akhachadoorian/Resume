@@ -1,4 +1,5 @@
 import SmartFusion_CardImage from "../images/home/SmartFusion_CardImage.png"
+import Oxford_CardImage from "../images/home/Oxford_CardImage.png"
 
 export const basic_info = {
     title: 'Lead Website Developer',
@@ -121,7 +122,7 @@ export const skills = [
 
 export const case_studies = [
     {
-        name: "Smart Fusion Website",
+        name: "Smart Fusion",
         tags: [
             "Website Development",
             "New CMS Features",
@@ -134,5 +135,30 @@ export const case_studies = [
         },
         body: "Case Study Coming Soon, but for now, check out their site!",
         link: "https://smartfusiongov.com/"
-    }
+    },
+    {
+        name: "City of Oxford",
+        tags: [
+            "Website Upgrade",
+            "Workflow Improvements",
+            "Improved User Experience"
+        ],
+        image: {
+            image: Oxford_CardImage,
+            alt_text: "Image of the City of Oxford's Home Page"
+        },
+        body: "Case Study Coming Soon, but for now, check out their site!",
+        link: "https://www.oxfordal.gov/"
+    },
+    // {
+    //     name: "",
+    //     tags: [
+    //     ],
+    //     image: {
+    //         image: ,
+    //         alt_text: ""
+    //     },
+    //     body: "",
+    //     link: ""
+    // },
 ]

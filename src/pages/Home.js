@@ -98,13 +98,19 @@ function Home({}) {
                     header={"Case Studies"}
                     style={"l"}
                 />
-                <CardWithImage 
-                    header={case_studies[0].name}
-                    tags={case_studies[0].tags}
-                    image={case_studies[0].image}
-                    body={case_studies[0].body}
-                    link={case_studies[0].link}
-                />
+                
+                <div className="study_cards">
+                    {case_studies.map((cs, idx) => (
+                        <CardWithImage 
+                            key={idx}
+                            header={cs.name}
+                            tags={cs.tags}
+                            image={cs.image}
+                            body={cs.body}
+                            link={cs.link}
+                        />
+                    ))}
+                </div>
             </section>
         </div>
     );

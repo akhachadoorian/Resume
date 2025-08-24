@@ -131,8 +131,12 @@
         }
     }
 
-    img {
+    .img_holder {
         flex: 1 1 513px;
+        aspect-ratio: 1 / 1;
+
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .text {
