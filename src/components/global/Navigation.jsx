@@ -85,13 +85,13 @@ function Navigation({}) {
                 <h6 className="s_header">Alex Khachadoorian</h6>
                 <p className="eyebrow">Full Stack Developer</p>
             </div>
-            {/* <nav>
+            <nav>
                 <ul className="main_nav">
                     {nav.map((item) => (
                         <CreateNavItem key={item.slug} item={item} />
                     ))}
                 </ul>
-            </nav> */}
+            </nav>
         </div>
     );
 }

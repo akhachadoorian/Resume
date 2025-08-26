@@ -35,13 +35,12 @@ function App() {
     // >
       <main data-scroll-container ref={containerRef}>
         <Router basename="/Resume">
-          {/* <Navigation /> */}
+          <Navigation />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/case-studies/smart-fusion" element={<SmartFusion/>} />
           </Routes>
           {/* <Footer /> */}
-          <Navigation />
         </Router>
       </main>
     // </LocomotiveScrollProvider>
