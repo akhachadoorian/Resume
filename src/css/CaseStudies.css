@@ -31,6 +31,8 @@ section {
     }
 
     #overview {
+        padding: 120px 0;
+
         display: flex;
         align-items: center;
         gap: 7.917vw;
@@ -46,11 +48,36 @@ section {
             }
         }
 
-        .left {
+        .text {
             flex: 1 1 624px;
+
+            padding-right: 60px;
 
             .copy_card {
                 margin-top: 32px;;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 800px)  {
+    section {
+        padding: 60px 16px;
+    }
+
+    .case_study_inner {
+        #overview {
+            padding: 60px 16px;
+            flex-direction: column;
+
+            .img_holder {
+                flex: 1;
+                aspect-ratio: 2 / 3;
+            }
+
+            .text {
+                flex: 1;
+                padding: 0;
             }
         }
     }

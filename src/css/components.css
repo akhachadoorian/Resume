@@ -135,6 +135,12 @@
     }
 }
 
+@media all and (max-width: 800px) {
+    .copy_card {
+        padding: 24px 12px;
+    }
+}
+
 /* /////////////////// */
 
 /* /////////////////// */

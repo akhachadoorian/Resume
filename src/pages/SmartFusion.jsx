@@ -34,7 +34,7 @@ function SmartFusion({}) {
                 <div className="img_holder">
                     <img src={overview.image.image} alt={overview.image.alt} />
                 </div>
-                <div className="left">
+                <div className="text">
                     <CopyOnly 
                         style="l"
                         header={overview.header}

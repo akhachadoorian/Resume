@@ -38,7 +38,7 @@ ul {
 }
 
 @media all and (max-width: 800px) {
-    p, li {
+    p, li, .body {
         font-size: clamp(16px, 4.267vw, 18px);
         letter-spacing: 0.32px;
     }

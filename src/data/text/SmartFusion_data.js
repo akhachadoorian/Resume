@@ -12,7 +12,7 @@ export const overview = {
         body: [
             "<li>Languages: HTML5, SCSS, JavaScript (ES6+), Ruby",
             "<li>Framework: Ruby on Rails</li>",
-            "<li>CMS: Caboose CMS (custom modules)/li>",
+            "<li>CMS: Caboose CMS (custom modules)</li>",
             "<li>Other: Fastly CDN, AWS S3, Heroku</li>",
         ]
     }
