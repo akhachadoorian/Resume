@@ -133,8 +133,8 @@ export const case_studies = [
             image: SmartFusion_CardImage,
             alt_text: "Image of Smart Fusion's Home Page"
         },
-        body: "Case Study Coming Soon, but for now, check out their site!",
-        link: "https://smartfusiongov.com/"
+        body: "Smart Fusion partnered with us to create a modern, scalable website for their government financial software brand. I built the site and tailored our CMS to their needs — adding features, refining workflows, and ensuring editors could manage content easily for the long term.",
+        link: "/case-studies/smart-fusion"
     },
     {
         name: "City of Oxford",
