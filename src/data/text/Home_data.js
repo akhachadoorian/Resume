@@ -134,7 +134,8 @@ export const case_studies = [
             alt_text: "Image of Smart Fusion's Home Page"
         },
         body: "Smart Fusion partnered with us to create a modern, scalable website for their government financial software brand. I built the site and tailored our CMS to their needs — adding features, refining workflows, and ensuring editors could manage content easily for the long term.",
-        link: "/case-studies/smart-fusion"
+        link: "/Resume/case-studies/smart-fusion",
+        target: "_self",
     },
     {
         name: "City of Oxford",
@@ -148,7 +149,8 @@ export const case_studies = [
             alt_text: "Image of the City of Oxford's Home Page"
         },
         body: "Case Study Coming Soon, but for now, check out their site!",
-        link: "https://www.oxfordal.gov/"
+        link: "https://www.oxfordal.gov/",
+        target: "_blank",
     },
     // {
     //     name: "",

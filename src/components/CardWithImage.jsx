@@ -1,11 +1,11 @@
 import React from "react";
 
-function CardWithImage({ header, tags, body, image, media_side = "left", link }) {
+function CardWithImage({ header, tags, body, image, media_side = "left", link, target = "_blank" }) {
     const isArray = Array.isArray(body);
     const listHtml = isArray ? body.join("") : null;
 
     return (
-        <a target="_blank" href={link} className="card_w_image">
+        <a target={target} href={link} className="card_w_image">
             <div className="img_holder" aria-label={image.alt_text} style={{backgroundImage: `url("${image.image}")`}}>
                 {/* <img src={image.image} alt={image.alt_text} /> */}
             </div>

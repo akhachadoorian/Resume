@@ -108,6 +108,7 @@ function Home({}) {
                             image={cs.image}
                             body={cs.body}
                             link={cs.link}
+                            target={cs.target}
                         />
                     ))}
                 </div>
