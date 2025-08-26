@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 import HeaderWithLine from "../components/HeaderWithLine";
 import { basic_info, education, experience, skills, case_studies } from "../data/text/Home_data";

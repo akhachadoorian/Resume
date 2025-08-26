@@ -7,13 +7,15 @@ import "./css/App.css";
 import "./css/components.css";
 import "./css/general.css";
 import "./css/Home.css";
-import "./css/Home_old.css";
+// import "./css/Home_old.css";
+import "./css/CaseStudies.css";
 
 // import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 // import "locomotive-scroll/dist/locomotive-scroll.css";
 
 import Navigation from "./components/global/Navigation"
 import Home from "./pages/Home";
+import SmartFusion from "./pages/SmartFusion";
 
 function App() {
   const containerRef = useRef(null);
@@ -36,6 +38,7 @@ function App() {
           {/* <Navigation /> */}
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/case-studies/smart-fusion" element={<SmartFusion/>} />
           </Routes>
           {/* <Footer /> */}
           <Navigation />

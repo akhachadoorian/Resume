@@ -1,0 +1,57 @@
+section {
+    padding: 120px 60px;
+}
+
+.case_study_inner {
+    #smart_fusion{
+        .cs_info {
+            margin-top: 75px;
+            min-height: 256px;
+            
+            display: flex;
+
+            
+            .cs_info_card {
+                flex: 1;
+                background: rgba(40, 40, 40, 0.50);
+                border-top: 2.5px solid var(--white);
+                /* border-left: 2.5px solid var(--white); */
+                padding: 32px 24px;
+
+                .eyebrow {
+                    margin-bottom: 16px;
+                }
+
+                &:nth-of-type(2) {
+                    border-left: 2.5px solid var(--white);
+                    border-right: 2.5px solid var(--white);
+                }
+            }
+        }
+    }
+
+    #overview {
+        display: flex;
+        align-items: center;
+        gap: 7.917vw;
+
+        .img_holder {
+            flex: 1 1 702px;
+            max-height: 936px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                /* height: 100%; */
+            }
+        }
+
+        .left {
+            flex: 1 1 624px;
+
+            .copy_card {
+                margin-top: 32px;;
+            }
+        }
+    }
+}
