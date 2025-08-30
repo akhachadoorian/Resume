@@ -1,54 +1,57 @@
 import React from "react";
 
-function CopyOnly({ eyebrow, header, subtext, body, id, contain = true,style = "m", h_tag }) {
-    var header_class = null;
-    var header_text = null;
-    
-    if (h_tag == null)  {
-        if (style == "xl") {
+function CopyOnly({
+    eyebrow,
+    header,
+    subtext,
+    body,
+    id,
+    contain = true,
+    style = "m",
+    h_tag,
+}) {
+    let header_class = "";
+    let header_text = null;
+
+    const tag = h_tag || "h2";
+
+    switch (style) {
+        case "xl":
             header_class = "xl_header";
-            header_text = <h2 className={header_class}>{header}</h2>
-        } else if (style == "l") {
+            break;
+        case "l":
             header_class = "l_header";
-            header_text = <h2 className={header_class}>{header}</h2>
-        }
-        else if (style == "m") {
+            break;
+        case "m":
             header_class = "m_header";
-            header_text = <h2 className={header_class}>{header}</h2>
-        }
-        else if (style == "s") {
+            break;
+        case "s":
             header_class = "s_header";
-            header_text = <h2 className={header_class}>{header}</h2>
-        }
-        else if (style == "subtext") {
-            header_class = "subtext">{header};
-            header_text = <h2 className={header_class}>{header}</h2>
-        }
-    }
-    else {
-        if (style == "xl") {
-            header_class = "xl_header";
-        } else if (style == "l") {
-            header_class = "l_header";
-        }
-        else if (style == "m") {
-            header_class = "m_header";
-        }
-        else if (style == "s") {
-            header_class = "s_header";
-        }
-        else if (style == "subtext") {
-            header_class = "subtext">{header};
-        }
+            break;
+        case "subtext":
+            header_class = "subtext";
+            break;
+        default:
+            header_class = "";
     }
 
-    
-
-    
+    // Only render the tag if h_tag is not provided
+    if (!h_tag) {
+        header_text = React.createElement(
+            tag,
+            { className: header_class },
+            header
+        );
+    }
 
     return (
-        <div className={`copy_only ${contain ? "contain" : null}`} id={id ? `${id}` : null}>
-            {style != "subtext" && eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+        <div
+            className={`copy_only ${contain ? "contain" : null}`}
+            id={id ? `${id}` : null}
+        >
+            {style != "subtext" && eyebrow ? (
+                <p className="eyebrow">{eyebrow}</p>
+            ) : null}
 
             {header_text}
 

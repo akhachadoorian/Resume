@@ -48,6 +48,10 @@ function SmartFusion({}) {
                 </div>
             </section>
 
+            <section id="challenges_goals">
+                
+            </section>
+
         </div>
     )
 }

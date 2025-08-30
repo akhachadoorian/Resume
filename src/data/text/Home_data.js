@@ -41,26 +41,29 @@ export const experience = [
         time: 'May 2024 - Present',
         description: [
             {
-                heading: "Leadership & Management",
+                heading: "Leadership & Project Management",
                 list: [
-                    "<li>Directed the web development department alongside the Creative Director, setting technical direction and ensuring creative/engineering alignment.</li>",
-                    "<li>Managed project scope and task delegation; led weekly planning sessions to coordinate concurrent builds.</li>",
-                    "<li>Supervised developers to deliver 16+ custom websites with agile methodologies, achieving 100% on-time launches.</li>",
+                    "<li>Led a team of two developers, ensuring timely, high-quality deliverables while mentoring a backend-focused teammate in frontend CMS workflows—accelerating development and increasing team velocity.</li>",
+                    "<li>Led Agile/Kanban workflows in ClickUp to deliver 16+ custom websites, managing timelines, task prioritization, and cross-functional collaboration across multiple concurrent projects.</li>",
+                    "<li>Assisted the sales team by contributing technical insights for client quotes and drafting project proposals.</li>",
                 ]
             },
             {
-                heading: "Technical Contributions",
+                heading: "Technical Development & Engineering",
                 list: [
-                    "<li>Engineered reusable CMS blocks using responsive design (flexbox, adaptive grids, optimized media) for seamless cross-device performance.</li>",
-                    "<li>Enhanced Caboose CMS tooling and introduced updated development standards to accelerate timelines and improve quality.</li>",
-                    "<li>Developed and maintained core CMS modules, adding dynamic content features that reduced manual client updates.</li>",
+                    "<li>Built and maintained responsive frontend components (flexbox layouts, adaptive grids, optimized media), creating a design system to ensure seamless, cross-device user experiences.</li>",
+                    "<li>Developed and maintained key modules within the Caboose CMS, implementing dynamic content features that reduced manual content updates.</li>",
+                    "<li>Leading development of a new React web application, defining component architecture, styling conventions, and CMS integration while ensuring future scalability.</li>",
+                    "<li>Worked with Heroku pipelines to manage deployments from staging to production, verifying stability in staging before promoting builds.</li>",
                 ]
             },
             {
-                heading: "Collaboration",
+                heading: "Process & Performance Improvements",
                 list: [
-                    "<li>Partnered with designers and marketers to translate Figma designs into pixel-perfect deployments.</li>",
-                    "<li>Supported the sales team by providing technical insights during client quoting and contributing to proposals.</li>"
+                    "<li>Collaborating with the backend developer to improve server performance and reliability by adding database indexes, optimizing queries, and introducing unit testing.</li>",
+                    "<li>Standardized CMS build processes by creating repeatable conventions for heading styles, classes, and layout structures—reducing build time, improving design consistency, and enhancing the client editing experience.</li>",
+                    "<li>Improved documentation practices by writing post-launch build notes and maintaining ongoing documentation for new code additions, making future builds more efficient and onboarding smoother.</li>",
+                    "<li>Partnered with UI/UX designers, marketers, and the Creative Director to align visual design with functionality, ensuring pixel-perfect implementation from Figma to deployment.</li>",
                 ]
             }
         ]
