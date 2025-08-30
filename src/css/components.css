@@ -292,7 +292,54 @@
 /* /////////////////// */
 
 .large_cards {
+    padding: 32px 24px;
+    background-color: var(--light-black);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+
+    &.top {
+        border-top: 3px solid var(--white);
+    }
+
+    &.bottom {
+        border-bottom: 3px solid var(--white);
+
+        h2 {
+            order: 2;
+        }
+
+        .body {
+            order: 1;
+        }
+    }
 }
+
+/* /////////////////// */
+
+/* /////////////////// */
+/* Card With Icon */
+/* /////////////////// */
+
+.card_w_icon {
+    background-color: var(--light-black);
+    padding: 32px 24px;
+    border-left: 3px solid var(--white);
+    border-right: 3px solid var(--white);
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .icon {
+        flex: 0 1 70px;
+        aspect-ratio: 1 / 1;
+        max-width: 70px;
+    }
+}
+
 
 /* /////////////////// */
 
@@ -372,7 +419,7 @@
     .social {
         /* padding: 20px; */
         border-radius: 100%;
-        background: #282828;
+        background-color: var(--light-black);
         aspect-ratio: 1 / 1;
         width: 72px;
         height: 72px;
@@ -384,11 +431,25 @@
 
         .icon {
             height: 40px;
+
+            path {
+                transition: all ease-in-out 300ms;
+            }
         }
 
-        /* &:hover { */
-        /* box-shadow: 0 0 48.485px 0 #404040, 0 0 27.706px 0 #404040, 0 0 16.162px 0 #404040, 0 0 8.081px 0 #404040, 0 0 2.309px 0 #404040, 0 0 1.154px 0 #404040; */
-        /* } */
+        /* &:hover {
+            background-color: var(--white);
+
+            svg path {
+                fill: var(--light-black);
+            }
+        } */
+
+        &:hover {
+            box-shadow: 0 0 48.485px 0 #404040, 0 0 27.706px 0 #404040,
+                0 0 16.162px 0 #404040, 0 0 8.081px 0 #404040,
+                0 0 2.309px 0 #404040, 0 0 1.154px 0 #404040;
+        }
     }
 }
 

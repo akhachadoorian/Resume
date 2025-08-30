@@ -1,9 +1,14 @@
-section {
-    padding: 120px 60px;
-}
 
 .case_study_inner {
-    #smart_fusion{
+    section {
+        padding: 120px 60px;
+        min-height: 1025px;
+    }
+
+
+    #smart_fusion {
+        min-height: auto;
+
         .cs_info {
             margin-top: 75px;
             min-height: 256px;
@@ -58,14 +63,46 @@ section {
             }
         }
     }
+
+    #challenges_goals {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .large_cards {
+            flex: 1 1 50%;
+            min-height: 551px;
+        }
+    }
+
+    #solution {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 60px;
+
+        .solution_cards {
+            /* display: grid; */
+            /* grid-template-columns: repeat(auto-fill, minmax(645px, 1fr)); */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .card_w_icon {
+                flex: 1 1 44%;
+            }
+            
+        }
+    }
 }
 
 @media all and (max-width: 800px)  {
-    section {
-        padding: 60px 16px;
-    }
-
     .case_study_inner {
+        section {
+            padding: 60px 16px;
+            min-height: auto;
+        }
+
         #overview {
             padding: 60px 16px;
             flex-direction: column;
@@ -80,5 +117,15 @@ section {
                 padding: 0;
             }
         }
+
+        #challenges_goals {
+            flex-direction: column;
+
+            .large_cards {
+                flex: 1;
+                min-height: auto;
+            }
+        }
+        
     }
 }
