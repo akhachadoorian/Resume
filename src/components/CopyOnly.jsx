@@ -1,22 +1,50 @@
 import React from "react";
 
-function CopyOnly({ eyebrow, header, subtext, body, style = "m", id, contain = true }) {
+function CopyOnly({ eyebrow, header, subtext, body, id, contain = true,style = "m", h_tag }) {
+    var header_class = null;
     var header_text = null;
+    
+    if (h_tag == null)  {
+        if (style == "xl") {
+            header_class = "xl_header";
+            header_text = <h2 className={header_class}>{header}</h2>
+        } else if (style == "l") {
+            header_class = "l_header";
+            header_text = <h2 className={header_class}>{header}</h2>
+        }
+        else if (style == "m") {
+            header_class = "m_header";
+            header_text = <h2 className={header_class}>{header}</h2>
+        }
+        else if (style == "s") {
+            header_class = "s_header";
+            header_text = <h2 className={header_class}>{header}</h2>
+        }
+        else if (style == "subtext") {
+            header_class = "subtext">{header};
+            header_text = <h2 className={header_class}>{header}</h2>
+        }
+    }
+    else {
+        if (style == "xl") {
+            header_class = "xl_header";
+        } else if (style == "l") {
+            header_class = "l_header";
+        }
+        else if (style == "m") {
+            header_class = "m_header";
+        }
+        else if (style == "s") {
+            header_class = "s_header";
+        }
+        else if (style == "subtext") {
+            header_class = "subtext">{header};
+        }
+    }
 
-    if (style == "xl") {
-        header_text = <h2 className="xl_header">{header}</h2>;
-    } else if (style == "l") {
-        header_text = <h3 className="l_header">{header}</h3>;
-    }
-    else if (style == "m") {
-        header_text = <h3 className="m_header">{header}</h3>;
-    }
-    else if (style == "s") {
-        header_text = <h4 className="s_header">{header}</h4>;
-    }
-    else if (style == "subtext") {
-        header_text = <h5 className="subtext">{header}</h5>;
-    }
+    
+
+    
 
     return (
         <div className={`copy_only ${contain ? "contain" : null}`} id={id ? `${id}` : null}>

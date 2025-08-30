@@ -112,10 +112,25 @@ section {
     }
     
     .home_page {
+        #name {
+            flex-direction: column;
+            gap: 32px;
+        }
+
         #education {
             .cards {
                 flex-direction: column;
             }
+        }
+
+        #experience {
+            .job_cards {
+                grid-template-columns: [s] 1fr [e] !important;
+            }
+        }
+
+        #case-studies {
+            
         }
     }
 }
