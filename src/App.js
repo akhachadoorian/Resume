@@ -21,18 +21,6 @@ function App() {
   const containerRef = useRef(null);
 
   return (
-    // <LocomotiveScrollProvider
-    //   options={{
-    //     smooth: true,
-    //     smartphone: {
-    //       smooth: true,
-    //     },
-    //     tablet: {
-    //       smooth: true,
-    //     },
-    //   }}
-    //   containerRef={containerRef}
-    // >
       <main data-scroll-container ref={containerRef}>
         <Router basename="/Resume">
           <Navigation />
@@ -43,8 +31,38 @@ function App() {
           {/* <Footer /> */}
         </Router>
       </main>
-    // </LocomotiveScrollProvider>
   );
 }
 
 export default App;
+
+
+// function App() {
+//   const containerRef = useRef(null);
+
+//   return (
+//     // <LocomotiveScrollProvider
+//     //   options={{
+//     //     smooth: true,
+//     //     smartphone: {
+//     //       smooth: true,
+//     //     },
+//     //     tablet: {
+//     //       smooth: true,
+//     //     },
+//     //   }}
+//     //   containerRef={containerRef}
+//     // >
+//       <main data-scroll-container ref={containerRef}>
+//         <Router basename="/Resume">
+//           <Navigation />
+//           <Routes>
+//             <Route path="/" element={<Home />} />
+//             <Route path="/case-studies/smart-fusion" element={<SmartFusion/>} />
+//           </Routes>
+//           {/* <Footer /> */}
+//         </Router>
+//       </main>
+//     // </LocomotiveScrollProvider>
+//   );
+// }
