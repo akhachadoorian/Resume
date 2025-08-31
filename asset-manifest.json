@@ -1,23 +1,30 @@
 {
   "files": {
-    "main.css": "/Resume/static/css/main.2547fb94.css",
-    "main.js": "/Resume/static/js/main.c6da8a78.js",
+    "main.css": "/Resume/static/css/main.71050c58.css",
+    "main.js": "/Resume/static/js/main.999b030f.js",
     "static/js/453.ed3810f9.chunk.js": "/Resume/static/js/453.ed3810f9.chunk.js",
     "static/media/Smartfusion_Homepage.png": "/Resume/static/media/Smartfusion_Homepage.8b0d55c2990519e4a420.png",
     "static/media/Oxford_CardImage.png": "/Resume/static/media/Oxford_CardImage.2b3cdb18a9a3940a0d93.png",
+    "static/media/Admin.png": "/Resume/static/media/Admin.2541768f988d16b319fc.png",
     "static/media/SmartFusion_CardImage.png": "/Resume/static/media/SmartFusion_CardImage.d10f4dab7093d7f3662a.png",
     "static/media/Black Mango Regular.ttf": "/Resume/static/media/Black Mango Regular.93e0b8cb943e082319e4.ttf",
     "static/media/OstrichProper-SemiBold.woff": "/Resume/static/media/OstrichProper-SemiBold.daa00513e18b22703d78.woff",
     "static/media/OstrichProper-Regular.woff": "/Resume/static/media/OstrichProper-Regular.4c988a92cb258729ab1a.woff",
+    "static/media/AdminBanner.png": "/Resume/static/media/AdminBanner.12780b1f3a2d7d1fbc65.png",
     "static/media/ostrich-sans-black.woff": "/Resume/static/media/ostrich-sans-black.eec1ce9a59405a01c3fd.woff",
+    "static/media/Settings.svg": "/Resume/static/media/Settings.c62e7b2a0c04e4f2678fcb1f053f18bc.svg",
+    "static/media/Filter.svg": "/Resume/static/media/Filter.3ab118dbefcf7c59dfbd18725e1f0586.svg",
+    "static/media/PaintDropper.svg": "/Resume/static/media/PaintDropper.a5607697fab3d6d8a0f9e4bdb52e79f0.svg",
+    "static/media/Block.svg": "/Resume/static/media/Block.83c8c535d6b601a9e371aadd5a8ee475.svg",
+    "static/media/Books.svg": "/Resume/static/media/Books.69c7f4afc130018f14c923c04e821d7a.svg",
     "static/media/Right_arrow.svg": "/Resume/static/media/Right_arrow.a74a09d4f7c9b04032d3.svg",
     "index.html": "/Resume/index.html",
-    "main.2547fb94.css.map": "/Resume/static/css/main.2547fb94.css.map",
-    "main.c6da8a78.js.map": "/Resume/static/js/main.c6da8a78.js.map",
+    "main.71050c58.css.map": "/Resume/static/css/main.71050c58.css.map",
+    "main.999b030f.js.map": "/Resume/static/js/main.999b030f.js.map",
     "453.ed3810f9.chunk.js.map": "/Resume/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2547fb94.css",
-    "static/js/main.c6da8a78.js"
+    "static/css/main.71050c58.css",
+    "static/js/main.999b030f.js"
   ]
 }
