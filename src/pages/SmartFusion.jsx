@@ -6,6 +6,7 @@ import {
     c_and_g,
     solution,
     improved_admin_ui,
+    dynamic_color_theme,
     // improved_admin_ui_code
 } from "../data/text/SmartFusion_data";
 import CopyCard from "../components/CopyCard";
@@ -13,11 +14,10 @@ import LargeCards from "../components/LargeCards";
 import CardWithIcon from "../components/CardWithIcon";
 import CodeBlock from "../components/CodeBlock";
 
-
 function SmartFusion({}) {
     return (
         <div className="case_study_inner">
-            <section id="smart_fusion">
+            <section id="smart_fusion" className="with_padding">
                 <CopyOnly
                     style="xl"
                     header={"Smart Fusion"}
@@ -58,7 +58,7 @@ function SmartFusion({}) {
                 </div>
             </section>
 
-            <section id="challenges_goals">
+            <section id="challenges_goals" className="with_padding">
                 <div className="challenges_goals-inner">
                     <LargeCards
                         header={c_and_g[0].title}
@@ -73,7 +73,7 @@ function SmartFusion({}) {
                 </div>
             </section>
 
-            <section id="solution">
+            <section id="solution" className="with_padding">
                 <CopyOnly
                     style="l"
                     header={solution.header}
@@ -101,17 +101,53 @@ function SmartFusion({}) {
                         body={improved_admin_ui.body}
                         // contain={false}
                     />
-                    <CodeBlock 
+                    <CodeBlock
                         code={improved_admin_ui.code}
                         // code={improved_admin_ui_code}
                     />
                 </div>
-                {/* <div className="img_holder">
-                    <img src={improved_admin_ui.image.image} alt={improved_admin_ui.image.alt} />
-                </div> */}
+                <div className="img_holder">
+                    <img
+                        lazy
+                        src={improved_admin_ui.image.image}
+                        alt={improved_admin_ui.image.alt}
+                    />
+                </div>
             </section>
-            
-            {/* <section id=""></section> */}
+
+            <section id="dynamic_color_theme">
+                <CopyOnly
+                    style="l"
+                    eyebrow={dynamic_color_theme.eyebrow}
+                    header={dynamic_color_theme.header}
+                    body={dynamic_color_theme.body}
+                />
+                <div className="dynamic_color_theme-content">
+                    <div className="videos">
+                        <div className="vid_holder">
+                            <video autoPlay loop muted playsInline ref={video => video && (video.playbackRate = 0.75)} >
+                                <source src={dynamic_color_theme.videos[0]}/>
+                            </video>
+                        </div>
+                        <div className="vid_holder">
+                            <video autoPlay loop muted playsInline ref={video => video && (video.playbackRate = 0.75)}>
+                                <source src={dynamic_color_theme.videos[1]}/>
+                            </video>
+                        </div>
+                    </div>
+                    <CopyCard
+                        orientation="top"
+                        header={dynamic_color_theme.card.header}
+                        body={dynamic_color_theme.card.body}
+                    />
+                </div>
+            </section>
+
+            {/* <section style={{padding: "120px 0"}}>
+                <div className="vid_holder">
+                    <img style={{width: "100%"}} src={overview.video}/>
+                </div>
+            </section> */}
         </div>
     );
 }

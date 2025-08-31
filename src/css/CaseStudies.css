@@ -1,6 +1,6 @@
 
 .case_study_inner {
-    section {
+    section.with_padding {
         padding: 120px 60px;
         min-height: 1025px;
     }
@@ -53,6 +53,10 @@
             }
         }
 
+        /* .vid_holder {
+            flex: 1 1 702px;
+        } */
+
         .text {
             flex: 1 1 680px;
 
@@ -103,7 +107,7 @@
         gap: 60px;
 
         .improved_admin_ui-inner {
-            padding: 120px 60px;
+            padding: 120px 60px 0 60px;
 
             display: flex;
             flex-direction: column;
@@ -131,11 +135,47 @@
             }
         }
     }
+
+    #dynamic_color_theme {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        padding: 120px 0px;
+
+        .copy_only {
+            padding: 0 60px;
+        }
+
+        .dynamic_color_theme-content {
+            .videos {
+                display: flex;
+                gap: 7.778vw;
+
+                .vid_holder {
+                    flex: 1 1 664px;
+
+                    overflow: hidden;
+
+                    video {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .copy_card {
+                max-width: 42.639vw;
+                margin: -2% auto 0 auto;
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
 }
 
 @media all and (max-width: 800px)  {
     .case_study_inner {
-        section {
+        section.with_padding {
             padding: 60px 16px;
             min-height: auto;
         }
@@ -163,6 +203,15 @@
                 min-height: auto;
             }
         }
+
+        #improved_admin_ui {
+            .improved_admin_ui-inner {
+                padding: 60px 16px 0 16px;
+            }
+        }
         
+        #dynamic_color_theme {
+
+        }
     }
 }
