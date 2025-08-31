@@ -49,11 +49,13 @@ function CopyOnly({
             className={`copy_only ${contain ? "contain" : null}`}
             id={id ? `${id}` : null}
         >
-            {style != "subtext" && eyebrow ? (
-                <p className="eyebrow">{eyebrow}</p>
-            ) : null}
+            <div className="upper">
+                {style != "subtext" && eyebrow ? (
+                    <p className="eyebrow">{eyebrow}</p>
+                ) : null}
 
-            {header_text}
+                {header_text}
+            </div>
 
             <div className="div_line"></div>
 

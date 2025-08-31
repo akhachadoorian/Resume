@@ -1,0 +1,17 @@
+# Get custom modules and sort them into correct folder
+custom_modules = { 'id' => 'custom-modules', 'text' => 'Custom Modules', 'children' => [] }
+style_modules = { 'id' => 'style-modules', 'text' => 'Style Modules', 'children' => [] }
+
+Caboose::CustomModule.joins(:sites).where("sites.id = ?", site.id).order("custom_modules.sort_order, custom_modules.name").limit(100).each do |cm|
+    view_permission = cm.view_permission_id.blank? ? nil : Caboose::Permission.where(:id => cm.view_permission_id).first
+    if cm.category == "Default" || cm.category.blank?
+    custom_modules['children'] << { 'icon' => cm.icon, 'id' => "custom_module_#{cm.id}"  , 'text' => cm.name   , 'href' => cm.url  , 'modal' => false } if view_permission && user.is_allowed(view_permission.resource, view_permission.action, is_superadmin)
+    else 
+    style_modules['children'] << { 'icon' => cm.icon, 'id' => "custom_module_#{cm.id}"  , 'text' => cm.name   , 'href' => cm.url  , 'modal' => false } if view_permission && user.is_allowed(view_permission.resource, view_permission.action, is_superadmin)
+    end
+end
+
+nav << custom_modules if custom_modules['children'].count > 0
+nav << style_modules if style_modules['children'].count > 0
+
+return nav

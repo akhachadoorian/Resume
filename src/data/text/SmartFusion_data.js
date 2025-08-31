@@ -6,6 +6,9 @@ import Books from "../images/icons/Books.svg";
 import Block from "../images/icons/Block.svg";
 import Settings from "../images/icons/Settings.svg";
 
+import Admin from "../images/case_studies/Admin.png"
+import AdminBanner from "../images/case_studies/AdminBanner.png"
+
 export const overview = {
     image: {
         image: Homepage,
@@ -49,6 +52,15 @@ export const solution = {
     solution_cards: [
         {
             icon: {
+                svg: Settings,
+                alt: "Settings wheel icon",
+            },
+            header: "Improved Admin UI ",
+            body: "The interface was reorganized and refined to support the new style-focused modules, making it easier for editors to manage icons, themes, and other visual settings confidently.",
+            ele_id: "improved_admin_ui",
+        },
+        {
+            icon: {
                 svg: FilterIcon,
                 alt: "3 filter bars icon",
             },
@@ -63,15 +75,6 @@ export const solution = {
             },
             header: "Dynamic Page-Level Color Theme System",
             body: "Editors can assign a specific color palette to any page, with all blocks automatically adapting to match. Developers can define and expand preset palettes, enabling unique page designs without additional CSS work.",
-            // ele_id: "",
-        },
-        {
-            icon: {
-                svg: Settings,
-                alt: "Settings wheel icon",
-            },
-            header: "Improved Admin UI ",
-            body: "The interface was reorganized and refined to support the new style-focused modules, making it easier for editors to manage icons, themes, and other visual settings confidently.",
             // ele_id: "",
         },
         {
@@ -93,4 +96,127 @@ export const solution = {
             // ele_id: "",
         },
     ],
+};
+
+// export const improved_admin_ui_code = [
+// `<pre class="code_group"><code>
+// <span class="comment"># Setup hashes for both types of modules</span>
+// custom_modules = { 
+//     'id' => 'custom-modules', 
+//     'text' => 'Custom Modules', 
+//     'children' => []
+// }
+// style_modules  = { 
+//     'id' => 'style-modules',  
+//     'text' => 'Style Modules',  
+//     'children' => [] 
+// }
+// </code></pre>
+
+// <pre class="code_group"><code>
+// <span class="comment"># Iterate through the site's modules and sort them into the correct hash</span>
+// Caboose::CustomModule.joins(:sites)
+//     .where("sites.id = ?", site.id)
+//     .order("custom_modules.sort_order, custom_modules.name")
+//     .limit(100).each do |cm|
+  
+//   view_permission = cm.view_permission_id.blank? 
+//     ? nil 
+//     : Caboose::Permission.where(:id => cm.view_permission_id).first
+
+//   if cm.category == "Default" || cm.category.blank?
+//     <span class="comment"># Add to custom_modules hash if the user has the required permissions</span>
+//     custom_modules['children'] << {
+//       'icon' => cm.icon,
+//       'id'   => "custom_module_#{cm.id}",
+//       'text' => cm.name,
+//       'href' => cm.url,
+//       'modal'=> false
+//     } if view_permission && 
+//         user.is_allowed(
+//           view_permission.resource, 
+//           view_permission.action, 
+//           is_superadmin
+//         )
+
+//   else
+//     <span class="comment"># Add to style_modules hash if the user has the required permissions</span>
+//     style_modules['children'] << {
+//       'icon' => cm.icon,
+//       'id'   => "custom_module_#{cm.id}",
+//       'text' => cm.name,
+//       'href' => cm.url,
+//       'modal'=> false
+//     } if view_permission && 
+//         user.is_allowed(
+//           view_permission.resource, 
+//           view_permission.action, 
+//           is_superadmin
+//         )
+//   end
+// end
+// </code></pre>
+// <pre class="code_group"><code>
+// nav << custom_modules if custom_modules['children'].count > 0
+// nav << style_modules  if style_modules['children'].count  > 0
+// </code></pre>
+
+// <pre class="code_group"><code>
+// return nav
+// </code></pre>`,
+// ];
+
+export const improved_admin_ui = {
+    eyebrow: "Improved Admin UI",
+    header: "New Style Modules Section",
+    body: "With the addition of these style-focused custom modules, the admin interface was reorganized and improved to make it more intuitive, allowing editors to easily find tools and apply visual changes.",
+    image: {
+        image: AdminBanner,
+        alt: "Screenshot of the Caboose CMS Admin Login Page"
+    },
+    code: `
+<pre class="code_group"><code><span class="comment"># Setup hashes for both types of modules</span>
+custom_modules = { 'id' => 'custom-modules', 'text' => 'Custom Modules', 'children' => [] }
+style_modules  = { 'id' => 'style-modules',  'text' => 'Style Modules',  'children' => [] }
+</code></pre>
+
+<pre class="code_group"><code><span class="comment"># Iterate through the site's modules and sort them into the correct hash</span>
+Caboose::CustomModule.joins(:sites).where("sites.id = ?", site.id)
+  .order("custom_modules.sort_order, custom_modules.name").limit(100).each do |cm|
+  
+  view_permission = cm.view_permission_id.blank? ? nil : Caboose::Permission.where(:id => cm.view_permission_id).first
+
+  if cm.category == "Default" || cm.category.blank?
+    <span class="comment"># Add to custom_modules hash if the user has the required permissions</span>
+    custom_modules['children'] << {
+      'icon' => cm.icon,
+      'id'   => "custom_module_#{cm.id}",
+      'text' => cm.name,
+      'href' => cm.url,
+      'modal'=> false
+    } if view_permission && user.is_allowed(view_permission.resource, view_permission.action, is_superadmin)
+
+  else
+    <span class="comment"># Add to style_modules hash if the user has the required permissions</span>
+    style_modules['children'] << {
+      'icon' => cm.icon,
+      'id'   => "custom_module_#{cm.id}",
+      'text' => cm.name,
+      'href' => cm.url,
+      'modal'=> false
+    } if view_permission && user.is_allowed(view_permission.resource, view_permission.action, is_superadmin)
+  end
+end
+</code></pre>
+
+<pre class="code_group"><code>
+nav << custom_modules if custom_modules['children'].count > 0
+nav << style_modules  if style_modules['children'].count  > 0
+</code></pre>
+
+<pre class="code_group"><code>
+return nav
+</code></pre>` ,
+
+    
 };

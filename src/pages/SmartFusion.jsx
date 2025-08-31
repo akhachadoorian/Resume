@@ -1,10 +1,18 @@
 import React from "react";
 import CopyOnly from "../components/CopyOnly";
 
-import { overview, c_and_g, solution } from "../data/text/SmartFusion_data";
+import {
+    overview,
+    c_and_g,
+    solution,
+    improved_admin_ui,
+    // improved_admin_ui_code
+} from "../data/text/SmartFusion_data";
 import CopyCard from "../components/CopyCard";
 import LargeCards from "../components/LargeCards";
 import CardWithIcon from "../components/CardWithIcon";
+import CodeBlock from "../components/CodeBlock";
+
 
 function SmartFusion({}) {
     return (
@@ -51,16 +59,18 @@ function SmartFusion({}) {
             </section>
 
             <section id="challenges_goals">
-                <LargeCards
-                    header={c_and_g[0].title}
-                    body={c_and_g[0].body}
-                    orientation={c_and_g[0].orientation}
-                />
-                <LargeCards
-                    header={c_and_g[1].title}
-                    body={c_and_g[1].body}
-                    orientation={c_and_g[1].orientation}
-                />
+                <div className="challenges_goals-inner">
+                    <LargeCards
+                        header={c_and_g[0].title}
+                        body={c_and_g[0].body}
+                        orientation={c_and_g[0].orientation}
+                    />
+                    <LargeCards
+                        header={c_and_g[1].title}
+                        body={c_and_g[1].body}
+                        orientation={c_and_g[1].orientation}
+                    />
+                </div>
             </section>
 
             <section id="solution">
@@ -76,11 +86,32 @@ function SmartFusion({}) {
                             icon={s.icon}
                             header={s.header}
                             body={s.body}
-                            // ele_id={s.ele_id}
+                            ele_id={s.ele_id}
                         />
                     ))}
                 </div>
             </section>
+
+            <section id="improved_admin_ui">
+                <div className="improved_admin_ui-inner">
+                    <CopyOnly
+                        style="m"
+                        eyebrow={improved_admin_ui.eyebrow}
+                        header={improved_admin_ui.header}
+                        body={improved_admin_ui.body}
+                        // contain={false}
+                    />
+                    <CodeBlock 
+                        code={improved_admin_ui.code}
+                        // code={improved_admin_ui_code}
+                    />
+                </div>
+                {/* <div className="img_holder">
+                    <img src={improved_admin_ui.image.image} alt={improved_admin_ui.image.alt} />
+                </div> */}
+            </section>
+            
+            {/* <section id=""></section> */}
         </div>
     );
 }

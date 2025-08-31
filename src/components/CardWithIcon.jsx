@@ -7,8 +7,16 @@ function CardWithIcon({ icon, header, body, link, target = "_self", ele_id }) {
     if (link) {
         return (
             <a href={link} target={target} className="card_w_icon">
-                <img className="icon" src={icon.svg} alt={icon.alt} />
-                <h3 className="s_header">{header}</h3>
+                <div className="upper">
+                    <img className="icon" src={icon.svg} alt={icon.alt} />
+                    <h3 className="s_header">
+                        {header}
+
+                        <span className="arrow-wrapper">
+                            <span className="arrow"></span>
+                        </span>
+                    </h3>
+                </div>
                 {isArray ? (
                     <ul
                         className="body"
@@ -24,9 +32,23 @@ function CardWithIcon({ icon, header, body, link, target = "_self", ele_id }) {
         );
     } else if (ele_id) {
         return (
-            <button className="card_w_icon">
-                <img className="icon" src={icon.svg} alt={icon.alt} />
-                <h3 className="s_header">{header}</h3>
+            <a className="card_w_icon" 
+                onClick={() => {
+                const element = document.getElementById(ele_id);
+                element?.scrollIntoView({
+                    behavior: 'smooth'
+                })}}
+            >
+                <div className="upper">
+                    <img className="icon" src={icon.svg} alt={icon.alt} />
+                    <h3 className="s_header">
+                        {header}
+
+                        <span className="arrow-wrapper">
+                            <span className="arrow"></span>
+                        </span>
+                    </h3>
+                </div>
                 {isArray ? (
                     <ul
                         className="body"
@@ -38,14 +60,17 @@ function CardWithIcon({ icon, header, body, link, target = "_self", ele_id }) {
                         dangerouslySetInnerHTML={{ __html: body }}
                     />
                 ) : null}
-            </button>
+            </a>
         );
     }
 
     return (
         <div className="card_w_icon">
-            <img className="icon" src={icon.svg} alt={icon.alt} />
-            <h3 className="s_header">{header}</h3>
+            <div className="upper">
+                <img className="icon" src={icon.svg} alt={icon.alt} />
+                <h3 className="s_header">{header}</h3>
+            </div>
+
             {isArray ? (
                 <ul
                     className="body"
