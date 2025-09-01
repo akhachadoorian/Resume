@@ -90,13 +90,22 @@ ul {
     letter-spacing: 1.28px;
 }
 
-.s_header, h5, h6 {
+.s_header, h5 {
     font-family: "Black Mango";
     font-size: clamp(45px, 3.333vw, 55px);
     font-style: normal;
     font-weight: 400;
     line-height: 110%;
     letter-spacing: 0.96px;
+} 
+
+.xs_header, h6 {
+    font-family: "Black Mango";
+    font-size: clamp(35px, 2.5vw, 45px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.72px;
 }
 
 .subtext {

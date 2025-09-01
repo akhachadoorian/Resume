@@ -7,7 +7,8 @@ import Block from "../images/icons/Block.svg";
 import Settings from "../images/icons/Settings.svg";
 
 import AdminBanner from "../images/case_studies/AdminBanner.png";
-
+import Payroll from "../images/case_studies/Payroll.png"
+import FinancialManagement from "../images/case_studies/FinancialManagement.png"
 
 import HomepageGIF from "../videos/Homepage_GIF.gif"
 import FinancialPage from "../videos/FinancialPage.mp4"
@@ -169,6 +170,16 @@ export const dynamic_color_theme = {
     videos: [
         FinancialPage,
         PayrollPage
+    ],
+    images: [
+        {
+            src: FinancialManagement,
+            alt: "",
+        },
+        {
+            src: Payroll,
+            alt: ""
+        }
     ]
 }
 

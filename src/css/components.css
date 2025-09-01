@@ -422,6 +422,54 @@ a.card_w_icon {
 
 /* /////////////////// */
 
+/* /////////////////// */
+/* Double Image Card */
+/* /////////////////// */
+
+.double_image_card {
+    padding: 32px 24px;
+    background-color: var(--light-black);
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .img_holder {
+        flex: 1 1 422px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text {
+        flex: 1 1 368px;
+
+        h5 {
+            margin-bottom: 16px;
+        }
+    }
+
+    .lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* /////////////////// */
+
 /* ////////////////////////////////////// */
 
 /* /////////////////// */

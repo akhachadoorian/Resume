@@ -13,6 +13,7 @@ import CopyCard from "../components/CopyCard";
 import LargeCards from "../components/LargeCards";
 import CardWithIcon from "../components/CardWithIcon";
 import CodeBlock from "../components/CodeBlock";
+import DoubleImageCard from "../components/DoubleImageCard";
 
 function SmartFusion({}) {
     return (
@@ -115,15 +116,22 @@ function SmartFusion({}) {
                 </div>
             </section>
 
-            <section id="dynamic_color_theme">
+            <section id="dynamic_color_theme" className="with_padding">
                 <CopyOnly
-                    style="l"
+                    style="m"
                     eyebrow={dynamic_color_theme.eyebrow}
                     header={dynamic_color_theme.header}
                     body={dynamic_color_theme.body}
                 />
-                <div className="dynamic_color_theme-content">
-                    <div className="videos">
+                {/* <DoubleImageCard 
+                        style={"right"}
+                        header={"Same Blocks Different Palettes"}
+                        body={"Both the Payroll & HR and Financial Management pages use the same modular blocks. A unique color palette is applied to each through the Dynamic Page-Level Color Theme System, automatically updating all styles so each page has its own look while keeping structure consistent."}
+                        image1={dynamic_color_theme.images[0]}
+                        image2={dynamic_color_theme.images[1]}
+                    /> */}
+                {/* <div className="dynamic_color_theme-content"> */}
+                    {/* <div className="videos">
                         <div className="vid_holder">
                             <video autoPlay loop muted playsInline ref={video => video && (video.playbackRate = 0.75)} >
                                 <source src={dynamic_color_theme.videos[0]}/>
@@ -134,13 +142,14 @@ function SmartFusion({}) {
                                 <source src={dynamic_color_theme.videos[1]}/>
                             </video>
                         </div>
-                    </div>
-                    <CopyCard
+                    </div> */}
+                    
+                    {/* <CopyCard
                         orientation="top"
                         header={dynamic_color_theme.card.header}
                         body={dynamic_color_theme.card.body}
-                    />
-                </div>
+                    /> */}
+                {/* </div> */}
             </section>
 
             {/* <section style={{padding: "120px 0"}}>

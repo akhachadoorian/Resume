@@ -1,6 +1,9 @@
 import SmartFusion_CardImage from "../images/home/SmartFusion_CardImage.png"
 import Oxford_CardImage from "../images/home/Oxford_CardImage.png"
 
+import SmartFusion from "../images/home/SmartFusion.png"
+import Oxford from "../images/home/Oxford.png"
+
 export const basic_info = {
     title: 'Lead Website Developer',
     blurb: 'With a passion for making things pretty, I’m a Full Stack Developer dedicated to creating web experiences that are as beautiful as they are functional.',
@@ -70,6 +73,91 @@ export const experience = [
     }
 ]
 
+export const skills = [
+    {
+        title: 'Languages',
+        body: 'HTML, CSS, JavaScript, TypeScript, Python, Ruby, Java, SQL (PostgreSQL), NoSQL (MongoDB), Liquid'
+    },
+    {
+        title: 'Frameworks & Libraries',
+        body: 'React, Next.js, Node.js, Ruby on Rails',
+    },
+    {
+        title: 'CMS & Platforms',
+        body: 'Payload CMS, Caboose CMS, WordPress, Shopify',
+    },
+    {
+        title: 'Tools & Technologies',
+        body: 'Git, Docker, AWS, Axios, Visual Studio Code, Postico',
+    },
+]
+
+export const case_studies = [
+    // {
+    //     name: "",
+    //     body: "",
+    //     image: {
+    //         image: "",
+    //         alt: "",
+    //     },
+    //     link: {
+    //         slug: "",
+    //         website: "",
+    //     },
+    //     tags: [],
+    // },
+    {
+        name: "Smart Fusion",
+        body: "I built the site and tailored our CMS to their needs — adding features, refining workflows, and ensuring editors could manage content easily for the long term.",
+        image: {
+            image: SmartFusion,
+            alt_text: "Image of Smart Fusion's Home Page"
+        },
+        link: {
+            slug: "/Resume/case-studies/smart-fusion",
+            website: "https://smartfusiongov.com/"
+        },
+        tags: [
+            "Website Development",
+            "New CMS Features",
+            "Full Stack Development",
+            "Workflow Improvements",
+        ],
+    },
+        {
+        name: "City of Oxford",
+        body: "Case Study Coming Soon, but for now, check out their site!",
+        image: {
+            image: Oxford,
+            alt_text: "Image of the City of Oxford's Home Page"
+        },
+        link: {
+            slug: "",
+            website: "https://www.oxfordal.gov/",
+        },
+        tags: [
+            "Website Upgrade",
+            "Workflow Improvements",
+            "Improved User Experience"
+        ],
+    },
+    // {
+    //     name: "Jolly Heating & Air",
+    //     body: "Case Study Coming Soon, but for now, check out their site!",
+    //     image: {
+    //         image: "",
+    //         alt: "",
+    //     },
+    //     link: {
+    //         slug: "",
+    //         website: "",
+    //     },
+    //     tags: [],
+    // },
+]
+
+
+
 
 // export const experience = [
 //     {
@@ -103,67 +191,3 @@ export const experience = [
 //         ]
 //     }
 // ]
-
-export const skills = [
-    {
-        title: 'Languages',
-        body: 'HTML, CSS, JavaScript, TypeScript, Python, Ruby, Java, SQL (PostgreSQL), NoSQL (MongoDB), Liquid'
-    },
-    {
-        title: 'Frameworks & Libraries',
-        body: 'React, Next.js, Node.js, Ruby on Rails',
-    },
-    {
-        title: 'CMS & Platforms',
-        body: 'Payload CMS, Caboose CMS, WordPress, Shopify',
-    },
-    {
-        title: 'Tools & Technologies',
-        body: 'Git, Docker, AWS, Axios, Visual Studio Code, Postico',
-    },
-]
-
-export const case_studies = [
-    {
-        name: "Smart Fusion",
-        tags: [
-            "Website Development",
-            "New CMS Features",
-            "Full Stack Development",
-            "Workflow Improvements",
-        ],
-        image: {
-            image: SmartFusion_CardImage,
-            alt_text: "Image of Smart Fusion's Home Page"
-        },
-        body: "Smart Fusion partnered with us to create a modern, scalable website for their government financial software brand. I built the site and tailored our CMS to their needs — adding features, refining workflows, and ensuring editors could manage content easily for the long term.",
-        link: "/Resume/case-studies/smart-fusion",
-        target: "_self",
-    },
-    {
-        name: "City of Oxford",
-        tags: [
-            "Website Upgrade",
-            "Workflow Improvements",
-            "Improved User Experience"
-        ],
-        image: {
-            image: Oxford_CardImage,
-            alt_text: "Image of the City of Oxford's Home Page"
-        },
-        body: "Case Study Coming Soon, but for now, check out their site!",
-        link: "https://www.oxfordal.gov/",
-        target: "_blank",
-    },
-    // {
-    //     name: "",
-    //     tags: [
-    //     ],
-    //     image: {
-    //         image: ,
-    //         alt_text: ""
-    //     },
-    //     body: "",
-    //     link: ""
-    // },
-]
