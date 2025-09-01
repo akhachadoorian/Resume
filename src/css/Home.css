@@ -129,7 +129,7 @@
             .tabs {
                 &.autoplay_paused {
                     .autoplay_line {
-                        .inner_line {
+                        .progress_bar {
                             width: 0% !important;
                             transition: none !important; 
                         }
@@ -164,10 +164,10 @@
                         height: 2px;
                         background-color: var(--white);
 
-                        .inner_line {
+                        .progress_bar {
                             width: 0%;
                             height: 2px;
-                            background-color: var(--code-black);
+                            background-color: var(--gray);
                         }
                     }
 
@@ -216,7 +216,7 @@
 
                     &.active {
                         .autoplay_line {
-                            .inner_line {
+                            .progress_bar {
                                 width: 100%;
                                 transition: all linear 5s;
                             }

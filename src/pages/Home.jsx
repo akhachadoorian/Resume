@@ -1,114 +1,209 @@
-import React, { useRef, useState, useEffect, useMemo } from "react";
+import { useEffect, useRef, useState } from "react";
 
-//#region Swiper Imports
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/effect-fade";
-
-//#endregion 
-
-//#region Data Imports
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import {
     basic_info,
+    case_studies,
     education,
     experience,
     skills,
-    case_studies,
 } from "../data/text/Home_data";
 
-//#endregion 
-
-//#region Component Imports
-
+import Card from "../components/Card";
+import CopyCard from "../components/CopyCard";
+import CopyOnly from "../components/CopyOnly";
 import HeaderWithLine from "../components/HeaderWithLine";
 import Socials from "../components/Socials";
-import Card from "../components/Card";
-import CopyOnly from "../components/CopyOnly";
-import CopyCard from "../components/CopyCard";
+
+//#region Helper Functions
+
+//#region SlideToggle Functions
+/**
+ * Expands an element by setting max-height and opacity.
+ * Supposed to replicate the jQuery slideOut() function.
+ *
+ * @param {HTMLElement|null} el The DOM element to expand
+ * @returns {void}
+ *
+ * @description
+ *  This function first checks to make sure their was a valid DOM element passed to the function.
+ *  Then it calculates and sets the element's maximum height based on the element's scroll height.
+ *  Finally, the element's opacity is set to 1.
+ */
+function expand(el) {
+    if (!el) return;
+
+    el.style.maxHeight = el.scrollHeight + "px";
+    el.style.opacity = 1;
+}
+
+/**
+ * Collapses an element by setting max-height and opacity.
+ * Supposed to replicate the jQuery slideOut() function.
+ *
+ * @param {HTMLElement|null} el The DOM element to collapse
+ * @returns {void}
+ *
+ * @description
+ *  This function first checks to make sure their was a valid DOM element passed to the function.
+ *  Then, the element's max height and opacity are set to 0.
+ */
+function collapse(el) {
+    if (!el) return;
+
+    el.style.maxHeight = "0px";
+    el.style.opacity = 0;
+}
 
 //#endregion
 
+//#region Autoplay Progress Bar Functions
+/**
+ * Reset all the progress bars width, transition, and flushing any pending style changes.
+ *
+ * @param {{ current: (HTMLElement|null)[] }} progressRefs reference array to .progress_bar elements
+ * @returns {void}
+ *
+ */
+function resetAllBars(progressRefs) {
+    progressRefs.current.forEach((el) => {
+        if (!el) return;
 
+        el.style.transition = "none"; // Remove any existing transition
+        el.style.width = "0%"; // Reset width
+        void el.offsetHeight; // Flush any pending style changes
+        el.style.transition = `width 5000ms linear`; // Reapply transition
+    });
+}
+
+/**
+ * Reset progress bar and start animation/sync for active bar.
+ *
+ * @param {{ current: (HTMLElement|null)[] }} progressRefs reference array to .progress_bar elements
+ * @param {number} idx index of active slide/tab
+ * @returns {void}
+ */
+function syncProgress(progressRefs, idx) {
+    // Reset
+    resetAllBars(progressRefs);
+
+    const el = progressRefs.current[idx];
+    if (!el) return;
+
+    el.style.width = "0%";
+    requestAnimationFrame(() => {
+        el.style.width = "100%";
+    });
+}
+
+/**
+ * Activate progress bar animation for the idx slide.
+ *
+ * @param {Swiper|null} swiper reference to swiper instance
+ * @param {{ current: (HTMLElement|null)[] }} progressRefs reference array to .progress_bar elements
+ * @param {number} idx index of active slide/tab
+ * @returns {void}
+ */
+function activateProgress(swiperRef, progressRefs, idx) {
+    const s = swiperRef.current;
+    if (s) {
+        s.slideTo(idx);
+        syncProgress(progressRefs, idx);
+    }
+}
+
+//#endregion
+//#endregion
+
+/**
+ * Home Page Component
+ * @component
+ *
+ * @description
+ *  The `Home` component is the main landing page for the resume/portfolio.
+ *  It displays sections for:
+ *      - Name and social links
+ *      - Education history
+ *      - Work experience
+ *      - Skills & qualifications
+ *      - Case studies/projects (with a Swiper-powered slideshow and progress bar sync)
+ *
+ * This component integrates `Swiper.js` with autoplay and fade transitions,
+ * and provides interactive tabs that expand/collapse descriptions and
+ * synchronize with the active Swiper slide.
+ *
+ *
+ * @returns {JSX.Element} Rendered Home Page Layout
+ */
 function Home({}) {
+    // TODO: Remove this after adding functionality for more jobs
     var curr_job = experience[0];
 
-    const [active, setActive] = useState(0);
+    //#region useState and useRef Variables
+
+    /**
+     * Tracks the currently active index (tab/slide).
+     * Used to sync between the left-hand project tabs and the Swiper instance.
+     *
+     * @type {[number, function]}
+     */
+    const [active, setActive] = useState(0); //
+
+    /**
+     * Reference to the Swiper instance
+     *
+     * @type {React.MutableRefObject<Swiper | null>}
+     */
     const swiperRef = useRef(null);
+
+    /**
+     * Reference to all expandable body elements in the Project tabs.
+     * Each entry corresponds to a tab’s `.body` div.
+     *
+     * @type {React.MutableRefObject<(HTMLElement | null)[]>}
+     */
     const bodyRefs = useRef([]);
+
+    /**
+     * References to progress bar elements for each project tab.
+     * Each entry corresponds to a `.progress_bar` div inside a tab.
+     *
+     * @type {React.MutableRefObject<(HTMLElement | null)[]>}
+     */
     const progressRefs = useRef([]);
 
+    //#endregion
+
+    /**
+     * Syncs the Swiper instance and expanded/collapsed tab bodies
+     * whenever the `active` index changes.
+     *
+     * - Calls `s.slideTo(active)` to ensure Swiper matches the active index.
+     * - Expands the `.body` for the active tab and collapses all others.
+     *
+     * @effect Runs whenever `active` changes.
+     */
     useEffect(() => {
         const s = swiperRef.current;
         if (!s) return;
+
         s.slideTo(active);
         bodyRefs.current.forEach((el, i) =>
             i === active ? expand(el) : collapse(el)
         );
     }, [active]);
 
-    const resetAll = (durationMs) => {
-        progressRefs.current.forEach((el) => {
-            if (!el) return;
-            el.style.setProperty("--progress-duration", `${durationMs}ms`);
-            el.style.transition = "none";
-            el.style.width = "0%";
-            // force reflow so next change animates
-            void el.offsetHeight;
-            el.style.transition = `width ${durationMs}ms linear`;
-        });
-    };
-
-    const start = (idx, durationMs) => {
-        const el = progressRefs.current[idx];
-        if (!el) return;
-        // ensure it starts from 0 on this frame, then animate next frame
-        el.style.width = "0%";
-        requestAnimationFrame(() => {
-            el.style.width = "100%";
-        });
-    };
-
-    const activate = (idx) => {
-        if (active === idx) return;
-        setActive(idx);
-        const s = swiperRef.current;
-        if (s) {
-            s.slideTo(idx);
-            syncProgress(idx, s);
-        }
-    };
-
-    const syncProgress = (idx, s) => {
-        const delay = s?.params?.autoplay?.delay ?? 5000;
-        resetAll(delay);
-        start(idx, delay);
-    };
-
-    const expand = (el) => {
-        if (!el) return;
-        el.style.maxHeight = el.scrollHeight + "px";
-        el.style.opacity = 1;
-    };
-    const collapse = (el) => {
-        if (!el) return;
-        el.style.maxHeight = "0px";
-        el.style.opacity = 0;
-    };
-
-    const isTouch = useMemo(
-        () =>
-            typeof window !== "undefined" &&
-            matchMedia("(pointer: coarse)").matches,
-        []
-    );
-
     return (
         <div className="home_page" id="home">
+            {/* ======================
+                Hero Section
+            ====================== */}
             <section id="name">
                 <HeaderWithLine
                     header_line_1={"Alex"}
@@ -120,6 +215,9 @@ function Home({}) {
                 <Socials socials={basic_info.socials} />
             </section>
 
+            {/* ======================
+
+            ====================== */}
             <section id="education">
                 <CopyOnly header={"Education"} style={"l"} />
                 <div className="cards">
@@ -136,6 +234,9 @@ function Home({}) {
                 </div>
             </section>
 
+            {/* ======================
+                
+            ====================== */}
             <section id="experience">
                 <CopyOnly
                     header={"Work Experience"}
@@ -143,7 +244,7 @@ function Home({}) {
                     id={"work_experience"}
                     // contain={false}
                 />
-
+                {/* TODO: Fix for more jobs */}
                 <div className="jobs">
                     <div className="job">
                         <CopyOnly
@@ -167,6 +268,9 @@ function Home({}) {
                 </div>
             </section>
 
+            {/* ======================
+                
+            ====================== */}
             <section id="skills">
                 <CopyOnly header={"Skills & Qualification"} style={"l"} />
 
@@ -180,6 +284,9 @@ function Home({}) {
                 </div>
             </section>
 
+            {/* ======================
+                
+            ====================== */}
             <section id="case_studies_v2">
                 <div className="left">
                     <h2 className="l_header">Projects</h2>
@@ -191,17 +298,23 @@ function Home({}) {
                                     active === idx ? "active" : ""
                                 }`}
                                 onMouseEnter={() => {
-                                    document.querySelector(".tabs")?.classList.add("autoplay_paused");
+                                    document
+                                        .querySelector(".tabs")
+                                        ?.classList.add("autoplay_paused");
                                     swiperRef.current?.autoplay?.stop();
-                                    activate(idx);
+                                    setActive(idx);
+                                    activateProgress(
+                                        swiperRef,
+                                        progressRefs,
+                                        idx
+                                    );
                                 }}
                                 onMouseLeave={() => {
-                                    document.querySelector(".tabs")?.classList.remove("autoplay_paused");
+                                    document
+                                        .querySelector(".tabs")
+                                        ?.classList.remove("autoplay_paused");
                                     swiperRef.current?.autoplay?.start();
-                                    
-                                }
-                                    
-                                }
+                                }}
                                 href={
                                     cs.link.slug && cs.link.slug != ""
                                         ? cs.link.slug
@@ -228,7 +341,7 @@ function Home({}) {
 
                                 <div className="autoplay_line">
                                     <div
-                                        className="inner_line"
+                                        className="progress_bar"
                                         ref={(el) =>
                                             (progressRefs.current[idx] = el)
                                         }
@@ -254,7 +367,7 @@ function Home({}) {
                             );
                             setActive(s.activeIndex);
 
-                            syncProgress(s.activeIndex, s);
+                            syncProgress(progressRefs, s.activeIndex);
 
                             // IntersectionObserver — set up ONCE
                             const el = s.el;
@@ -274,7 +387,7 @@ function Home({}) {
                         }}
                         onSlideChange={(s) => {
                             setActive(s.activeIndex);
-                            syncProgress(s.activeIndex, s);
+                            syncProgress(progressRefs, s.activeIndex);
                         }}
                         autoplay={{
                             delay: 5000, // 5s per slide
@@ -300,6 +413,12 @@ function Home({}) {
 
 export default Home;
 
+//#region Depreciated Code
+
+//////////////////////////
+// Case Studies Version 1
+//////////////////////////
+
 /* 
 <section id="case_studies_v1">
     <CopyOnly
@@ -322,3 +441,11 @@ export default Home;
     </div>
 </section> 
 */
+
+//////////////////////////
+
+//#endregion
+
+
+
+
