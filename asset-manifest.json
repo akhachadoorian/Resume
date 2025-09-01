@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/Resume/static/css/main.5d128cfb.css",
-    "main.js": "/Resume/static/js/main.999b030f.js",
+    "main.css": "/Resume/static/css/main.bf198ce1.css",
+    "main.js": "/Resume/static/js/main.ede1b081.js",
     "static/js/453.ed3810f9.chunk.js": "/Resume/static/js/453.ed3810f9.chunk.js",
+    "static/media/Homepage_GIF.gif": "/Resume/static/media/Homepage_GIF.92229ad635222fc5c9e5.gif",
+    "static/media/FinancialPage.mp4": "/Resume/static/media/FinancialPage.7f1a185723edc260993b.mp4",
+    "static/media/PayrollPage.mp4": "/Resume/static/media/PayrollPage.85e068e1bb4a151f40d5.mp4",
+    "static/media/Oxford.png": "/Resume/static/media/Oxford.c2f83a180014c0197d94.png",
+    "static/media/SmartFusion.png": "/Resume/static/media/SmartFusion.8b0d55c2990519e4a420.png",
     "static/media/Smartfusion_Homepage.png": "/Resume/static/media/Smartfusion_Homepage.8b0d55c2990519e4a420.png",
     "static/media/Oxford_CardImage.png": "/Resume/static/media/Oxford_CardImage.2b3cdb18a9a3940a0d93.png",
-    "static/media/Admin.png": "/Resume/static/media/Admin.2541768f988d16b319fc.png",
+    "static/media/FinancialManagement.png": "/Resume/static/media/FinancialManagement.ff6d5b5f6c28c1e42d2c.png",
+    "static/media/Payroll.png": "/Resume/static/media/Payroll.9fc2e1568ecf67b4e88d.png",
     "static/media/SmartFusion_CardImage.png": "/Resume/static/media/SmartFusion_CardImage.d10f4dab7093d7f3662a.png",
     "static/media/Black Mango Regular.ttf": "/Resume/static/media/Black Mango Regular.93e0b8cb943e082319e4.ttf",
+    "static/media/AdminBanner.png": "/Resume/static/media/AdminBanner.10897815a213ff83b3a6.png",
     "static/media/OstrichProper-SemiBold.woff": "/Resume/static/media/OstrichProper-SemiBold.daa00513e18b22703d78.woff",
     "static/media/OstrichProper-Regular.woff": "/Resume/static/media/OstrichProper-Regular.4c988a92cb258729ab1a.woff",
-    "static/media/AdminBanner.png": "/Resume/static/media/AdminBanner.12780b1f3a2d7d1fbc65.png",
     "static/media/ostrich-sans-black.woff": "/Resume/static/media/ostrich-sans-black.eec1ce9a59405a01c3fd.woff",
     "static/media/Settings.svg": "/Resume/static/media/Settings.c62e7b2a0c04e4f2678fcb1f053f18bc.svg",
     "static/media/Filter.svg": "/Resume/static/media/Filter.3ab118dbefcf7c59dfbd18725e1f0586.svg",
@@ -19,12 +25,12 @@
     "static/media/Books.svg": "/Resume/static/media/Books.69c7f4afc130018f14c923c04e821d7a.svg",
     "static/media/Right_arrow.svg": "/Resume/static/media/Right_arrow.a74a09d4f7c9b04032d3.svg",
     "index.html": "/Resume/index.html",
-    "main.5d128cfb.css.map": "/Resume/static/css/main.5d128cfb.css.map",
-    "main.999b030f.js.map": "/Resume/static/js/main.999b030f.js.map",
+    "main.bf198ce1.css.map": "/Resume/static/css/main.bf198ce1.css.map",
+    "main.ede1b081.js.map": "/Resume/static/js/main.ede1b081.js.map",
     "453.ed3810f9.chunk.js.map": "/Resume/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d128cfb.css",
-    "static/js/main.999b030f.js"
+    "static/css/main.bf198ce1.css",
+    "static/js/main.ede1b081.js"
   ]
 }
