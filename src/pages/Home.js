@@ -1,7 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useMemo } from "react";
 // import Swiper from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, EffectFade } from "swiper/modules";
+import { Navigation, Pagination, EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -27,6 +27,7 @@ function Home({}) {
     const [active, setActive] = useState(0);
     const swiperRef = useRef(null);
     const bodyRefs = useRef([]);
+    const progressRefs = useRef([]);
 
     useEffect(() => {
         const s = swiperRef.current;
@@ -36,6 +37,44 @@ function Home({}) {
             i === active ? expand(el) : collapse(el)
         );
     }, [active]);
+
+    const resetAll = (durationMs) => {
+        progressRefs.current.forEach((el) => {
+            if (!el) return;
+            el.style.setProperty("--progress-duration", `${durationMs}ms`);
+            el.style.transition = "none";
+            el.style.width = "0%";
+            // force reflow so next change animates
+            void el.offsetHeight;
+            el.style.transition = `width ${durationMs}ms linear`;
+        });
+    };
+
+    const start = (idx, durationMs) => {
+        const el = progressRefs.current[idx];
+        if (!el) return;
+        // ensure it starts from 0 on this frame, then animate next frame
+        el.style.width = "0%";
+        requestAnimationFrame(() => {
+            el.style.width = "100%";
+        });
+    };
+
+    const activate = (idx) => {
+        if (active === idx) return;
+        setActive(idx);
+        const s = swiperRef.current;
+        if (s) {
+            s.slideTo(idx);
+            syncProgress(idx, s);
+        }
+    };
+
+    const syncProgress = (idx, s) => {
+        const delay = s?.params?.autoplay?.delay ?? 5000;
+        resetAll(delay);
+        start(idx, delay);
+    };
 
     const expand = (el) => {
         if (!el) return;
@@ -48,15 +87,12 @@ function Home({}) {
         el.style.opacity = 0;
     };
 
-    //     const hoverTimer = useRef(null);
-
-    // const handleHover = (idx) => {
-    //   if (active === idx) return;              // no thrash if same tab
-    //   clearTimeout(hoverTimer.current);
-    //   hoverTimer.current = setTimeout(() => setActive(idx), 120);
-    // };
-
-    // const cancelHover = () => clearTimeout(hoverTimer.current);
+    const isTouch = useMemo(
+        () =>
+            typeof window !== "undefined" &&
+            matchMedia("(pointer: coarse)").matches,
+        []
+    );
 
     return (
         <div className="home_page" id="home">
@@ -141,7 +177,18 @@ function Home({}) {
                                 className={`tab ${
                                     active === idx ? "active" : ""
                                 }`}
-                                onMouseEnter={() => setActive(idx)}
+                                onMouseEnter={() => {
+                                    document.querySelector(".tabs")?.classList.add("autoplay_paused");
+                                    swiperRef.current?.autoplay?.stop();
+                                    activate(idx);
+                                }}
+                                onMouseLeave={() => {
+                                    document.querySelector(".tabs")?.classList.remove("autoplay_paused");
+                                    swiperRef.current?.autoplay?.start();
+                                    
+                                }
+                                    
+                                }
                                 href={
                                     cs.link.slug && cs.link.slug != ""
                                         ? cs.link.slug
@@ -165,25 +212,61 @@ function Home({}) {
                                 >
                                     {cs.body}
                                 </div>
+
+                                <div className="autoplay_line">
+                                    <div
+                                        className="inner_line"
+                                        ref={(el) =>
+                                            (progressRefs.current[idx] = el)
+                                        }
+                                    ></div>
+                                </div>
                             </a>
                         ))}
                     </div>
                 </div>
                 <div className="right">
                     <Swiper
-                        modules={[Navigation, Pagination, EffectFade]}
+                        modules={[Navigation, Pagination, EffectFade, Autoplay]}
                         effect="fade"
                         fadeEffect={{ crossFade: true }}
                         slidesPerView={1}
                         spaceBetween={0}
                         onSwiper={(s) => {
                             swiperRef.current = s;
+
+                            // Setup bodies
                             bodyRefs.current.forEach((el, i) =>
                                 i === s.activeIndex ? expand(el) : collapse(el)
                             );
                             setActive(s.activeIndex);
+
+                            syncProgress(s.activeIndex, s);
+
+                            // IntersectionObserver — set up ONCE
+                            const el = s.el;
+                            const io = new IntersectionObserver(
+                                ([entry]) => {
+                                    if (!swiperRef.current?.autoplay) return;
+                                    entry.isIntersecting
+                                        ? swiperRef.current.autoplay.start()
+                                        : swiperRef.current.autoplay.stop();
+                                },
+                                { threshold: 0.25 }
+                            );
+                            io.observe(el);
+
+                            // store for cleanup when unmounting
+                            s.on("destroy", () => io.disconnect());
                         }}
-                        onSlideChange={(s) => setActive(s.activeIndex)}
+                        onSlideChange={(s) => {
+                            setActive(s.activeIndex);
+                            syncProgress(s.activeIndex, s);
+                        }}
+                        autoplay={{
+                            delay: 5000, // 5s per slide
+                            disableOnInteraction: false,
+                        }}
                     >
                         {case_studies.map((cs, idx) => (
                             <SwiperSlide key={idx}>
@@ -198,29 +281,31 @@ function Home({}) {
                     </Swiper>
                 </div>
             </section>
-
-            {/* <section id="case_studies_v1">
-                <CopyOnly
-                    header={"Case Studies"}
-                    style={"l"}
-                />
-                
-                <div className="study_cards">
-                    {case_studies.map((cs, idx) => (
-                        <CardWithImage 
-                            key={idx}
-                            header={cs.name}
-                            tags={cs.tags}
-                            image={cs.image}
-                            body={cs.body}
-                            link={cs.link}
-                            target={cs.target}
-                        />
-                    ))}
-                </div>
-            </section> */}
         </div>
     );
 }
 
 export default Home;
+
+/* 
+<section id="case_studies_v1">
+    <CopyOnly
+        header={"Case Studies"}
+        style={"l"}
+    />
+    
+    <div className="study_cards">
+        {case_studies.map((cs, idx) => (
+            <CardWithImage 
+                key={idx}
+                header={cs.name}
+                tags={cs.tags}
+                image={cs.image}
+                body={cs.body}
+                link={cs.link}
+                target={cs.target}
+            />
+        ))}
+    </div>
+</section> 
+*/
