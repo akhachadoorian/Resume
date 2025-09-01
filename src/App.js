@@ -1,19 +1,19 @@
 // import logo from './logo.svg';
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useRef } from "react";
+import { useRef } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import "./css/App.css";
 import "./css/components.css";
 import "./css/general.css";
-import "./css/Home.css";
+import "./css/Home.scss";
 // import "./css/Home_old.css";
 import "./css/CaseStudies.css";
 
 // import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 // import "locomotive-scroll/dist/locomotive-scroll.css";
 
-import Navigation from "./components/global/Navigation"
+import Navigation from "./components/global/Navigation";
 import Home from "./pages/Home";
 import SmartFusion from "./pages/SmartFusion";
 

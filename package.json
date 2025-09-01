@@ -47,7 +47,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "sass": "^1.91.0"
   },
   "prettier.printWidth": 120
 }

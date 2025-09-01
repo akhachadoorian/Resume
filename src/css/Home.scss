@@ -1,16 +1,65 @@
+/* ===========================================================================
+    File: Home.css
+    Purpose: Styles for homepage sections
+        - Name
+        - Education
+        - Experience
+        - Skills
+        - Case Studies (V1 & V2)
+
+    Notes:
+    - Root properties are defined in general.css file (ex: --light-black)
+    - Property order guideline per block:
+        1) Layout (display, position, flex/grid)
+        2) Box (gap, padding, margin, size)
+        3) Typography (font, text- styles)
+        4) Visual (background, border, effects)
+        5) State/Child modifiers (&.active, &:hover)
+
+===========================================================================*/
+
 .home_page {
+    //#region Shared Styling
+
     section {
         padding: 120px 60px;
+
+        @media all and (max-width: 800px) {
+            padding: 60px 16px;
+        }
     }
 
-    #name {
-        min-height: 100vh;
+    //#endregion
 
+    //#region Name (Hero)
+
+    #name {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 3vw;
+
+        min-height: 100vh;
+
+        @media all and (max-width: 1000px) {
+            min-height: auto;
+
+            .header_with_line {
+                h1 {
+                    font-size: clamp(30px, 9vw, 60px) !important;
+                }
+            }
+        }
+
+        @media all and (max-width: 800px) {
+            flex-direction: column;
+            gap: 32px;
+        }
     }
+
+    //#endregion
+
+    //#region Education
 
     #education {
         display: flex;
@@ -23,38 +72,44 @@
 
             width: 100%;
 
+            @media all and (max-width: 800px) {
+                flex-direction: column;
+            }
+
             .card {
                 flex: 1;
             }
         }
     }
 
+    //#endregion
+
+    //#region Experience
+
     #experience {
         display: flex;
         flex-direction: column;
         gap: 60px;
 
-        /* #work_experience {
-            text-align: center;
-
-            .div_line {
-                display: none;
-            }
-        } */
-
         .jobs {
             .job {
                 .job_cards {
-                    margin-top: 40px;
-
-                    /* display: flex; */
                     display: grid;
                     grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
                     gap: 30px;
+
+                    margin-top: 40px;
+
+                    @media all and (max-width: 800px) {
+                        grid-template-columns: [s] 1fr [e] !important;
+                    }
                 }
             }
         }
     }
+    //#endregion
+
+    //#region Skills
 
     #skills {
         display: flex;
@@ -65,6 +120,11 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 0px;
+
+            @media all and (max-width: 1000px) {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0 16px;
+            }
 
             .box_unit {
                 padding: 32px 24px;
@@ -85,15 +145,25 @@
                     border-top: 3px solid var(--Blacks-Lighter-Black, #282828);
                 }
 
-                /* p {
-                    font-size: clamp(20px, 1.389vw, 25px);
-                    font-family: Ostrich Sans;
-                    letter-spacing: 2.8px;
-                    text-transform: uppercase;
-                } */
+                @media all and (max-width: 1000px) {
+                    min-height: 166px;
+                    border-top: none !important;
+                    border-right: none !important;
+
+                    &:not(:last-of-type) {
+                        border-bottom: 3px solid var(--Blacks-Lighter-Black, #282828);
+                    }
+
+                    p {
+                        font-size: clamp(16px, 4.267vw, 20px);
+                    }
+                }
             }
         }
     }
+    //#endregion
+
+    //#region Case Studies Version 1
 
     #case_studies_v1 {
         display: flex;
@@ -107,10 +177,18 @@
         }
     }
 
+    //#endregion
+
+    //#region Case Studies Version 2
+
     #case_studies_v2 {
         padding: 0;
 
         display: flex;
+
+        @media all and (max-width: 800px) {
+            flex-direction: column;
+        }
 
         .left {
             flex: 1 1 742px;
@@ -123,28 +201,28 @@
             flex-direction: column;
             gap: 60px;
 
+            @media all and (max-width: 800px) {
+                flex: 1;
+                padding: 48px 16px;
+            }
+
             .tabs {
                 &.autoplay_paused {
                     .autoplay_line {
                         .progress_bar {
                             width: 0% !important;
-                            transition: none !important; 
+                            transition: none !important;
                         }
                     }
                 }
 
                 .tab {
-                    /* display: block; */
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
+
                     text-decoration: none;
                     padding: 16px;
-                    /* border-top: 2px solid var(--white); */
-
-                    &:last-of-type {
-                        /* border-bottom: 2px solid var(--white); */
-                    }
 
                     &:hover {
                         p {
@@ -185,7 +263,7 @@
                                 width: 25px;
                                 height: 25px;
                                 aspect-ratio: 1/1;
-                                background-image: url("/src/data//images/Right_arrow.svg");
+                                background-image: url("../data//images/Right_arrow.svg");
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 background-size: contain;
@@ -197,11 +275,6 @@
                     }
 
                     .body {
-                        /* display: none; */
-                        /* margin-top: 16px; */
-
-                        /* height: 0; */
-                        /* overflow: hidden; */
                         pointer-events: none;
                         max-height: 0px;
                         opacity: 0;
@@ -223,8 +296,6 @@
                             max-height: none;
                             opacity: 1;
                             pointer-events: auto;
-                            /* display: block; */
-                            /* height: auto; */
                         }
                     }
                 }
@@ -234,18 +305,21 @@
         .right {
             flex: 0 0 50.069vw;
 
+            @media all and (max-width: 800px) {
+                flex: 1;
+            }
+
             .swiper {
                 max-width: 50.069vw;
+
+                @media all and (max-width: 800px) {
+                    max-width: none;
+                }
             }
 
             .img_holder {
                 overflow: hidden;
                 max-height: 850px;
-                /* display: none; */
-
-                &.active {
-                    /* display: block; */
-                }
 
                 img {
                     width: 100%;
@@ -253,86 +327,90 @@
             }
         }
     }
+
+    //#endregion
 }
 
-@media all and (max-width: 800px) {
-    .home_page {
-        section {
-            padding: 60px 16px;
-        }
+//#region Depreciated Code
+// @media all and (max-width: 800px) {
+//     .home_page {
+//         // section {
+//         //     padding: 60px 16px;
+//         // }
 
-        #name {
-            flex-direction: column;
-            gap: 32px;
-        }
+//         // #name {
+//         //     flex-direction: column;
+//         //     gap: 32px;
+//         // }
 
-        #education {
-            .cards {
-                flex-direction: column;
-            }
-        }
+//         // #education {
+//         //     .cards {
+//         //         flex-direction: column;
+//         //     }
+//         // }
 
-        #experience {
-            .job_cards {
-                grid-template-columns: [s] 1fr [e] !important;
-            }
-        }
+//         // #experience {
+//         //     .job_cards {
+//         //         grid-template-columns: [s] 1fr [e] !important;
+//         //     }
+//         // }
 
-        #case_studies_v2 {
-            flex-direction: column;
+//         // #case_studies_v2 {
+//         //     flex-direction: column;
 
-            .left {
-                flex: 1;
-                padding: 48px 16px;
+//         //     .left {
+//         //         flex: 1;
+//         //         padding: 48px 16px;
 
-                .tabs {
-                    /* display: flex; */
-                }
-            }
+//         //         .tabs {
+//         //             /* display: flex; */
+//         //         }
+//         //     }
 
-            .right {
-                flex: 1;
+//         //     // .right {
+//         //     //     flex: 1;
 
-                .swiper {
-                    max-width: none;
-                }
-            }
-        }
-    }
-}
+//         //     //     .swiper {
+//         //     //         max-width: none;
+//         //     //     }
+//         //     // }
+//         // }
+//     }
+// }
 
-@media all and (max-width: 1000px) {
-    .home_page {
-        #name {
-            min-height: auto;
+// @media all and (max-width: 1000px) {
+//     .home_page {
+//         // #name {
+//         //     min-height: auto;
 
-            .header_with_line {
-                h1 {
-                    font-size: clamp(30px, 9vw, 60px) !important;
-                }
-            }
-        }
+//         //     .header_with_line {
+//         //         h1 {
+//         //             font-size: clamp(30px, 9vw, 60px) !important;
+//         //         }
+//         //     }
+//         // }
 
-        #skills {
-            .skill_box {
-                grid-template-columns: repeat(1, 1fr);
-                padding: 0 16px;
+//         // #skills {
+//         //     .skill_box {
+//         //         grid-template-columns: repeat(1, 1fr);
+//         //         padding: 0 16px;
 
-                .box_unit {
-                    min-height: 166px;
-                    border-top: none !important;
-                    border-right: none !important;
+//         //         .box_unit {
+//         //             min-height: 166px;
+//         //             border-top: none !important;
+//         //             border-right: none !important;
 
-                    &:not(:last-of-type) {
-                        border-bottom: 3px solid
-                            var(--Blacks-Lighter-Black, #282828);
-                    }
+//         //             &:not(:last-of-type) {
+//         //                 border-bottom: 3px solid
+//         //                 var(--Blacks-Lighter-Black, #282828);
+//         //             }
 
-                    p {
-                        font-size: clamp(16px, 4.267vw, 20px);
-                    }
-                }
-            }
-        }
-    }
-}
+//         //             p {
+//         //                 font-size: clamp(16px, 4.267vw, 20px);
+//         //             }
+//         //         }
+//         //     }
+//         // }
+//     }
+// }
+//#endregion
