@@ -1,5 +1,7 @@
 import React, { useRef, useState, useEffect, useMemo } from "react";
-// import Swiper from "swiper";
+
+//#region Swiper Imports
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -7,7 +9,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
-import HeaderWithLine from "../components/HeaderWithLine";
+//#endregion 
+
+//#region Data Imports
+
 import {
     basic_info,
     education,
@@ -15,11 +20,19 @@ import {
     skills,
     case_studies,
 } from "../data/text/Home_data";
+
+//#endregion 
+
+//#region Component Imports
+
+import HeaderWithLine from "../components/HeaderWithLine";
 import Socials from "../components/Socials";
 import Card from "../components/Card";
 import CopyOnly from "../components/CopyOnly";
 import CopyCard from "../components/CopyCard";
-import CardWithImage from "../components/CardWithImage";
+
+//#endregion
+
 
 function Home({}) {
     var curr_job = experience[0];
