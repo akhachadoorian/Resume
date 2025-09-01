@@ -7,13 +7,7 @@ import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import {
-    basic_info,
-    case_studies,
-    education,
-    experience,
-    skills,
-} from "../data/text/Home_data";
+import { basic_info, case_studies, education, experience, skills } from "../data/text/Home_data";
 
 import Card from "../components/Card";
 import CopyCard from "../components/CopyCard";
@@ -194,16 +188,15 @@ function Home({}) {
         if (!s) return;
 
         s.slideTo(active);
-        bodyRefs.current.forEach((el, i) =>
-            i === active ? expand(el) : collapse(el)
-        );
+        bodyRefs.current.forEach((el, i) => (i === active ? expand(el) : collapse(el)));
     }, [active]);
 
     return (
         <div className="home_page" id="home">
-            {/* ======================
-                Hero Section
-            ====================== */}
+            {/* ─────────────────────────────────────────────────────────
+                Hero / Name Section
+                - Large name/title and social links
+            ───────────────────────────────────────────────────────── */}
             <section id="name">
                 <HeaderWithLine
                     header_line_1={"Alex"}
@@ -215,9 +208,10 @@ function Home({}) {
                 <Socials socials={basic_info.socials} />
             </section>
 
-            {/* ======================
-
-            ====================== */}
+            {/* ─────────────────────────────────────────────────────────
+                Education Section
+                - Renders a Card per item in `education`
+            ───────────────────────────────────────────────────────── */}
             <section id="education">
                 <CopyOnly header={"Education"} style={"l"} />
                 <div className="cards">
@@ -234,9 +228,10 @@ function Home({}) {
                 </div>
             </section>
 
-            {/* ======================
-                
-            ====================== */}
+            {/* ─────────────────────────────────────────────────────────
+                Work Experience Section
+                - Shows most recent job description in Card
+            ───────────────────────────────────────────────────────── */}
             <section id="experience">
                 <CopyOnly
                     header={"Work Experience"}
@@ -255,22 +250,18 @@ function Home({}) {
                         />
 
                         <div className="job_cards">
-                            {curr_job.description.map((ee, ee_index) => (
-                                <CopyCard
-                                    key={ee_index}
-                                    header={ee.heading}
-                                    body={ee.list}
-                                    style="left"
-                                />
+                            {curr_job.description.map((j, j_index) => (
+                                <CopyCard key={j_index} header={j.heading} body={j.list} style="left" />
                             ))}
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* ======================
-                
-            ====================== */}
+            {/* ─────────────────────────────────────────────────────────
+                Skills Section
+                - 2 x 2 Grid of skills
+            ───────────────────────────────────────────────────────── */}
             <section id="skills">
                 <CopyOnly header={"Skills & Qualification"} style={"l"} />
 
@@ -284,9 +275,12 @@ function Home({}) {
                 </div>
             </section>
 
-            {/* ======================
-                
-            ====================== */}
+            {/* ─────────────────────────────────────────────────────────
+                Case Studies Version 2
+                - Left: interactive tabs
+                - Right: Swiper slide show of project homepages
+                - Progress bars synced to the active slide (autoplay 5s)
+            ───────────────────────────────────────────────────────── */}
             <section id="case_studies_v2">
                 <div className="left">
                     <h2 className="l_header">Projects</h2>
@@ -294,37 +288,20 @@ function Home({}) {
                         {case_studies.map((cs, idx) => (
                             <a
                                 key={idx}
-                                className={`tab ${
-                                    active === idx ? "active" : ""
-                                }`}
+                                className={`tab ${active === idx ? "active" : ""}`} // Add the active class if active index
                                 onMouseEnter={() => {
-                                    document
-                                        .querySelector(".tabs")
-                                        ?.classList.add("autoplay_paused");
-                                    swiperRef.current?.autoplay?.stop();
-                                    setActive(idx);
-                                    activateProgress(
-                                        swiperRef,
-                                        progressRefs,
-                                        idx
-                                    );
+                                    document.querySelector(".tabs")?.classList.add("autoplay_paused"); // Add `autoplay_paused` class to tabs (hides progress bar)
+                                    swiperRef.current?.autoplay?.stop(); // Stop autoplay while mouse inside tab
+
+                                    setActive(idx); // Set slide to corresponding index
+                                    // activateProgress(swiperRef, progressRefs, idx);
                                 }}
                                 onMouseLeave={() => {
-                                    document
-                                        .querySelector(".tabs")
-                                        ?.classList.remove("autoplay_paused");
-                                    swiperRef.current?.autoplay?.start();
+                                    document.querySelector(".tabs")?.classList.remove("autoplay_paused"); // Removed `autoplay_paused` class from tabs
+                                    swiperRef.current?.autoplay?.start(); // Restart autoplay since mouse has left
                                 }}
-                                href={
-                                    cs.link.slug && cs.link.slug != ""
-                                        ? cs.link.slug
-                                        : cs.link.website
-                                }
-                                target={
-                                    cs.link.slug && cs.link.slug != ""
-                                        ? "_self"
-                                        : "_blank"
-                                }
+                                href={cs.link.slug && cs.link.slug != "" ? cs.link.slug : cs.link.website} // If slug, use that; otherwise, use website link
+                                target={cs.link.slug && cs.link.slug != "" ? "_self" : "_blank"} // If slug, target is self; otherwise, target is blank
                             >
                                 <p className="xs_header">
                                     {cs.name}
@@ -332,20 +309,12 @@ function Home({}) {
                                         <span className="arrow"></span>
                                     </span>
                                 </p>
-                                <div
-                                    className="body"
-                                    ref={(el) => (bodyRefs.current[idx] = el)}
-                                >
+                                <div className="body" ref={(el) => (bodyRefs.current[idx] = el)}> {/* Add element to bodyRefs */}
                                     {cs.body}
                                 </div>
 
                                 <div className="autoplay_line">
-                                    <div
-                                        className="progress_bar"
-                                        ref={(el) =>
-                                            (progressRefs.current[idx] = el)
-                                        }
-                                    ></div>
+                                    <div className="progress_bar" ref={(el) => (progressRefs.current[idx] = el)}></div> {/* Add element to progressRefs */}
                                 </div>
                             </a>
                         ))}
@@ -361,33 +330,30 @@ function Home({}) {
                         onSwiper={(s) => {
                             swiperRef.current = s;
 
-                            // Setup bodies
-                            bodyRefs.current.forEach((el, i) =>
-                                i === s.activeIndex ? expand(el) : collapse(el)
-                            );
-                            setActive(s.activeIndex);
+                            // Setup bodies state
+                            bodyRefs.current.forEach((el, i) => (i === s.activeIndex ? expand(el) : collapse(el))); // Collapse if not active; expand if active
+                            setActive(s.activeIndex); // update state
 
-                            syncProgress(progressRefs, s.activeIndex);
+                            syncProgress(progressRefs, s.activeIndex); // Sync the progress bars with swiper
 
-                            // IntersectionObserver — set up ONCE
-                            const el = s.el;
-                            const io = new IntersectionObserver(
-                                ([entry]) => {
+                            // IntersectionObserver
+                            const el = s.el; // Swiper slider's root DOM element
+                            const io = new IntersectionObserver( // Monitor when the element leaves/enters viewport
+                                ([entry]) => { // entry describes visibility
                                     if (!swiperRef.current?.autoplay) return;
                                     entry.isIntersecting
-                                        ? swiperRef.current.autoplay.start()
+                                        ? swiperRef.current.autoplay.start() 
                                         : swiperRef.current.autoplay.stop();
                                 },
-                                { threshold: 0.25 }
+                                { threshold: 0.25 } // Must have 25% of slider visible
                             );
-                            io.observe(el);
-
-                            // store for cleanup when unmounting
-                            s.on("destroy", () => io.disconnect());
+                            
+                            io.observe(el); // Start observing
+                            s.on("destroy", () => io.disconnect()); // When Swiper is destroyed, disconnect observer
                         }}
                         onSlideChange={(s) => {
-                            setActive(s.activeIndex);
-                            syncProgress(progressRefs, s.activeIndex);
+                            setActive(s.activeIndex); // update state
+                            syncProgress(progressRefs, s.activeIndex); // Sync the progress bars with swiper
                         }}
                         autoplay={{
                             delay: 5000, // 5s per slide
@@ -397,10 +363,7 @@ function Home({}) {
                         {case_studies.map((cs, idx) => (
                             <SwiperSlide key={idx}>
                                 <div className="img_holder">
-                                    <img
-                                        src={cs.image.image}
-                                        alt={cs.image.alt || cs.name}
-                                    />
+                                    <img src={cs.image.image} alt={cs.image.alt || cs.name} />
                                 </div>
                             </SwiperSlide>
                         ))}
@@ -445,7 +408,3 @@ export default Home;
 //////////////////////////
 
 //#endregion
-
-
-
-
