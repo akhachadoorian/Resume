@@ -1,3 +1,4 @@
+// import AOS from 'aos';
 import { useEffect, useRef, useState } from "react";
 
 import "swiper/css";
@@ -7,13 +8,12 @@ import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { basic_info, case_studies, education, experience, skills } from "../data/text/Home_data";
+import { case_studies, education, experience, skills } from "../data/text/Home_data";
 
 import Card from "../components/Card";
 import CopyCard from "../components/CopyCard";
 import CopyOnly from "../components/CopyOnly";
-import HeaderWithLine from "../components/HeaderWithLine";
-import Socials from "../components/Socials";
+import Hero from "../components/Hero";
 
 //#region Helper Functions
 
@@ -191,28 +191,82 @@ function Home({}) {
         bodyRefs.current.forEach((el, i) => (i === active ? expand(el) : collapse(el)));
     }, [active]);
 
+    const heroNameRef = useRef(null);
+    useEffect(() => {
+  const elements = [heroNameRef.current].filter(Boolean);
+  if (!elements.length) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("in-view");
+      io.unobserve(entry.target); // <- reveal once
+    });
+  }, { threshold: 0.6 });
+
+  elements.forEach(el => io.observe(el));
+  return () => io.disconnect();
+}, []);
+
+
+    // useEffect(() => {
+    // AOS.init({
+    //   duration: 600,     // animation duration (ms)
+    //   easing: 'ease-out',
+    //   once: true,        // whether animation should happen only once
+    //   mirror: false,     // animate out on scroll past
+    //   offset: 80,        // trigger point from element (px)
+    // });
+    // }, []);
+
     return (
-        <div className="home_page" id="home">
+        <div className="home_page hero--bg-dots" id="home">
             {/* ─────────────────────────────────────────────────────────
                 Hero / Name Section
                 - Large name/title and social links
             ───────────────────────────────────────────────────────── */}
-            <section id="name">
-                <HeaderWithLine
-                    header_line_1={"Alex"}
-                    header_line_2={"Khachadoorian"}
-                    subtext={basic_info.title}
-                    body={basic_info.blurb}
-                    h_level="h1"
-                />
-                <Socials socials={basic_info.socials} />
+            <Hero />
+            {/* <section id="name" className="hero--bg-dots">
+                <div className="hero-inner">
+                    
+                </div>
+                 */}
+
+
+                {/* <Socials socials={basic_info.socials} /> */}
+            {/* </section> */}
+
+            <section className="education-section ">
+                <div className="education-inner">
+                    {/* {education.map((e, idx) => (
+                        <div className="e_card">
+                            <h6 className="s_heading">{e.type}</h6>
+                            <p className="subtitle">{e.major}</p>
+                            <p>University of Alabama</p>
+                        </div>
+                    ))} */}
+                    <div className="e_card">
+                        <h6 className="s_heading">{education[0].major}</h6>
+                        <p className="subtitle">{education[0].type}</p>
+                        <p>University of Alabama</p>
+                    </div>
+
+                    <div className="div_line"></div>
+
+                    <div className="e_card">
+                        <h6 className="s_heading">{education[1].major}</h6>
+                        <p className="subtitle">{education[1].type}</p>
+                        <p>University of Alabama</p>
+                    </div>
+                </div>
             </section>
+
 
             {/* ─────────────────────────────────────────────────────────
                 Education Section
                 - Renders a Card per item in `education`
             ───────────────────────────────────────────────────────── */}
-            <section id="education">
+            {/* <section id="education">
                 <CopyOnly header={"Education"} style={"l"} />
                 <div className="cards">
                     {education.map((e, idx) => (
@@ -226,13 +280,13 @@ function Home({}) {
                         />
                     ))}
                 </div>
-            </section>
+            </section> */}
 
             {/* ─────────────────────────────────────────────────────────
                 Work Experience Section
                 - Shows most recent job description in Card
             ───────────────────────────────────────────────────────── */}
-            <section id="experience">
+            <section id="experience" >
                 <CopyOnly
                     header={"Work Experience"}
                     style={"l"}

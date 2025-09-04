@@ -65,3 +65,12 @@
   src: local("Ostrich Proper Semibold"),
        url("../fonts/OstrichProper-SemiBold.woff") format("woff");
 }
+
+@font-face {
+  font-family: "Ostrich Proper";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Ostrich Proper Bold"),
+       url("../fonts/OstrichProper-Bold.woff") format("woff");
+}
+

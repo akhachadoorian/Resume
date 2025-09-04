@@ -1,0 +1,132 @@
+<section class="hero hero--bg-dots">
+  <div class="hero__inner">
+    <div class="eyebrow">FULL STACK <span class="accent">DEVELOPER</span></div>
+
+    <h1 class="hero__name">Alex Khachadoorian</h1>
+
+    <h3 class="hero__subtitle">
+      <span>Turning Complex Problems into</span>
+      <span class="accent">Elegant Code</span>
+    </h3>
+
+    <p class="hero__body">
+      I specialize in front-end engineering—translating polished designs into
+      fast, accessible, maintainable interfaces. React, Rails, and modern tooling,
+      shipped with performance and reliability in mind.
+    </p>
+
+    <div class="hero__cta">
+      <a href="/Resume.pdf" class="btn btn--accent">Download Resume</a>
+      <a href="#projects" class="btn btn--ghost">See My Work</a>
+    </div>
+  </div>
+
+  <button class="scroll-cue" aria-label="Scroll"
+    onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">
+    <span></span>
+  </button>
+</section>
+<style>
+:root{
+  --bg:#0f0f10; --fg:#f0f0f0; --muted:#c9c9c9; --accent:#7c8cff;
+  --maxw:1100px;
+  /* spacing scale */
+  --s1:8px; --s2:12px; --s3:16px; --s4:24px; --s5:32px; --s6:48px; --s7:72px;
+}
+
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"DM Sans",system-ui,sans-serif}
+
+.hero{
+  position:relative; isolation:isolate;
+  min-height:100svh; display:grid; place-items:center;
+  padding: clamp(var(--s5),6vw,var(--s7)) var(--s4);
+  overflow:hidden;
+}
+.hero__inner{ width:100%; max-width:var(--maxw); }
+
+.eyebrow{
+  text-transform:uppercase; letter-spacing:.22em;
+  color:var(--muted); font-weight:650; font-size:clamp(12px,1.1vw,14px);
+  margin-bottom:var(--s2);
+}
+.eyebrow .accent{ color:var(--accent); }
+
+.hero__name{
+  font-family:"Black Mango", serif; /* your display face */
+  font-weight:400; line-height:1.06;
+  font-size: clamp(42px,6.5vw,84px);
+  margin:0 0: var(--s2);
+  padding-bottom:.25em;
+  background: linear-gradient(var(--accent),var(--accent)) left bottom/0 2px no-repeat;
+  transition: background-size .7s ease;
+}
+.hero__name:hover{ background-size:100% 2px; }
+
+.hero__subtitle{
+  margin: var(--s2) 0 var(--s3);
+  font-weight:700; letter-spacing:.02em;
+  font-size: clamp(18px,2.2vw,24px);
+  display:flex; gap:.4em; flex-wrap:wrap;
+}
+.hero__subtitle .accent{ color:var(--accent); }
+
+.hero__body{
+  color:var(--muted);
+  max-width: min(65ch, 90%);
+  font-size: clamp(16px,1.3vw,18px);
+  line-height:1.55;
+  margin: 0 0 var(--s5);
+}
+
+.hero__cta{ display:flex; gap:var(--s3); flex-wrap:wrap }
+.btn{
+  border:1px solid var(--accent); padding:.85rem 1.15rem; border-radius:999px;
+  text-decoration:none; color:var(--fg); font-weight:600; letter-spacing:.02em;
+  transition:.25s ease;
+}
+.btn--accent{ background:var(--accent); color:#0b0b10 }
+.btn--accent:hover{ transform:translateY(-1px) }
+.btn--ghost:hover{ background:color-mix(in oklab, var(--accent) 14%, transparent) }
+
+/* Scroll cue */
+.scroll-cue{ position:absolute; left:50%; bottom:22px; translate:-50% 0; border:0; background:none; cursor:pointer }
+.scroll-cue span{
+  width:24px;height:36px;border:2px solid var(--muted);display:block;border-radius:999px;position:relative;opacity:.8
+}
+.scroll-cue span::after{
+  content:"";position:absolute;left:50%;top:8px;translate:-50% 0;width:4px;height:8px;border-radius:2px;background:var(--accent);
+  animation:drop 1.5s ease-in-out infinite;
+}
+@keyframes drop{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(10px)}}
+
+/* -------- Background variants: choose ONE class on .hero -------- */
+
+/* 1) hero--bg-dots: faint dot grid */
+.hero--bg-dots::before{
+  content:""; position:absolute; inset:-20% -10% 0; z-index:-1; opacity:.16;
+  background:
+    radial-gradient(circle at center, #fff 1px, transparent 1px) 0 0/18px 18px;
+  filter:contrast(120%) brightness(80%);
+}
+
+/* 2) hero--bg-radial: soft spotlight */
+.hero--bg-radial::before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background: radial-gradient(600px 300px at 20% 20%, color-mix(in oklab, var(--accent) 12%, transparent), transparent 60%);
+  opacity:.7;
+}
+
+/* 3) hero--bg-stripe: thin angled accent stripe */
+.hero--bg-stripe::before{
+  content:""; position:absolute; inset:-10% -10%; z-index:-1; opacity:.35;
+  background:
+    linear-gradient(120deg, transparent 65%, color-mix(in oklab, var(--accent) 15%, transparent) 65.5%, transparent 66%);
+}
+
+/* Motion-respect */
+@media (prefers-reduced-motion:reduce){
+  *{ transition:none!important; animation:none!important }
+}
+
+
+</style>

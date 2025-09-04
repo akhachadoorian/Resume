@@ -18,6 +18,33 @@
 
 ===========================================================================*/
 
+@keyframes bar_fill {
+    from {
+        background-size: 0% 3px;
+    }
+    to {
+        background-size: 100% 3px;
+    }
+}
+
+@keyframes bar_fill_unfill {
+    0% {
+        background-size: 0% 3px;
+    }
+    50% {
+        background-size: 100% 3px;
+    }
+    100% {
+        background-size: 0% 3px;
+    }
+}
+
+@mixin underline-grow($height: 3px) {
+    background: linear-gradient(var(--accent), var(--accent)) left bottom / 0 $height no-repeat;
+    animation: bar_fill_unfill 15s ease-in-out infinite;
+    // transition: background-size 0.8s ease;
+}
+
 .home_page {
     //#region Shared Styling
 
@@ -31,33 +58,141 @@
 
     //#endregion
 
+    &.hero--bg-dots {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: -20% -10% 0;
+            z-index: -1;
+            opacity: 0.16;
+            background: radial-gradient(circle at center, #fff 1px, transparent 1px) 0 0 / 18px 18px;
+            filter: contrast(120%) brightness(80%);
+        }
+    }
+
     //#region Name (Hero)
 
     #name {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 3vw;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        // gap: 32px;
 
-        min-height: 100vh;
+        min-height: calc(100vh - 240px);
+        margin: auto;
+        overflow: hidden;
+        position: relative;
 
-        @media all and (max-width: 1000px) {
-            min-height: auto;
+        .hero-inner {
+            max-width: var(--maxw);
+        }
 
-            .header_with_line {
-                h1 {
-                    font-size: clamp(30px, 9vw, 60px) !important;
-                }
+        .hero_name {
+            @include underline-grow(3px);
+            // animation: bar_fill 5s infinite;
+
+            padding-bottom: 16px;
+            margin-bottom: 32px;
+
+            h1 {
+                font-size: clamp(75px, 5.625vw, 95px);
+                margin: 16px 0 8px;
+            }
+
+            // &:hover {
+            //     background-size: 100% 3px;
+            // }
+            &.in-view {
+                background-size: 100% 3px;
+            }
+        }
+        .accent {
+            color: var(--accent);
+        }
+
+        h3.subtitle {
+            font-weight: 600;
+            font-family: "Ostrich Proper";
+            font-size: clamp(35px, 2.5vw, 45px);
+
+            margin-bottom: 16px;
+        }
+
+        .lower_text {
+            // max-width: 65vw;
+
+            .body {
+                max-width: min(65ch, 90%);
             }
         }
 
-        @media all and (max-width: 800px) {
-            flex-direction: column;
-            gap: 32px;
+        .btns {
+            margin-top: 32px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
         }
+
+        // min-height: 100vh;
+
+        // @media all and (max-width: 1000px) {
+        //     min-height: auto;
+
+        //     .header_with_line {
+        //         h1 {
+        //             font-size: clamp(30px, 9vw, 60px) !important;
+        //         }
+        //     }
+        // }
+
+        // @media all and (max-width: 800px) {
+        //     flex-direction: column;
+        //     gap: 32px;
+        // }
     }
 
     //#endregion
+
+    .education-section {
+        padding:0;
+    }
+    .education-inner {
+        background-color: #5762b3;
+        padding: 60px;
+
+        display: flex;
+        gap: 60px;
+
+        .e_card {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+
+            h6 {
+                // font-size: 32px;
+            }
+        }
+
+        .div_line {
+            width: 2px;
+            background-color: var(--accent);
+            opacity: 25%;
+        }
+
+        .subtitle {
+            font-weight: 600;
+            font-family: "Ostrich Sans";
+            font-size: clamp(25px, 2.083vw, 35px);
+            letter-spacing: 3px;
+        }
+    }
 
     //#region Education
 

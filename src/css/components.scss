@@ -209,7 +209,7 @@
                     width: 40px;
                     height: 40px;
                     aspect-ratio: 1/1;
-                    background-image: url("/src/data//images/Right_arrow.svg");
+                    background-image: url("../data/images/Right_arrow.svg");
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: contain;
@@ -351,7 +351,7 @@ a.card_w_icon {
             width: 40px;
             height: 40px;
             aspect-ratio: 1/1;
-            background-image: url("/src/data//images/Right_arrow.svg");
+            background-image: url("../data/images/Right_arrow.svg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -470,7 +470,62 @@ a.card_w_icon {
 
 /* /////////////////// */
 
-/* ////////////////////////////////////// */
+/* ///////////////////////////////////// */
+
+
+/* /////////////////// */
+// Button
+/* /////////////////// */
+
+.btn {
+    display: flex;
+    width: fit-content;
+    padding: 12px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all ease-in-out 300ms;
+
+    .btn-text { 
+        color: var(--black);
+        font-weight: 600;
+        font-size: clamp(18px, 1.25vw, 20px)
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-1px);
+    }
+
+    &.main {
+        border: 1px solid var(--accent);
+        background-color: var(--accent);
+
+        &:hover {
+            box-shadow: 0 0 12px var(--accent);
+        }
+    }
+
+    &.outline {
+        background-color: transparent;
+        border: 1px solid var(--accent);
+
+        .btn-text {
+            color: var(--white);
+        }
+
+        &:hover {
+            background: 
+ color-mix(in oklab, var(--accent) 14%, transparent);
+        }
+    }
+}
+
+
+/* /////////////////// */
+
+
+
+/* ///////////////////////////////////// */
 
 /* /////////////////// */
 /* HeaderWithLine */
