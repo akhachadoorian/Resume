@@ -237,6 +237,7 @@ function Home({}) {
             {/* </section> */}
 
             <section className="education-section ">
+                <div className="education-wrapper">
                 <div className="education-inner">
                     {/* {education.map((e, idx) => (
                         <div className="e_card">
@@ -258,6 +259,7 @@ function Home({}) {
                         <p className="subtitle">{education[1].type}</p>
                         <p>University of Alabama</p>
                     </div>
+                </div>
                 </div>
             </section>
 

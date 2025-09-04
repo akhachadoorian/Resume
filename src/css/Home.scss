@@ -41,8 +41,8 @@
 
 @mixin underline-grow($height: 3px) {
     background: linear-gradient(var(--accent), var(--accent)) left bottom / 0 $height no-repeat;
-    animation: bar_fill_unfill 15s ease-in-out infinite;
-    // transition: background-size 0.8s ease;
+    // animation: bar_fill_unfill 15s ease-in-out infinite;
+    transition: background-size 800ms ease-in-out;
 }
 
 .home_page {
@@ -102,9 +102,9 @@
                 margin: 16px 0 8px;
             }
 
-            // &:hover {
-            //     background-size: 100% 3px;
-            // }
+            &:hover {
+                background-size: 100% 3px;
+            }
             &.in-view {
                 background-size: 100% 3px;
             }
@@ -157,15 +157,55 @@
 
     //#endregion
 
-    .education-section {
-        padding:0;
+    @keyframes sheen {
+        0%,
+        20% {
+            transform: translateX(-120%);
+        }
+        50% {
+            transform: translateX(0%);
+        }
+        80%,
+        100% {
+            transform: translateX(120%);
+        }
     }
-    .education-inner {
+
+    .education-section {
+        padding: 0;
+    }
+    .education-wrapper {
         background-color: #5762b3;
         padding: 60px;
 
-        display: flex;
-        gap: 60px;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                120deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.06) 45%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0.06) 55%,
+                transparent 100%
+            );
+            transform: translateX(-120%);
+            animation: sheen 12s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .education-inner {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+
+            max-width: var(--maxw);
+            margin: auto;
+        }
 
         .e_card {
             flex: 1;
@@ -176,20 +216,20 @@
             gap: 8px;
 
             h6 {
-                // font-size: 32px;
+                    font-size: clamp(35px, 2.5vw, 50px);
             }
         }
 
         .div_line {
             width: 2px;
             background-color: var(--accent);
-            opacity: 25%;
+            opacity: 30%;
         }
 
         .subtitle {
             font-weight: 600;
             font-family: "Ostrich Sans";
-            font-size: clamp(25px, 2.083vw, 35px);
+            font-size: clamp(25px, 2.083vw, 30px);
             letter-spacing: 3px;
         }
     }
