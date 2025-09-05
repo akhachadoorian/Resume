@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Resume/static/css/main.bd18aa15.css",
-    "main.js": "/Resume/static/js/main.961e18d2.js",
+    "main.css": "/Resume/static/css/main.ed297ab0.css",
+    "main.js": "/Resume/static/js/main.02eefebc.js",
     "static/js/453.ed3810f9.chunk.js": "/Resume/static/js/453.ed3810f9.chunk.js",
     "static/media/Homepage_GIF.gif": "/Resume/static/media/Homepage_GIF.92229ad635222fc5c9e5.gif",
     "static/media/FinancialPage.mp4": "/Resume/static/media/FinancialPage.7f1a185723edc260993b.mp4",
@@ -9,12 +9,14 @@
     "static/media/Oxford.png": "/Resume/static/media/Oxford.c2f83a180014c0197d94.png",
     "static/media/SmartFusion.png": "/Resume/static/media/SmartFusion.8b0d55c2990519e4a420.png",
     "static/media/Smartfusion_Homepage.png": "/Resume/static/media/Smartfusion_Homepage.8b0d55c2990519e4a420.png",
+    "static/media/AlexKhachadoorian_Resume.pdf": "/Resume/static/media/AlexKhachadoorian_Resume.18e8bcdb70020a8fcdca.pdf",
     "static/media/Oxford_CardImage.png": "/Resume/static/media/Oxford_CardImage.2b3cdb18a9a3940a0d93.png",
     "static/media/FinancialManagement.png": "/Resume/static/media/FinancialManagement.ff6d5b5f6c28c1e42d2c.png",
     "static/media/Payroll.png": "/Resume/static/media/Payroll.9fc2e1568ecf67b4e88d.png",
     "static/media/SmartFusion_CardImage.png": "/Resume/static/media/SmartFusion_CardImage.d10f4dab7093d7f3662a.png",
     "static/media/Black Mango Regular.ttf": "/Resume/static/media/Black Mango Regular.93e0b8cb943e082319e4.ttf",
     "static/media/AdminBanner.png": "/Resume/static/media/AdminBanner.10897815a213ff83b3a6.png",
+    "static/media/OstrichProper-Bold.woff": "/Resume/static/media/OstrichProper-Bold.d4845a9e684ecfb0c7b3.woff",
     "static/media/OstrichProper-SemiBold.woff": "/Resume/static/media/OstrichProper-SemiBold.daa00513e18b22703d78.woff",
     "static/media/OstrichProper-Regular.woff": "/Resume/static/media/OstrichProper-Regular.4c988a92cb258729ab1a.woff",
     "static/media/ostrich-sans-black.woff": "/Resume/static/media/ostrich-sans-black.eec1ce9a59405a01c3fd.woff",
@@ -25,12 +27,12 @@
     "static/media/Books.svg": "/Resume/static/media/Books.69c7f4afc130018f14c923c04e821d7a.svg",
     "static/media/Right_arrow.svg": "/Resume/static/media/Right_arrow.a74a09d4f7c9b04032d3.svg",
     "index.html": "/Resume/index.html",
-    "main.bd18aa15.css.map": "/Resume/static/css/main.bd18aa15.css.map",
-    "main.961e18d2.js.map": "/Resume/static/js/main.961e18d2.js.map",
+    "main.ed297ab0.css.map": "/Resume/static/css/main.ed297ab0.css.map",
+    "main.02eefebc.js.map": "/Resume/static/js/main.02eefebc.js.map",
     "453.ed3810f9.chunk.js.map": "/Resume/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd18aa15.css",
-    "static/js/main.961e18d2.js"
+    "static/css/main.ed297ab0.css",
+    "static/js/main.02eefebc.js"
   ]
 }
