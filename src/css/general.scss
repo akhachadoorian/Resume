@@ -1,26 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 :root {
     --black: #101010;
-    --code-black: #1E1E1E;
+    --code-black: #1e1e1e;
     --light-black: #282828;
 
-    --white: #F0F0F0;
-    --light-gray: #CCCCCC; 
-    --gray: #B7B7B7;
+    --white: #f0f0f0;
+    --light-gray: #cccccc;
+    --gray: #b7b7b7;
 
     --accent: #7c8cff;
 
     --maxw: 1550px;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
     color: var(--white);
     margin: 0;
 }
 
-p, li, .body {
+p,
+li,
+.body {
     color: var(--white);
     font-family: "DM Sans";
     font-size: clamp(18px, 1.25vw, 22px);
@@ -28,6 +38,11 @@ p, li, .body {
     font-weight: 400;
     line-height: 140%;
     letter-spacing: 0.36px;
+}
+
+p.accent,
+span.accent {
+    color: var(--accent);
 }
 
 ul {
@@ -41,7 +56,9 @@ ul {
 }
 
 @media all and (max-width: 800px) {
-    p, li, .body {
+    p,
+    li,
+    .body {
         font-size: clamp(16px, 4.267vw, 18px);
         letter-spacing: 0.32px;
     }
@@ -57,7 +74,6 @@ ul {
     letter-spacing: 0.28px;
 }
 
-
 /* /////////////////// */
 /* Header Styles */
 /* /////////////////// */
@@ -66,25 +82,29 @@ ul {
 /* Desktop */
 /* //////// */
 
-.xl_header, h1 {
+.xl_header,
+h1 {
     font-family: "Black Mango";
-    font-size: clamp(100px, 9.444vw, 145px);
+    font-size: clamp(75px, 5.625vw, 95px);
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 100%;
     letter-spacing: 6.8px;
 }
 
-.l_header, h2, h3 {
+.l_header,
+h2,
+h3 {
     font-family: "Black Mango";
-    font-size: clamp(90px, 6.667vw, 101px);
+    font-size: clamp(45px, 3.333vw, 55px);
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 110%;
     letter-spacing: 1.92px;
 }
 
-.m_header, h4 {
+.m_header,
+h4 {
     font-family: "Black Mango";
     font-size: clamp(60px, 4.444vw, 70px);
     font-style: normal;
@@ -93,16 +113,18 @@ ul {
     letter-spacing: 1.28px;
 }
 
-.s_header, h5 {
+.s_header,
+h5 {
     font-family: "Black Mango";
     font-size: clamp(45px, 3.333vw, 55px);
     font-style: normal;
     font-weight: 400;
     line-height: 110%;
     letter-spacing: 0.96px;
-} 
+}
 
-.xs_header, h6 {
+.xs_header,
+h6 {
     font-family: "Black Mango";
     font-size: clamp(35px, 2.5vw, 45px);
     font-style: normal;
@@ -137,37 +159,43 @@ ul {
 /* Mobile */
 /* //////// */
 
-@media all and (max-width: 800px) {
-    .xl_header, h1 {
-        font-size: clamp(50px, 13.333vw, 60px);
-        letter-spacing: 2.5px;
-    }
+// @media all and (max-width: 800px) {
+//     .xl_header,
+//     h1 {
+//         font-size: clamp(50px, 13.333vw, 60px);
+//         letter-spacing: 2.5px;
+//     }
 
-    .l_header, h2, h3 {
-        font-size: clamp(40px, 11.2vw, 50px);
-        letter-spacing: 0.84px;
-    }
+//     .l_header,
+//     h2,
+//     h3 {
+//         font-size: clamp(40px, 11.2vw, 50px);
+//         letter-spacing: 0.84px;
+//     }
 
-    .m_header, h4 {
-        font-size: clamp(30px, 8.533vw, 40px);
-        letter-spacing: 0.64px;
-    }
+//     .m_header,
+//     h4 {
+//         font-size: clamp(30px, 8.533vw, 40px);
+//         letter-spacing: 0.64px;
+//     }
 
-    .s_header, h5, h6 {
-        font-size: clamp(25px, 6.933vw, 35px);
-        letter-spacing: 0.52px;
-    }
+//     .s_header,
+//     h5,
+//     h6 {
+//         font-size: clamp(25px, 6.933vw, 35px);
+//         letter-spacing: 0.52px;
+//     }
 
-    .subtext {
-        font-size: clamp(20px, 5.867vw, 30px);
-        letter-spacing: 5.28px;
-    }
+//     .subtext {
+//         font-size: clamp(20px, 5.867vw, 30px);
+//         letter-spacing: 5.28px;
+//     }
 
-    .eyebrow {
-        font-size: clamp(15px, 4.8vw, 25px);
-        letter-spacing: 4.32px;
-    }
-}
+//     .eyebrow {
+//         font-size: clamp(15px, 4.8vw, 25px);
+//         letter-spacing: 4.32px;
+//     }
+// }
 
 /* //////// */
 
@@ -219,16 +247,16 @@ ul {
 /* Overall Styling */
 /* /////////////////// */
 
-html, body {
-  height: 100%;
-  /* overflow: hidden; */
+html,
+body {
+    height: 100%;
+    /* overflow: hidden; */
 }
 
 [data-scroll-container] {
-  min-height: 100vh;
-  position: relative;
+    min-height: 100vh;
+    position: relative;
 }
-
 
 body {
     background-color: var(--black);

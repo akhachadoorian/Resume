@@ -472,7 +472,6 @@ a.card_w_icon {
 
 /* ///////////////////////////////////// */
 
-
 /* /////////////////// */
 // Button
 /* /////////////////// */
@@ -485,10 +484,10 @@ a.card_w_icon {
     text-decoration: none;
     transition: all ease-in-out 300ms;
 
-    .btn-text { 
+    .btn-text {
         color: var(--black);
         font-weight: 600;
-        font-size: clamp(18px, 1.25vw, 20px)
+        font-size: clamp(18px, 1.25vw, 20px);
     }
 
     &:hover {
@@ -514,16 +513,12 @@ a.card_w_icon {
         }
 
         &:hover {
-            background: 
- color-mix(in oklab, var(--accent) 14%, transparent);
+            background: color-mix(in oklab, var(--accent) 14%, transparent);
         }
     }
 }
 
-
 /* /////////////////// */
-
-
 
 /* ///////////////////////////////////// */
 
@@ -628,8 +623,7 @@ a.card_w_icon {
         } */
 
         &:hover {
-            box-shadow: 0 0 48.485px 0 #404040, 0 0 27.706px 0 #404040,
-                0 0 16.162px 0 #404040, 0 0 8.081px 0 #404040,
+            box-shadow: 0 0 48.485px 0 #404040, 0 0 27.706px 0 #404040, 0 0 16.162px 0 #404040, 0 0 8.081px 0 #404040,
                 0 0 2.309px 0 #404040, 0 0 1.154px 0 #404040;
         }
     }

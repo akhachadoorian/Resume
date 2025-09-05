@@ -43,6 +43,10 @@
     background: linear-gradient(var(--accent), var(--accent)) left bottom / 0 $height no-repeat;
     // animation: bar_fill_unfill 15s ease-in-out infinite;
     transition: background-size 800ms ease-in-out;
+
+    &:hover {
+        background-size: 100% 3px;
+    }
 }
 
 .home_page {
@@ -77,9 +81,7 @@
     #name {
         display: flex;
         flex-direction: column;
-        // align-items: center;
         justify-content: center;
-        // gap: 32px;
 
         min-height: calc(100vh - 240px);
         margin: auto;
@@ -98,19 +100,13 @@
             margin-bottom: 32px;
 
             h1 {
-                font-size: clamp(75px, 5.625vw, 95px);
+                // font-size: clamp(75px, 5.625vw, 95px);
                 margin: 16px 0 8px;
             }
 
-            &:hover {
-                background-size: 100% 3px;
-            }
             &.in-view {
                 background-size: 100% 3px;
             }
-        }
-        .accent {
-            color: var(--accent);
         }
 
         h3.subtitle {
@@ -216,7 +212,7 @@
             gap: 8px;
 
             h6 {
-                    font-size: clamp(35px, 2.5vw, 50px);
+                font-size: clamp(35px, 2.5vw, 50px);
             }
         }
 
@@ -260,6 +256,110 @@
     //#endregion
 
     //#region Experience
+
+    .experience-section {
+        min-height: calc(100vh - 240px);
+        display: flex;
+        align-items: center;
+
+        .experience-wrapper {
+            .experience-header {
+                max-width: var(--maxw);
+
+                .role_name {
+                    @include underline-grow(3px);
+
+                    padding-bottom: 16px;
+                }
+                .at {
+                    color: var(--gray) l;
+                }
+
+                .eyebrow {
+                    margin-bottom: 16px;
+                }
+                .meta {
+                    margin-top: 8px;
+                    font-weight: 300;
+                }
+            }
+
+            .experience-stats {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+
+                margin: 32px 0;
+
+                .stat_card {
+                    // border: 1px solid color-mix(in oklab, var(--accent) 40%, transparent);
+                    border: 1px solid var(--accent);
+                    border-radius: 12px;
+                    padding: 24px;
+                    // background: rgba(124, 140, 255, 0.07);
+                    background: color-mix(in oklab, var(--accent) 14%, transparent);
+                    transition: all ease-in-out 300ms;
+
+                    .stat_top {
+                        display: flex;
+                        flex-direction: column;
+                        // align-items: center;
+                        gap: 8px;
+
+                        margin-bottom: 16px;
+
+                        .stat {
+                            // color: var(--accent);
+                        }
+                    }
+
+                    &:hover {
+                        // background: color-mix(in oklab, var(--accent) 14%, transparent);
+                        box-shadow: 0 0 20px var(--accent);
+                    }
+
+                    .stat_body {
+                        font-size: clamp(16px, 1.111vw, 18px);
+                    }
+                }
+            }
+
+            .highlight_stack {
+                display: flex;
+                gap: 60px;
+
+                .highlight {
+                    flex: 1 1 60%;
+
+                    ul {
+                        margin-top: 16px;
+                    }
+                }
+
+                .stack {
+                    flex: 1 1 40%;
+
+                    .pills {
+                        margin-top: 16px;
+
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 16px;
+
+                        .pill {
+                            padding: 8px 12px;
+                            border: 1px solid color-mix(in oklab, var(--accent) 55%, transparent);
+                            background: rgba(124, 140, 255, 0.08);
+                            border-radius: 999px;
+
+                            font-weight: 600;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     #experience {
         display: flex;

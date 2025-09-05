@@ -1,0 +1,284 @@
+<section class="section section--dots" id="experience">
+  <div class="container">
+    <h2 class="section__head">Work Experience</h2>
+
+    <article class="role-panel" id="role-panel">
+      <header class="role-head">
+        <div class="role-id">
+          <h3 class="role-title">Lead Website Developer</h3>
+          <p class="role-meta">The Nine · 2022—Present</p>
+        </div>
+        <a class="btn-ghost" href="#projects">See My Work</a>
+      </header>
+
+      <ul class="metrics">
+        <li class="metric">
+          <span class="num">16+</span>
+          <span class="label">Sites shipped</span>
+        </li>
+        <li class="metric">
+          <span class="num">Reusable</span>
+          <span class="label">Module library</span>
+        </li>
+        <li class="metric">
+          <span class="num">Perf</span>
+          <span class="label">A11y & optimization</span>
+        </li>
+      </ul>
+
+      <div class="role-grid">
+        <div class="col">
+          <h4 class="eyebrow">Highlights</h4>
+          <ul class="ul">
+            <li>Delivered custom websites and streamlined CMS workflows.</li>
+            <li>Built reusable modules; improved reliability and performance.</li>
+            <li>Mentored developers and led agile delivery.</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4 class="eyebrow">Stack</h4>
+          <div class="pills">
+            <span class="pill">React</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">Rails</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">CI/CD</span>
+            <span class="pill">Accessibility</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<article class="role-panel">
+  <div class="role-head">
+    <div class="role-id">
+      <h3 class="role-title">Full-Stack Lead Developer</h3>
+      <p class="role-meta">The Nine · May 2024 — Present</p>
+    </div>
+    <a class="btn-ghost" href="#projects">See My Work</a>
+</div>
+
+  <p class="role-summary">
+    I lead a two-developer team to deliver 16+ custom websites, mentor across CMS workflows, and run Agile/Kanban in ClickUp.
+    I design responsive component systems, build dynamic Caboose CMS modules, and architect a new React app.
+    Recent wins include Heroku pipeline rigor, database/index tuning with unit tests, and standardized CMS conventions and documentation.
+  </p>
+
+  <div class="role-grid">
+    <div class="col">
+      <h4 class="eyebrow">Highlights</h4>
+      <ul class="ul">
+        <li>Team lead; delivery, mentoring, cross-function coordination.</li>
+        <li>16+ custom sites; reusable modules; consistent design & editor UX.</li>
+        <li>New React app architecture and CMS integration.</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4 class="eyebrow">Stack</h4>
+      <div class="pills">
+        <span class="pill">React</span>
+        <span class="pill">Caboose CMS</span>
+        <span class="pill">Heroku Pipelines</span>
+        <span class="pill">Unit Testing</span>
+        <span class="pill">Agile/Kanban (ClickUp)</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="stat">
+  <span class="num">30%</span>
+  <span class="label">faster development time</span>
+  <span class="sub">after process standardization · 84h → 59h</span>
+</div>
+
+<div class="stat stat--owner" aria-label="I created this process; about 30% faster development time">
+  <span class="badge">Process I Created</span>
+  <span class="num">~30% faster</span>
+  <span class="label">development time</span>
+  <span class="sub">
+    After I designed and rolled out a standardized CMS build process · 84h → 59h (−25h)
+  </span>
+</div>
+<div class="stat-chip" aria-label="About 9 percent faster average development time">
+  <span class="num">~9%</span>
+  <span class="label">faster average development time</span>
+  <span class="sub">80h → 72h (−7.3h/site, last 3 vs first 3)</span>
+</div>
+
+
+<style>
+:root{
+  --bg:#0f0f10; --fg:#f0f0f0; --muted:#c9c9c9; --accent:#7c8cff;
+  --card:#1b1b1d; --edge:#222226; --maxw:1100px;
+  --s2:12px; --s3:16px; --s4:24px; --s5:32px; --s6:48px;
+}
+.stat-chip{
+  --accent: #7c8cff;
+  border: 1px solid color-mix(in oklab, var(--accent) 55%, transparent);
+  border-radius: 14px;
+  padding: 16px 18px;
+  background: rgba(124,140,255,.08);
+  box-shadow: 0 0 14px rgba(124,140,255,.20);
+  max-width: 32rem;
+}
+.stat-chip .num{
+  display:block;
+  font: 700 clamp(22px,5vw,40px)/1 "Black Mango", serif;
+  text-shadow: 0 0 10px rgba(124,140,255,.25);
+}
+.stat-chip .label{
+  display:block;
+  font-weight: 700;
+  margin-top: 4px;
+}
+.stat-chip .sub{
+  display:block;
+  opacity: .85;
+  margin-top: 6px;
+}
+
+/* optional ambient sheen (no hover) */
+.stat-chip::after{
+  content:""; pointer-events:none; border-radius: inherit;
+  position:absolute; inset:0;
+  background: linear-gradient(120deg, transparent 0%,
+    rgba(255,255,255,.06) 45%, rgba(255,255,255,.10) 50%,
+    rgba(255,255,255,.06) 55%, transparent 100%);
+  transform: translateX(-120%);
+  animation: sheen 12s ease-in-out infinite;
+}
+@keyframes sheen{
+  0%,20%{ transform: translateX(-120%) }
+  50%   { transform: translateX(0%) }
+  80%,100%{ transform: translateX(120%) }
+}
+@media (prefers-reduced-motion: reduce){
+  .stat-chip::after{ display:none }
+}
+
+
+.stat{
+  border:1px solid rgba(124,140,255,.5);
+  border-radius:12px;
+  padding:18px 20px;
+  background:rgba(124,140,255,.08);
+  box-shadow:0 0 14px rgba(124,140,255,.20);
+}
+.stat .num{
+  display:block;
+  font:700 clamp(22px,5vw,40px)/1 "Black Mango",serif;
+}
+.stat .label{ display:block; font-weight:700; margin-top:2px }
+.stat .sub{ display:block; opacity:.85; margin-top:6px }
+
+.badge{
+  display:inline-block;
+  border:1px solid rgba(124,140,255,.55);
+  background:rgba(124,140,255,.12);
+  color:#fff; font-weight:700; letter-spacing:.04em;
+  border-radius:999px; padding:.25rem .55rem;
+  font-size:.8rem; margin-bottom:8px;
+  box-shadow:0 0 10px rgba(124,140,255,.18);
+}
+
+
+.stat{border:1px solid rgba(124,140,255,.5);border-radius:12px;padding:18px 20px;
+background:rgba(124,140,255,.08);box-shadow:0 0 14px rgba(124,140,255,.2)}
+.num{display:block;font:700 clamp(22px,5vw,40px)/1 "Black Mango",serif}
+.label{display:block;font-weight:700}
+.sub{display:block;opacity:.8;margin-top:4px}
+
+
+body{background:var(--bg);color:var(--fg);margin:0;font-family:"DM Sans",system-ui,sans-serif}
+.section{padding:clamp(48px,8vw,120px) var(--s4); position:relative; isolation:isolate;}
+.container{max-width:var(--maxw); margin-inline:auto}
+
+/* dotted backdrop like your hero */
+.section--dots::before{
+  content:""; position:absolute; inset:-10% -5% 0; z-index:-1; opacity:.15;
+  background: radial-gradient(#fff 1px, transparent 1px) 0 0/18px 18px;
+  filter: contrast(120%) brightness(80%);
+}
+
+/* section head with thin accent underline */
+.section__head{
+  font-family:"Black Mango",serif;
+  font-size:clamp(36px,6vw,88px);
+  line-height:1.06; margin:0 0 var(--s5);
+  padding-bottom:.25em;
+  background:linear-gradient(var(--accent),var(--accent)) left bottom/0 2px no-repeat;
+  transition:background-size .6s ease;
+}
+.section__head:hover{ background-size:100% 2px; } /* keep or remove */
+
+/* role panel (single-job layout) */
+.role-panel{
+  background: linear-gradient(180deg, var(--card), var(--edge));
+  border:1px solid #000;
+  border-radius:12px;
+  padding: clamp(var(--s4), 4vw, var(--s6));
+  box-shadow: 0 0 8px rgba(124,140,255,.18);
+  opacity:0; transform: translateY(10px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.role-panel.in-view{ opacity:1; transform: none; }
+
+/* header row */
+.role-head{ display:flex; justify-content:space-between; align-items:end; gap:var(--s4); flex-wrap:wrap; }
+.role-title{ margin:0; font-size:clamp(22px,3.2vw,34px); font-weight:700 }
+.role-meta{ margin:6px 0 0; color:var(--muted) }
+
+/* CTA */
+.btn-ghost{
+  border:1px solid color-mix(in oklab,var(--accent) 55%, transparent);
+  color:var(--fg); text-decoration:none; padding:.7rem 1rem; border-radius:999px;
+  background: rgba(124,140,255,.08);
+  box-shadow: 0 0 12px rgba(124,140,255,.18);
+}
+
+/* metrics row */
+.metrics{
+  list-style:none; margin: var(--s4) 0; padding:0;
+  display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: var(--s4);
+}
+.metric{
+  border:1px solid color-mix(in oklab,var(--accent) 40%, transparent);
+  border-radius:12px; padding: var(--s4);
+  background: rgba(124,140,255,.07);
+}
+.metric .num{ display:block; font-weight:800; font-size:clamp(18px,2.4vw,22px); letter-spacing:.02em }
+.metric .label{ display:block; margin-top:6px; color:var(--muted) }
+
+/* two-column content */
+.role-grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap: var(--s5); }
+.eyebrow{ text-transform:uppercase; letter-spacing:.22em; color:var(--muted); font-weight:700; font-size:.9rem; margin-bottom:.5rem }
+.ul{ margin:0; padding-left:22px; }
+.ul li{ margin-bottom:6px; }
+.pills{ display:flex; flex-wrap:wrap; gap:12px; }
+.pill{
+  border:1px solid color-mix(in oklab,var(--accent) 55%, transparent);
+  background: rgba(124,140,255,.08);
+  color:var(--fg); border-radius:999px; padding:.55rem .9rem; font-weight:600; letter-spacing:.02em;
+  box-shadow: 0 0 12px rgba(124,140,255,.18);
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .metrics{ grid-template-columns: 1fr; }
+  .role-grid{ grid-template-columns: 1fr; }
+}
+
+</style>
+
+<script>
+  const panel = document.getElementById('role-panel');
+  if (panel){
+    const io = new IntersectionObserver(([e])=>{
+      panel.classList.toggle('in-view', e.isIntersecting);
+    }, { threshold: 0.4 });
+    io.observe(panel);
+  }
+</script>
