@@ -1,3 +1,4 @@
+// import AOS from 'aos';
 import { useEffect, useRef, useState } from "react";
 
 import "swiper/css";
@@ -7,13 +8,10 @@ import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { basic_info, case_studies, education, experience, skills } from "../data/text/Home_data";
+import { case_studies, education, experience, skills } from "../data/text/Home_data";
 
-import Card from "../components/Card";
-import CopyCard from "../components/CopyCard";
 import CopyOnly from "../components/CopyOnly";
-import HeaderWithLine from "../components/HeaderWithLine";
-import Socials from "../components/Socials";
+import Hero from "../components/Hero";
 
 //#region Helper Functions
 
@@ -191,40 +189,65 @@ function Home({}) {
         bodyRefs.current.forEach((el, i) => (i === active ? expand(el) : collapse(el)));
     }, [active]);
 
+    const heroNameRef = useRef(null);
+    useEffect(() => {
+        const elements = [heroNameRef.current].filter(Boolean);
+        if (!elements.length) return;
+
+        const io = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add("in-view");
+                    io.unobserve(entry.target); // <- reveal once
+                });
+            },
+            { threshold: 0.6 }
+        );
+
+        elements.forEach((el) => io.observe(el));
+        return () => io.disconnect();
+    }, []);
+
+    // useEffect(() => {
+    // AOS.init({
+    //   duration: 600,     // animation duration (ms)
+    //   easing: 'ease-out',
+    //   once: true,        // whether animation should happen only once
+    //   mirror: false,     // animate out on scroll past
+    //   offset: 80,        // trigger point from element (px)
+    // });
+    // }, []);
+
     return (
-        <div className="home_page" id="home">
+        <div className="home_page hero--bg-dots" id="home">
             {/* ─────────────────────────────────────────────────────────
                 Hero / Name Section
                 - Large name/title and social links
             ───────────────────────────────────────────────────────── */}
-            <section id="name">
-                <HeaderWithLine
-                    header_line_1={"Alex"}
-                    header_line_2={"Khachadoorian"}
-                    subtext={basic_info.title}
-                    body={basic_info.blurb}
-                    h_level="h1"
-                />
-                <Socials socials={basic_info.socials} />
-            </section>
+            <Hero />
 
             {/* ─────────────────────────────────────────────────────────
                 Education Section
                 - Renders a Card per item in `education`
             ───────────────────────────────────────────────────────── */}
-            <section id="education">
-                <CopyOnly header={"Education"} style={"l"} />
-                <div className="cards">
-                    {education.map((e, idx) => (
-                        <Card
-                            key={idx}
-                            subtext={e.type}
-                            header={e.major}
-                            body={e.university}
-                            theme="black"
-                            scroll_speed="1"
-                        />
-                    ))}
+            <section className="education-section ">
+                <div className="education-wrapper">
+                    <div className="education-inner">
+                        <div className="e_card">
+                            <h6 className="s_heading">{education[0].major}</h6>
+                            <p className="subtitle">{education[0].type}</p>
+                            <p>University of Alabama</p>
+                        </div>
+
+                        <div className="div_line"></div>
+
+                        <div className="e_card">
+                            <h6 className="s_heading">{education[1].major}</h6>
+                            <p className="subtitle">{education[1].type}</p>
+                            <p>University of Alabama</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -232,15 +255,105 @@ function Home({}) {
                 Work Experience Section
                 - Shows most recent job description in Card
             ───────────────────────────────────────────────────────── */}
-            <section id="experience">
+            <section className="experience-section">
+                <div className="experience-wrapper">
+                    <div className="experience-header">
+                        <div className="role_name">
+                            <p className="eyebrow">Current Role</p>
+                            <h2 className="role-headline">
+                                Lead Website Developer <span class="at">@ </span>
+                                <span class="accent">The Nine</span>
+                            </h2>
+                        </div>
+
+                        <p class="meta">2022 — Present</p>
+                    </div>
+                    <div className="experience-stats">
+                        <div className="stat_card">
+                            <div className="stat_top">
+                                <p className="stat m_header">6</p>
+                                <p className="eyebrow">Website Launches as Lead Developer</p>
+                            </div>
+                            <p>
+                                Since joining The Nine, I have been the lead developer on 6 launches website and
+                                contributed to over a total of 17 website projects.
+                            </p>
+                        </div>
+                        <div className="stat_card">
+                            <div className="stat_top">
+                                <p className="stat m_header">9.2%</p>
+                                <p className="eyebrow">faster average development time</p>
+                            </div>
+                            <p>
+                                After I standardized our CMS build process, the average development time dropped from
+                                ~80h to ~72h (-7.3h/site).
+                            </p>
+                        </div>
+                        <div className="stat_card">
+                            <div className="stat_top">
+                                {/* <p className="stat m_header">694×</p> */}
+                                {/* <p className="eyebrow">faster database query</p> */}
+                                <p className="stat m_header">99.86%</p>
+                                <p className="eyebrow">reduction in query execution time</p>
+                            </div>
+                            <p className="stat_body">
+                                I implemented a composite index across two key columns, reducing a hot query from 142.2
+                                ms to 0.205 ms (~694×, −99.86%), verified with EXPLAIN ANALYZE.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="highlight_stack">
+                        <div className="highlight">
+                            <p className="eyebrow">Highlights</p>
+
+                            <ul class="ul highlights">
+                                <li>
+                                    Leading a two-developer team, coaching a backend-focused teammate on
+                                    frontend/CMS workflows to raise velocity.
+                                </li>
+                                <li>
+                                    Running Agile/Kanban in ClickUp across concurrent projects—owning scope, timelines, and
+                                    handoffs.
+                                </li>
+                                <li>
+                                    Architect a new React application: component architecture, styling conventions, CMS
+                                    integration, and scalability.
+                                </li>
+                                <li>
+                                    Manage releases with Heroku pipelines, verifying in staging before promoting to
+                                    production.
+                                </li>
+                                <li>
+                                    Partner with design, marketing, and creative to ship pixel-perfect builds; support
+                                    sales with technical scoping and proposals.
+                                </li>
+                            </ul>
+                        </div>
+                        {/* <div className="stack">
+                            <p className="eyebrow">Stack</p>
+                            <div className="pills">
+                                <p className="pill">Ruby on Rails</p>
+                                <p className="pill">PostgreSQL</p>
+                                <p className="pill">JavaScript</p>
+                                <p className="pill">React</p>
+                                <p className="pill">Typescript</p>
+                                <p className="pill">Python</p>
+                                <p className="pill">HTML</p>
+                                <p className="pill">CSS</p>
+                            </div>
+                        </div> */}
+                    </div>
+                </div>
+            </section>
+            {/* <section id="experience" >
                 <CopyOnly
                     header={"Work Experience"}
                     style={"l"}
                     id={"work_experience"}
                     // contain={false}
-                />
-                {/* TODO: Fix for more jobs */}
-                <div className="jobs">
+                /> */}
+            {/* TODO: Fix for more jobs */}
+            {/* <div className="jobs">
                     <div className="job">
                         <CopyOnly
                             eyebrow={curr_job.time}
@@ -256,7 +369,7 @@ function Home({}) {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ─────────────────────────────────────────────────────────
                 Skills Section
@@ -309,12 +422,15 @@ function Home({}) {
                                         <span className="arrow"></span>
                                     </span>
                                 </p>
-                                <div className="body" ref={(el) => (bodyRefs.current[idx] = el)}> {/* Add element to bodyRefs */}
+                                <div className="body" ref={(el) => (bodyRefs.current[idx] = el)}>
+                                    {" "}
+                                    {/* Add element to bodyRefs */}
                                     {cs.body}
                                 </div>
 
                                 <div className="autoplay_line">
-                                    <div className="progress_bar" ref={(el) => (progressRefs.current[idx] = el)}></div> {/* Add element to progressRefs */}
+                                    <div className="progress_bar" ref={(el) => (progressRefs.current[idx] = el)}></div>{" "}
+                                    {/* Add element to progressRefs */}
                                 </div>
                             </a>
                         ))}
@@ -339,15 +455,16 @@ function Home({}) {
                             // IntersectionObserver
                             const el = s.el; // Swiper slider's root DOM element
                             const io = new IntersectionObserver( // Monitor when the element leaves/enters viewport
-                                ([entry]) => { // entry describes visibility
+                                ([entry]) => {
+                                    // entry describes visibility
                                     if (!swiperRef.current?.autoplay) return;
                                     entry.isIntersecting
-                                        ? swiperRef.current.autoplay.start() 
+                                        ? swiperRef.current.autoplay.start()
                                         : swiperRef.current.autoplay.stop();
                                 },
                                 { threshold: 0.25 } // Must have 25% of slider visible
                             );
-                            
+
                             io.observe(el); // Start observing
                             s.on("destroy", () => io.disconnect()); // When Swiper is destroyed, disconnect observer
                         }}

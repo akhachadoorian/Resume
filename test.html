@@ -1,0 +1,216 @@
+
+<body >
+<section class="stack-tiles">
+  <h4 class="eyebrow">Stack</h4>
+  <ul class="tiles" role="list">
+    <li class="tile"><span class="logo">Rb</span><span>Ruby on Rails</span></li>
+    <li class="tile"><span class="logo">PG</span><span>PostgreSQL</span></li>
+    <li class="tile"><span class="logo">JS</span><span>JavaScript</span></li>
+    <li class="tile"><span class="logo">React</span><span>React</span></li>
+    <li class="tile"><span class="logo">TS</span><span>TypeScript</span></li>
+    <li class="tile"><span class="logo">Py</span><span>Python</span></li>
+    <li class="tile"><span class="logo">HTML</span><span>HTML</span></li>
+    <li class="tile"><span class="logo">CSS</span><span>CSS</span></li>
+  </ul>
+</section>
+<section class="bento-stack section" aria-label="Skills & Stack">
+  <div class="container">
+    <h2 class="l_header">Skills & Stack</h2>
+
+    <div class="bento">
+      <!-- Feature (wide) -->
+      <article class="bt t-feature">
+        <div class="emblem">FE</div>
+        <h3 class="bt_title">React + TypeScript</h3>
+        <p class="bt_sub">Component systems · performance · a11y</p>
+        <ul class="chips">
+          <li>React</li><li>TypeScript</li><li>JavaScript</li>
+          <li>CSS</li><li>HTML</li>
+        </ul>
+      </article>
+
+      <!-- Backend -->
+      <article class="bt t-backend">
+        <div class="emblem">BE</div>
+        <h3 class="bt_title">Backend</h3>
+        <ul class="chips">
+          <li>Ruby on Rails</li><li>Node.js</li>
+        </ul>
+      </article>
+
+      <!-- Databases -->
+      <article class="bt t-db">
+        <div class="emblem">DB</div>
+        <h3 class="bt_title">Databases</h3>
+        <ul class="chips">
+          <li>PostgreSQL</li><li>SQL</li>
+        </ul>
+      </article>
+
+      <!-- CMS / Platforms (tall) -->
+      <article class="bt t-cms">
+        <div class="emblem">CMS</div>
+        <h3 class="bt_title">CMS & Platforms</h3>
+        <ul class="chips">
+          <li>Caboose</li><li>Payload</li><li>WordPress</li><li>Shopify</li>
+        </ul>
+      </article>
+
+      <!-- Tooling (tall) -->
+      <article class="bt t-tools">
+        <div class="emblem">Ops</div>
+        <h3 class="bt_title">Tooling</h3>
+        <ul class="chips">
+          <li>Git</li><li>Docker</li><li>AWS</li><li>Axios</li>
+          <li>VS&nbsp;Code</li><li>Postico</li>
+        </ul>
+      </article>
+
+      <!-- Scripting (small) -->
+      <article class="bt t-python">
+        <div class="emblem">Py</div>
+        <h3 class="bt_title">Python</h3>
+        <p class="bt_sub">scripts · data tasks</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+</body>
+
+<style>
+:root{
+  --bg:#0f0f10; --fg:#f0f0f0; --muted:#c9c9c9; --accent:#7c8cff;
+  --card:#202022; --card-edge:#29292c;
+  --maxw:1100px;
+  --s1:8px; --s2:12px; --s3:16px; --s4:24px; --s5:32px; --s6:48px; --s7:72px;
+}
+
+body {
+  background-color: #101010;
+  color: #f0f0f0;
+}
+
+.stack-tiles .tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:900px){.stack-tiles .tiles{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  display:flex;align-items:center;gap:.75rem;
+  padding:.8rem .9rem;border-radius:14px;
+  background:linear-gradient(180deg,rgba(124,140,255,.08),rgba(124,140,255,.04));
+  border:1px solid color-mix(in oklab,var(--accent) 35%, transparent);
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+  color:var(--white); font-weight:700; letter-spacing:.02em;
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.tile:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(0,0,0,.45)}
+.logo{
+  width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+  background:color-mix(in oklab,var(--accent) 28%, transparent);
+  box-shadow:0 0 18px rgba(124,140,255,.25) inset, 0 0 12px rgba(124,140,255,.25);
+  font:700 12px/1 "DM Sans",system-ui,sans-serif;
+}
+
+
+
+/* Bento grid */
+.bento{
+  display:grid; gap: clamp(14px,2.2vw,20px);
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "feature feature feature backend backend db"
+    "feature feature feature cms     tools   tools"
+    "python  python  .       cms     tools   tools";
+}
+@media (max-width: 980px){
+  .bento{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "feature feature"
+      "backend db"
+      "cms tools"
+      "python tools";
+  }
+}
+@media (max-width: 640px){
+  .bento{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "feature" "backend" "db" "cms" "tools" "python";
+  }
+}
+
+/* Area mapping */
+.t-feature{ grid-area: feature; }
+.t-backend{ grid-area: backend; }
+.t-db     { grid-area: db; }
+.t-cms    { grid-area: cms; }
+.t-tools  { grid-area: tools; }
+.t-python { grid-area: python; }
+
+/* Tile shell (matches theme) */
+.bt{
+  position:relative; display:grid; grid-template-columns: auto 1fr; gap:12px;
+  align-items:start; padding: clamp(16px,2.4vw,22px);
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--code-black), color-mix(in oklab, var(--code-black) 85%, black));
+  border: 1px solid color-mix(in oklab, var(--accent) 22%, var(--light-black));
+  color: var(--white);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.02) inset, 0 10px 28px rgba(0,0,0,.35);
+  overflow:hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.bt::after{ /* dotted texture */
+  content:""; position:absolute; inset:-1px; border-radius:inherit; pointer-events:none;
+  background: radial-gradient(rgba(255,255,255,.09) 1px, transparent 1px) 0 0/18px 18px;
+  opacity:.06; mix-blend-mode:screen;
+}
+.bt:hover{ transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0,0,0,.48); }
+.bt:focus-within{ outline:none; box-shadow: 0 0 0 2px rgba(124,140,255,.55), 0 12px 30px rgba(124,140,255,.24); }
+
+/* Left badge */
+.emblem{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  background: color-mix(in oklab, var(--accent) 24%, transparent);
+  box-shadow: 0 0 18px rgba(124,140,255,.25) inset, 0 0 12px rgba(124,140,255,.25);
+  font: 800 11px/1 "DM Sans", system-ui, sans-serif; letter-spacing:.05em;
+}
+
+/* Text */
+.bt_title{
+  font-family:"Black Mango", serif;
+  font-size: clamp(22px, 2.8vw, 32px);
+  line-height:1.1; margin:0;
+}
+.bt_sub{
+  grid-column: 2; margin-top:2px; opacity:.85; font-family:"DM Sans",system-ui,sans-serif;
+}
+
+/* Chips inside tiles (compact buttons) */
+.chips{ grid-column:2; display:flex; flex-wrap:wrap; gap:8px 10px; margin-top:8px; padding:0; list-style:none; }
+.chips li{
+  --bd: color-mix(in oklab, var(--accent) 45%, transparent);
+  --bg: rgba(124,140,255,.08);
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.36rem .65rem; border-radius:999px;
+  border:1px solid var(--bd);
+  background:
+    radial-gradient(140% 140% at 50% -40%, rgba(255,255,255,.10), transparent 60%),
+    var(--bg);
+  color: var(--white); font: 700 .95rem/1 "DM Sans",system-ui,sans-serif;
+}
+.chips li::before{
+  content:""; width:.34rem; height:.34rem; border-radius:999px;
+  background: var(--accent); box-shadow: 0 0 6px rgba(124,140,255,.5);
+}
+
+/* Emphasis for feature tile */
+.t-feature{ border-color: color-mix(in oklab, var(--accent) 35%, var(--light-black)); }
+.t-feature::before{
+  content:""; position:absolute; left:0; right:45%; bottom:0; height:2px;
+  background: linear-gradient(90deg, var(--accent), transparent); opacity:.75;
+}
+
+</style>

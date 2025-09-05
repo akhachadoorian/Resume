@@ -18,6 +18,37 @@
 
 ===========================================================================*/
 
+@keyframes bar_fill {
+    from {
+        background-size: 0% 3px;
+    }
+    to {
+        background-size: 100% 3px;
+    }
+}
+
+@keyframes bar_fill_unfill {
+    0% {
+        background-size: 0% 3px;
+    }
+    50% {
+        background-size: 100% 3px;
+    }
+    100% {
+        background-size: 0% 3px;
+    }
+}
+
+@mixin underline-grow($height: 3px) {
+    background: linear-gradient(var(--accent), var(--accent)) left bottom / 0 $height no-repeat;
+    // animation: bar_fill_unfill 15s ease-in-out infinite;
+    transition: background-size 800ms ease-in-out;
+
+    &:hover {
+        background-size: 100% 3px;
+    }
+}
+
 .home_page {
     //#region Shared Styling
 
@@ -31,33 +62,173 @@
 
     //#endregion
 
+    &.hero--bg-dots {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: -20% -10% 0;
+            z-index: -1;
+            opacity: 0.16;
+            background: radial-gradient(circle at center, #fff 1px, transparent 1px) 0 0 / 18px 18px;
+            filter: contrast(120%) brightness(80%);
+        }
+    }
+
     //#region Name (Hero)
 
     #name {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 3vw;
+        flex-direction: column;
+        justify-content: center;
 
-        min-height: 100vh;
+        min-height: calc(100vh - 240px);
+        margin: auto;
+        overflow: hidden;
+        position: relative;
 
-        @media all and (max-width: 1000px) {
-            min-height: auto;
+        .hero-inner {
+            max-width: var(--maxw);
+        }
 
-            .header_with_line {
-                h1 {
-                    font-size: clamp(30px, 9vw, 60px) !important;
-                }
+        .hero_name {
+            @include underline-grow(3px);
+            // animation: bar_fill 5s infinite;
+
+            padding-bottom: 16px;
+            margin-bottom: 32px;
+
+            h1 {
+                // font-size: clamp(75px, 5.625vw, 95px);
+                margin: 16px 0 8px;
+            }
+
+            &.in-view {
+                background-size: 100% 3px;
             }
         }
 
-        @media all and (max-width: 800px) {
-            flex-direction: column;
-            gap: 32px;
+        h3.subtitle {
+            font-weight: 600;
+            font-family: "Ostrich Proper";
+            font-size: clamp(35px, 2.5vw, 45px);
+
+            margin-bottom: 16px;
         }
+
+        .lower_text {
+            // max-width: 65vw;
+
+            .body {
+                max-width: min(65ch, 90%);
+            }
+        }
+
+        .btns {
+            margin-top: 32px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        // min-height: 100vh;
+
+        // @media all and (max-width: 1000px) {
+        //     min-height: auto;
+
+        //     .header_with_line {
+        //         h1 {
+        //             font-size: clamp(30px, 9vw, 60px) !important;
+        //         }
+        //     }
+        // }
+
+        // @media all and (max-width: 800px) {
+        //     flex-direction: column;
+        //     gap: 32px;
+        // }
     }
 
     //#endregion
+
+    @keyframes sheen {
+        0%,
+        20% {
+            transform: translateX(-120%);
+        }
+        50% {
+            transform: translateX(0%);
+        }
+        80%,
+        100% {
+            transform: translateX(120%);
+        }
+    }
+
+    .education-section {
+        padding: 0;
+    }
+    .education-wrapper {
+        background-color: #5762b3;
+        padding: 60px;
+
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                120deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.06) 45%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0.06) 55%,
+                transparent 100%
+            );
+            transform: translateX(-120%);
+            animation: sheen 12s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .education-inner {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+
+            max-width: var(--maxw);
+            margin: auto;
+        }
+
+        .e_card {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+
+            h6 {
+                font-size: clamp(35px, 2.5vw, 50px);
+            }
+        }
+
+        .div_line {
+            width: 2px;
+            background-color: var(--accent);
+            opacity: 30%;
+        }
+
+        .subtitle {
+            font-weight: 600;
+            font-family: "Ostrich Sans";
+            font-size: clamp(25px, 2.083vw, 30px);
+            letter-spacing: 3px;
+        }
+    }
 
     //#region Education
 
@@ -85,6 +256,110 @@
     //#endregion
 
     //#region Experience
+
+    .experience-section {
+        min-height: calc(100vh - 240px);
+        display: flex;
+        align-items: center;
+
+        .experience-wrapper {
+            .experience-header {
+                max-width: var(--maxw);
+
+                .role_name {
+                    @include underline-grow(3px);
+
+                    padding-bottom: 16px;
+                }
+                .at {
+                    color: var(--gray) l;
+                }
+
+                .eyebrow {
+                    margin-bottom: 16px;
+                }
+                .meta {
+                    margin-top: 8px;
+                    font-weight: 300;
+                }
+            }
+
+            .experience-stats {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+
+                margin: 32px 0;
+
+                .stat_card {
+                    // border: 1px solid color-mix(in oklab, var(--accent) 40%, transparent);
+                    border: 1px solid var(--accent);
+                    border-radius: 12px;
+                    padding: 24px;
+                    // background: rgba(124, 140, 255, 0.07);
+                    background: color-mix(in oklab, var(--accent) 14%, transparent);
+                    transition: all ease-in-out 300ms;
+
+                    .stat_top {
+                        display: flex;
+                        flex-direction: column;
+                        // align-items: center;
+                        gap: 8px;
+
+                        margin-bottom: 16px;
+
+                        .stat {
+                            // color: var(--accent);
+                        }
+                    }
+
+                    &:hover {
+                        // background: color-mix(in oklab, var(--accent) 14%, transparent);
+                        box-shadow: 0 0 20px var(--accent);
+                    }
+
+                    .stat_body {
+                        font-size: clamp(16px, 1.111vw, 18px);
+                    }
+                }
+            }
+
+            .highlight_stack {
+                display: flex;
+                gap: 60px;
+
+                .highlight {
+                    flex: 1 1 60%;
+
+                    ul {
+                        margin-top: 16px;
+                    }
+                }
+
+                .stack {
+                    flex: 1 1 40%;
+
+                    .pills {
+                        margin-top: 16px;
+
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 16px;
+
+                        .pill {
+                            padding: 8px 12px;
+                            border: 1px solid color-mix(in oklab, var(--accent) 55%, transparent);
+                            background: rgba(124, 140, 255, 0.08);
+                            border-radius: 999px;
+
+                            font-weight: 600;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     #experience {
         display: flex;
