@@ -71,12 +71,12 @@ export default function Hero() {
                         link={resumePDF} 
                         target="_blank"
                     />
-                    <Button 
+                    {/* <Button 
                         style={"outline"}
                         button_text={"See My Work"}
                         // link={} 
                         // target="_blank"
-                    />
+                    /> */}
                 </div>
             </div>
         </section>
