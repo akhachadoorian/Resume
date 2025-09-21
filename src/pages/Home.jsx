@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { case_studies, education, experience } from "../data/text/Home_data";
 
 import Hero from "../components/Hero";
-import IconCard from "../components/IconCard";
+import IconCardVertical from "../components/IconCardVertical";
 
 //#region Helper Functions
 
@@ -278,7 +278,7 @@ function Home({}) {
                             </h2>
                         </div>
                     </div>
-                    <div class="skills-grid">
+                    {/* <div class="skills-grid">
                         <IconCard 
                             icon={"paint-brush"}
                             title={"Frontend"}
@@ -309,6 +309,43 @@ function Home({}) {
                             title={"Other"}
                             body={"Agile Development, Responsive Design, Cross-Functional Collaboration, Kanban Project Planning"}
                         />
+                    </div> */}
+                    <div class="skills-grid-vertical">
+                        <IconCardVertical 
+                            icon={"paint-brush"}
+                            title={"Frontend"}
+                            body={"TypeScript, JavaScript, HTML, CSS, Liquid, React, Next.js"}
+                            style={"pale-indigo"}
+                        />
+                        <IconCardVertical 
+                            icon={"code"}
+                            title={"Backend"}
+                            body={"Python, Java, Ruby, Node.js, Ruby on Rails"}
+                            style={"light-indigo"}
+                        />
+                        <IconCardVertical 
+                            icon={"database"}
+                            title={"Databases"}
+                            body={"PostgreSQL, MongoDB"}
+                        />
+                        <IconCardVertical 
+                            icon={"browsers"}
+                            title={"CMS Platforms"}
+                            body={"Payload CMS, Caboose CMS, WordPress"}
+                            style={"pale-indigo"}
+                        />
+                        <IconCardVertical 
+                            icon={"toolbox"}
+                            title={"Tools & Technologies"}
+                            body={"Git, Docker, RESTful APIs, Visual Code Studio, Axios, Postman, AWS, Microsoft Word, Microsoft Excel, Clickup, Notion"}
+                            style={"light-indigo"}
+                        />
+                        <IconCardVertical 
+                            icon={"code-block"}
+                            title={"Other"}
+                            body={"Agile Development, Responsive Design, Cross-Functional Collaboration, Kanban Project Planning"}
+                            
+                        />
                     </div>
                 </div>
             </section>
@@ -333,12 +370,12 @@ function Home({}) {
                     <div className="experience-stats">
                         <div className="stat_card">
                             <div className="stat_top">
-                                <p className="stat m_header">6</p>
+                                <p className="stat m_header">7</p>
                                 <p className="eyebrow">Website Launches as Lead Developer</p>
                             </div>
                             <p>
-                                Since joining The Nine, I have been the lead developer on 6 launches website and
-                                contributed to over a total of 17 website projects.
+                                Since joining The Nine, I have been the lead developer on 7 launches website and
+                                contributed to more than 17 website projects.
                             </p>
                         </div>
                         <div className="stat_card">

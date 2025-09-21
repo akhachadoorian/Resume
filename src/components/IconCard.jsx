@@ -1,5 +1,7 @@
 
 function IconCard({title, body, icon}) {
+
+
     return (
         <div className="icon_card">
             <div className="left">
