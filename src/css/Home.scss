@@ -90,6 +90,7 @@
 
         .hero-inner {
             max-width: var(--maxw);
+            margin: auto;
         }
 
         .hero_name {
@@ -171,7 +172,7 @@
         padding: 0;
     }
     .education-wrapper {
-        background-color: #5762b3;
+        background-color: var(--darker-indigo);
         padding: 60px;
 
         position: relative;
@@ -259,12 +260,15 @@
 
     .experience-section {
         min-height: calc(100vh - 240px);
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
 
         .experience-wrapper {
+            max-width: var(--maxw);
+            margin: auto;
+            // flex: 1;
+
             .experience-header {
-                max-width: var(--maxw);
 
                 .role_name {
                     @include underline-grow(3px);
@@ -389,6 +393,53 @@
     //#endregion
 
     //#region Skills
+
+    .skills-section {
+        .skills-inner {
+            max-width: var(--maxw);
+            margin: auto;
+
+            .skills-header {
+                margin-bottom: 32px;
+
+                .role_name {
+                    @include underline-grow(3px);
+
+                    padding-bottom: 16px;
+
+                    h2 {
+                        margin-bottom: 16px;;
+                    }
+                }
+
+                .eyebrow {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        .skills-grid {
+            // display: grid;
+            // grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .icon_card {
+                flex: 1 1 47%;
+            }
+
+            @media all and (max-width: 1000px) {
+                // grid-template-columns: repeat(1, 1fr);
+
+                .icon_card {
+                    flex: 1 1 100%;
+                }
+            }
+        }
+        
+    }
+
 
     #skills {
         display: flex;

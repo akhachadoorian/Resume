@@ -86,6 +86,55 @@
 /* /////////////////// */
 
 /* /////////////////// */
+// Icon Card
+/* /////////////////// */
+
+.icon_card {
+    display: flex;
+    align-items: stretch;
+    // gap: 16px;
+
+    // padding: 32px 24px;
+    background-color: var(--code-black);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all ease-in-out 300ms;
+
+    .left {
+        flex: 1 1 350px;
+            min-width: 225px;
+        padding: 32px 12px 32px 24px;
+        background: var(--darker-indigo);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+
+        i {
+            color: var(--white);
+            font-size: 64px;
+        }
+    }
+
+    .right {
+        flex: 1 1 316px;
+        padding: 32px 24px 32px 12px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // background-color: var(--code-black);
+    }
+
+    &:hover {
+        box-shadow: 0 0 20px 0 var(--darker-indigo);
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
 /* Copy Only */
 /* /////////////////// */
 

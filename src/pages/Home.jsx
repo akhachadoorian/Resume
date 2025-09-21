@@ -8,10 +8,10 @@ import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { case_studies, education, experience, skills } from "../data/text/Home_data";
+import { case_studies, education, experience } from "../data/text/Home_data";
 
-import CopyOnly from "../components/CopyOnly";
 import Hero from "../components/Hero";
+import IconCard from "../components/IconCard";
 
 //#region Helper Functions
 
@@ -252,6 +252,68 @@ function Home({}) {
             </section>
 
             {/* ─────────────────────────────────────────────────────────
+                Skills Section
+                - 2 x 2 Grid of skills
+            ───────────────────────────────────────────────────────── */}
+            {/* <section id="skills">
+                <CopyOnly header={"Skills & Qualification"} style={"l"} />
+
+                <div className="skill_box">
+                    {skills.map((s, s_index) => (
+                        <div className="box_unit" key={s_index}>
+                            <h4 className="s_header">{s.title}</h4>
+                            <p className="eyebrow">{s.body}</p>
+                        </div>
+                    ))}
+                </div>
+            </section> */}
+
+            <section className="skills-section">
+                <div className="skills-inner">
+                    <div className="skills-header">
+                        <div className="role_name">
+                            <p className="eyebrow">What I Bring</p>
+                            <h2 className="role-headline">
+                                Strengths & Skills
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <IconCard 
+                            icon={"paint-brush"}
+                            title={"Frontend"}
+                            body={"TypeScript, JavaScript, HTML, CSS, Liquid, React, Next.js"}
+                        />
+                        <IconCard 
+                            icon={"code"}
+                            title={"Backend"}
+                            body={"Python, Java, Ruby, Node.js, Ruby on Rails"}
+                        />
+                        <IconCard 
+                            icon={"database"}
+                            title={"Databases"}
+                            body={"PostgreSQL, MongoDB"}
+                        />
+                        <IconCard 
+                            icon={"browsers"}
+                            title={"CMS Platforms"}
+                            body={"Payload CMS, Caboose CMS, WordPress"}
+                        />
+                        <IconCard 
+                            icon={"toolbox"}
+                            title={"Tools"}
+                            body={"Git, Docker, RESTful APIs, Visual Code Studio, Axios, Postman, AWS, Microsoft Word, Microsoft Excel, Clickup, Notion"}
+                        />
+                        <IconCard 
+                            icon={"code-block"}
+                            title={"Other"}
+                            body={"Agile Development, Responsive Design, Cross-Functional Collaboration, Kanban Project Planning"}
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* ─────────────────────────────────────────────────────────
                 Work Experience Section
                 - Shows most recent job description in Card
             ───────────────────────────────────────────────────────── */}
@@ -371,22 +433,7 @@ function Home({}) {
                 </div>
             </section> */}
 
-            {/* ─────────────────────────────────────────────────────────
-                Skills Section
-                - 2 x 2 Grid of skills
-            ───────────────────────────────────────────────────────── */}
-            <section id="skills">
-                <CopyOnly header={"Skills & Qualification"} style={"l"} />
-
-                <div className="skill_box">
-                    {skills.map((s, s_index) => (
-                        <div className="box_unit" key={s_index}>
-                            <h4 className="s_header">{s.title}</h4>
-                            <p className="eyebrow">{s.body}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
+            
 
             {/* ─────────────────────────────────────────────────────────
                 Case Studies Version 2
