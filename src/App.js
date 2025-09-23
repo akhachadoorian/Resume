@@ -9,6 +9,7 @@ import "./css/general.scss";
 import "./css/Home.scss";
 // import "./css/Home_old.css";
 import "./css/CaseStudies.css";
+import "./css/components_v2.scss";
 
 import 'aos/dist/aos.css';
 
@@ -16,7 +17,7 @@ import 'aos/dist/aos.css';
 // import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 // import "locomotive-scroll/dist/locomotive-scroll.css";
 
-import Home from "./pages/Home";
+import Home_v3 from "./pages/Home_v3";
 import SmartFusion from "./pages/SmartFusion";
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
         <Router basename="/Resume">
           {/* <Navigation /> */}
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home_v3 />} />
             <Route path="/case-studies/smart-fusion" element={<SmartFusion/>} />
           </Routes>
           {/* <Footer /> */}

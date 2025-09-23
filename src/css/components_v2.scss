@@ -1,0 +1,201 @@
+/* /////////////////// */
+/* HeroTerminal */
+/* /////////////////// */
+
+@keyframes cursor_blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.hero_terminal {
+    // padding: 60px;
+
+    .terminal {
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--code-black);
+        border: 1px solid var(--light-black);
+
+        .terminal-header {
+            background: var(--light-black);
+            padding: 16px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .terminal-btns {
+                display: flex;
+                gap: 8px;
+
+                .terminal-btn {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+
+                    &.red {
+                        background: #ff5f56;
+                    }
+                    &.yellow {
+                        background: #ffbd2e;
+                    }
+                    &.green {
+                        background: #27ca3f;
+                    }
+                }
+            }
+
+            .terminal-title {
+                color: var(--gray);
+                font-family: "DM Mono", monospace;
+            }
+        }
+    }
+
+    .terminal-body {
+        padding: 32px;
+
+        .terminal-section {
+            margin-bottom: 16px;
+            p.terminal-command {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                font-family: "DM Mono", monospace;
+                margin-bottom: 8px;
+
+                .prompt {
+                    color: var(--accent);
+                }
+                .command {
+                    color: var(--pale-indigo);
+                }
+
+                .cursor_blink {
+                    background: var(--pale-indigo);
+                    animation: cursor_blink 1s infinite;
+                    width: 10px;
+                    height: 20px;
+                }
+            }
+
+            .output {
+                margin-left: 32px;
+            }
+
+            .contact_list {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                .contact_item {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    text-decoration: none;
+                    // font-size: clamp(36px, 2.5vw, 46px);
+                    font-size: clamp(18px, 1.25vw, 22px);
+                    p {
+                        font-family: "DM Mono", monospace;
+                    }
+
+                    &:hover {
+                        p {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+// TextWithSmallTitle
+/* /////////////////// */
+
+.text_w_small_title-wrapper {
+    .text_w_small_title-inner {
+        position: relative;
+        padding: 12px 0 0 0;
+
+        max-width: 80%;
+        margin: auto;
+
+        .small_title {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            background: var(--code-black);
+            padding: 4px 8px;
+            width: fit-content;
+            border-radius: 6px;
+            
+            position: absolute;
+            top: 0;
+            left: 24px;
+
+            p {
+                color: var(--gray);
+            }
+        }
+
+        .text_w_small_title-body {
+            background: var(--code-black);
+            border: 1px solid var(--light-black);
+            border-radius: 8px;
+            padding: 36px 24px 24px 24px;
+
+            p {
+                font-family: "DM Mono", monospace;
+            }
+        }
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+// HeaderWithNumber
+/* /////////////////// */
+
+.header_w_num {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 32px;
+
+    p {
+        // font-size: clamp(20px, 1.667vw, 30px);
+    }
+
+    .number {
+        color: var(--accent);
+        font-size: clamp(18px, 1.25vw, 22px);
+        font-family: "DM Mono", monospace;
+    }
+
+    .line {
+        flex: 1;
+        background: var(--light-black);
+        height: 1px;
+    }
+}
+
+/* /////////////////// */
