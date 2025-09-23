@@ -666,6 +666,62 @@
     }
 
     //#endregion
+
+    .projects {
+        .projects-inner {
+            // max-width: 60.417vw;
+            max-width: var(--maxw);
+            margin: auto;
+
+            .projects-header {
+                text-align: center;
+                margin-bottom: 60px;
+
+                h2 {
+                    margin: 16px 0 32px 0;
+                }
+            }
+        }
+        .projects-grid {
+            .project {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                border-radius: 8px;
+                background-color: var(--light-black);
+                padding: 24px;
+                text-decoration: none;
+
+                .text {
+                    flex: 1 1 510px;
+
+                    h5 {
+                        margin: 16px 0;
+                    }
+
+                    p.body {
+                        font-size: clamp(14px, 0.972vw, 18px);
+                    }
+                }
+
+                .img_holder {
+                    flex: 1 1 312px;
+                    // max-height: 161px;
+                    aspect-ratio: 2 / 1;
+                    overflow: hidden;
+                    border-radius: 8px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: top center;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //#region Depreciated Code

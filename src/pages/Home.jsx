@@ -373,7 +373,7 @@ function Home({}) {
                                 <p className="stat m_header">7</p>
                                 <p className="eyebrow">Website Launches as Lead Developer</p>
                             </div>
-                            <p>
+                            <p className="body_small">
                                 Since joining The Nine, I have been the lead developer on 7 launches website and
                                 contributed to more than 17 website projects.
                             </p>
@@ -383,7 +383,7 @@ function Home({}) {
                                 <p className="stat m_header">9.2%</p>
                                 <p className="eyebrow">faster average development time</p>
                             </div>
-                            <p>
+                            <p className="body_small">
                                 After I standardized our CMS build process, the average development time dropped from
                                 ~80h to ~72h (-7.3h/site).
                             </p>
@@ -395,9 +395,9 @@ function Home({}) {
                                 <p className="stat m_header">99.86%</p>
                                 <p className="eyebrow">reduction in query execution time</p>
                             </div>
-                            <p className="stat_body">
+                            <p className="body_small">
                                 I implemented a composite index across two key columns, reducing a hot query from 142.2
-                                ms to 0.205 ms (~694×, −99.86%), verified with EXPLAIN ANALYZE.
+                                ms to 0.205 ms (-99.86%), verified with EXPLAIN ANALYZE.
                             </p>
                         </div>
                     </div>
@@ -428,49 +428,32 @@ function Home({}) {
                                 </li>
                             </ul>
                         </div>
-                        {/* <div className="stack">
-                            <p className="eyebrow">Stack</p>
-                            <div className="pills">
-                                <p className="pill">Ruby on Rails</p>
-                                <p className="pill">PostgreSQL</p>
-                                <p className="pill">JavaScript</p>
-                                <p className="pill">React</p>
-                                <p className="pill">Typescript</p>
-                                <p className="pill">Python</p>
-                                <p className="pill">HTML</p>
-                                <p className="pill">CSS</p>
-                            </div>
-                        </div> */}
+
                     </div>
                 </div>
             </section>
-            {/* <section id="experience" >
-                <CopyOnly
-                    header={"Work Experience"}
-                    style={"l"}
-                    id={"work_experience"}
-                    // contain={false}
-                /> */}
-            {/* TODO: Fix for more jobs */}
-            {/* <div className="jobs">
-                    <div className="job">
-                        <CopyOnly
-                            eyebrow={curr_job.time}
-                            header={curr_job.title}
-                            subtext={curr_job.company}
-                            style="m"
-                        />
 
-                        <div className="job_cards">
-                            {curr_job.description.map((j, j_index) => (
-                                <CopyCard key={j_index} header={j.heading} body={j.list} style="left" />
-                            ))}
-                        </div>
+
+            <section className="projects">
+                <div className="projects-inner">
+                    <div className="projects-header">
+                        <p className="eyebrow">What I Have Built</p>
+                        <h2>Projects & Case Studies</h2>
+                    </div>
+                    <div className="projects-grid">
+                        <a className="project" href={case_studies[0].link.website}>
+                            <div className="text">
+                                <p className="eyebrow">smartfusiongov.com</p>
+                                <h5 className="xs_heading">Smart Fusion</h5>
+                                <p className="body">I built the site and tailored our CMS to their needs — adding features, refining workflows, and ensuring editors could manage content easily for the long term.</p>
+                            </div>
+                            <div className="img_holder">
+                                <img src={case_studies[0].image.image} alt={case_studies[0].image.alt} />
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </section> */}
-
-            
+            </section>
 
             {/* ─────────────────────────────────────────────────────────
                 Case Studies Version 2

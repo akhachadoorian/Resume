@@ -49,6 +49,16 @@ li,
     letter-spacing: 0.36px;
 }
 
+p.body_small {
+    color: var(--white);
+    font-family: "DM Sans";
+    font-size: clamp(14px, 0.972vw, 18px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.36px;
+}
+
 p.accent,
 span.accent {
     color: var(--accent);
