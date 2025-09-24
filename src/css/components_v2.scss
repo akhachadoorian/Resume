@@ -1,64 +1,45 @@
 /* /////////////////// */
-/* HeroTerminal */
+// Terminal
 /* /////////////////// */
 
-@keyframes cursor_blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    51% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
+.terminal {
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--code-black);
+    border: 1px solid var(--light-black);
 
-.hero_terminal {
-    // padding: 60px;
+    .terminal-header {
+        background: var(--light-black);
+        padding: 16px;
 
-    .terminal {
-        border-radius: 8px;
-        overflow: hidden;
-        background: var(--code-black);
-        border: 1px solid var(--light-black);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        .terminal-header {
-            background: var(--light-black);
-            padding: 16px;
-
+        .terminal-btns {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 8px;
 
-            .terminal-btns {
-                display: flex;
-                gap: 8px;
+            .terminal-btn {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
 
-                .terminal-btn {
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-
-                    &.red {
-                        background: #ff5f56;
-                    }
-                    &.yellow {
-                        background: #ffbd2e;
-                    }
-                    &.green {
-                        background: #27ca3f;
-                    }
+                &.red {
+                    background: #ff5f56;
+                }
+                &.yellow {
+                    background: #ffbd2e;
+                }
+                &.green {
+                    background: #27ca3f;
                 }
             }
+        }
 
-            .terminal-title {
-                color: var(--gray);
-                font-family: "DM Mono", monospace;
-            }
+        .terminal-title {
+            color: var(--gray);
+            font-family: "DM Mono", monospace;
         }
     }
 
@@ -92,6 +73,7 @@
 
             .output {
                 margin-left: 32px;
+                font-family: "SF Mono", "DM Mono", monospace;
             }
 
             .contact_list {
@@ -125,6 +107,36 @@
 /* /////////////////// */
 
 /* /////////////////// */
+/* HeroTerminal */
+/* /////////////////// */
+
+@keyframes cursor_blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.hero_terminal {
+    .btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
 // TextWithSmallTitle
 /* /////////////////// */
 
@@ -136,6 +148,10 @@
         max-width: 80%;
         margin: auto;
 
+        @media all and (max-width: 800px) {
+            max-width: none;
+        }
+
         .small_title {
             display: flex;
             align-items: center;
@@ -145,7 +161,7 @@
             padding: 4px 8px;
             width: fit-content;
             border-radius: 6px;
-            
+
             position: absolute;
             top: 0;
             left: 24px;
@@ -196,6 +212,105 @@
         background: var(--light-black);
         height: 1px;
     }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+// Footer
+/* /////////////////// */
+
+footer {
+    .footer-inner {
+
+        .after-terminal {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--light-black);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            i {
+                color: var(--accent);
+                font-size: clamp(18px, 1.25vw, 22px);
+            }
+
+        }
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+// IconCardVertical
+/* /////////////////// */
+
+.icon_card_vertical {
+    padding: 32px 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--accent);
+    transition: all ease-in-out 300ms;
+
+    &:hover {
+        box-shadow: 0 0 20px var(--accent);
+    }
+    
+    @media all and (max-width: 800px) {
+        min-height: 200px;
+    }
+
+    &.pale-indigo {
+        background-color: var(--pale-indigo);
+
+        &:hover {
+            box-shadow: 0 0 20px var(--pale-indigo);
+        }
+    }
+
+    &.light-indigo {
+        background-color: var(--light-indigo);
+
+        &:hover {
+            box-shadow: 0 0 20px var(--light-indigo);
+        }
+    }
+
+    i {
+        color: var(--black);
+        font-size: clamp(64px, 5.208vw, 84px);
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        p,
+        h4 {
+            color: var(--black);
+        }
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+// Buttons
+/* /////////////////// */
+
+.btn {
+    padding: 16px 32px;
+
 }
 
 /* /////////////////// */

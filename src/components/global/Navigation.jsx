@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 const nav = [
@@ -8,18 +7,18 @@ const nav = [
         clickable: true,
         children: [],
     },
-    {
-        title: "Case Studies",
-        slug: "/case-studies",
-        clickable: false,
-        children: [
-            {
-                title: "Smart Fusion",
-                slug: "/smart-fusion",
-                clickable: true,
-            },
-        ],
-    },
+    // {
+    //     title: "Case Studies",
+    //     slug: "/case-studies",
+    //     clickable: false,
+    //     children: [
+    //         {
+    //             title: "Smart Fusion",
+    //             slug: "/smart-fusion",
+    //             clickable: true,
+    //         },
+    //     ],
+    // },
 ];
 
 function CreateNavItem({ item }) {

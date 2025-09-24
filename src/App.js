@@ -17,6 +17,7 @@ import 'aos/dist/aos.css';
 // import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 // import "locomotive-scroll/dist/locomotive-scroll.css";
 
+import Footer from "./components/global/Footer";
 import Home_v3 from "./pages/Home_v3";
 import SmartFusion from "./pages/SmartFusion";
 
@@ -31,7 +32,7 @@ function App() {
             <Route path="/" element={<Home_v3 />} />
             <Route path="/case-studies/smart-fusion" element={<SmartFusion/>} />
           </Routes>
-          {/* <Footer /> */}
+          <Footer />
         </Router>
       </main>
   );

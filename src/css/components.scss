@@ -132,55 +132,6 @@
     }
 }
 
-.icon_card_vertical {
-    padding: 32px 24px;
-    border-radius: 8px;
-    overflow: hidden;
-    min-height: 350px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    background-color: var(--accent);
-    transition: all ease-in-out 300ms;
-
-    &:hover {
-        box-shadow: 0 0 20px var(--accent);
-    }
-
-    &.pale-indigo {
-        background-color: var(--pale-indigo);
-
-        &:hover {
-            box-shadow: 0 0 20px var(--pale-indigo);
-        }
-    }
-
-    &.light-indigo {
-        background-color: var(--light-indigo);
-
-        &:hover {
-            box-shadow: 0 0 20px var(--light-indigo);
-        }
-    }
-
-    i {
-        color: var(--black);
-        font-size: clamp(64px, 5.208vw, 84px);
-    }
-
-    .text {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-
-        p, h4 {
-            color: var(--black);
-        }
-    }
-
-}
 
 
 /* /////////////////// */

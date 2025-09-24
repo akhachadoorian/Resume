@@ -68,40 +68,11 @@ function Home_v3({}) {
                 </div>
             </section>
 
-            <section className="experience-section">
+            {/* <section className="experience-section">
                 <div className="experience-inner max_width">
-                    <HeaderWithNumber number={"03"} header={"Experience"} />
-                    <div className="experience_cards">
-                        <div className="experience_card with_note">
-                            <div className="experience_card-note">
-                                <p className="code">/*</p>
-                                <p className="code">Current Role</p>
-                                <p className="code">*/</p>
-                            </div>
-                            <div className="experience_card-inner">
-                                <div className="experience_card-header">
-                                    <h4 className="xs_header">
-                                        <span className="accent">Lead Full Stack Developer</span>
-                                        <span>@</span>
-                                        <span>The Nine</span>
-                                    </h4>
-                                    <p className="code">2022 — Present</p>
-                                </div>
-                                <div className="experience_card-body">
-                                    <p>Led 7 launches and contributed to 17+ projects, standardizing CMS builds to cut development time by 9.2%. Optimized database performance with a composite index (142ms → 0.2ms, −99.86%). Managed a two-developer team, ran Agile/Kanban workflows, and partnered with design/marketing for pixel-perfect builds. Architected a new React web app, improved documentation, and supported sales with technical proposals.</p>
-                                    <div className="tags">
-                                        <p className="tag">Ruby on Rails</p>
-                                        <p className="tag">Caboose CMS</p>
-                                        <p className="tag">PostgreSQL</p>
-                                        <p className="tag">Heroku</p>
-                                        <p className="tag">React</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <HeaderWithNumber number={"03"} header={"Current Role"} />
                 </div>
-            </section>
+            </section> */}
 
             <section className="project-section">
 
