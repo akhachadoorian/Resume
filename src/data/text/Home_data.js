@@ -1,47 +1,43 @@
-import SmartFusion_CardImage from "../images/home/SmartFusion_CardImage.png"
-import Oxford_CardImage from "../images/home/Oxford_CardImage.png"
-
-import SmartFusion from "../images/home/SmartFusion.png"
-import Oxford from "../images/home/Oxford.png"
+import Oxford from "../images/home/Oxford.png";
+import SmartFusion from "../images/home/SmartFusion.png";
 
 export const basic_info = {
-    title: 'Lead Website Developer',
-    blurb: 'With a passion for making things pretty, I’m a Full Stack Developer dedicated to creating web experiences that are as beautiful as they are functional.',
+    title: "Lead Website Developer",
+    blurb: "With a passion for making things pretty, I’m a Full Stack Developer dedicated to creating web experiences that are as beautiful as they are functional.",
     socials: [
-         {
-            icon: 'envelope',
-            link: 'mailto:alexkhachadoorian@gmail.com'
+        {
+            icon: "envelope",
+            link: "mailto:alexkhachadoorian@gmail.com",
         },
         {
-            icon: 'github',
-            link: 'https://github.com/akhachadoorian'
+            icon: "github",
+            link: "https://github.com/akhachadoorian",
         },
         {
-            icon: 'linkedIn',
-            link: 'https://www.linkedin.com/in/alex-khachadoorian/'
+            icon: "linkedIn",
+            link: "https://www.linkedin.com/in/alex-khachadoorian/",
         },
-    ]
-}
+    ],
+};
 
 export const education = [
     {
-        type: 'Bachelor of Science',
-        major: 'Computer Science',
-        university: '<p>University of Alabama</p>'
+        type: "Bachelor of Science",
+        major: "Computer Science",
+        university: "<p>University of Alabama</p>",
     },
     {
-        type: 'Bachelor of Science',
-        major: 'Marketing',
-        university: '<p>University of Alabama</p>'
+        type: "Bachelor of Science",
+        major: "Marketing",
+        university: "<p>University of Alabama</p>",
     },
-]
-
+];
 
 export const experience = [
     {
-        company: 'The Nine',
-        title: 'Full Stack Lead Developer',
-        time: 'May 2024 - Present',
+        company: "The Nine",
+        title: "Full Stack Lead Developer",
+        time: "May 2024 - Present",
         description: [
             {
                 heading: "Leadership & Project Management",
@@ -49,7 +45,7 @@ export const experience = [
                     "<li>Led a team of two developers, ensuring timely, high-quality deliverables while mentoring a backend-focused teammate in frontend CMS workflows—accelerating development and increasing team velocity.</li>",
                     "<li>Led Agile/Kanban workflows in ClickUp to deliver 16+ custom websites, managing timelines, task prioritization, and cross-functional collaboration across multiple concurrent projects.</li>",
                     "<li>Assisted the sales team by contributing technical insights for client quotes and drafting project proposals.</li>",
-                ]
+                ],
             },
             {
                 heading: "Technical Development & Engineering",
@@ -58,7 +54,7 @@ export const experience = [
                     "<li>Developed and maintained key modules within the Caboose CMS, implementing dynamic content features that reduced manual content updates.</li>",
                     "<li>Leading development of a new React web application, defining component architecture, styling conventions, and CMS integration while ensuring future scalability.</li>",
                     "<li>Worked with Heroku pipelines to manage deployments from staging to production, verifying stability in staging before promoting builds.</li>",
-                ]
+                ],
             },
             {
                 heading: "Process & Performance Improvements",
@@ -67,30 +63,30 @@ export const experience = [
                     "<li>Standardized CMS build processes by creating repeatable conventions for heading styles, classes, and layout structures—reducing build time, improving design consistency, and enhancing the client editing experience.</li>",
                     "<li>Improved documentation practices by writing post-launch build notes and maintaining ongoing documentation for new code additions, making future builds more efficient and onboarding smoother.</li>",
                     "<li>Partnered with UI/UX designers, marketers, and the Creative Director to align visual design with functionality, ensuring pixel-perfect implementation from Figma to deployment.</li>",
-                ]
-            }
-        ]
-    }
-]
+                ],
+            },
+        ],
+    },
+];
 
 export const skills = [
     {
-        title: 'Languages',
-        body: 'HTML, CSS, JavaScript, TypeScript, Python, Ruby, Java, SQL (PostgreSQL), NoSQL (MongoDB), Liquid'
+        title: "Languages",
+        body: "HTML, CSS, JavaScript, TypeScript, Python, Ruby, Java, SQL (PostgreSQL), NoSQL (MongoDB), Liquid",
     },
     {
-        title: 'Frameworks & Libraries',
-        body: 'React, Next.js, Node.js, Ruby on Rails',
+        title: "Frameworks & Libraries",
+        body: "React, Next.js, Node.js, Ruby on Rails",
     },
     {
-        title: 'CMS & Platforms',
-        body: 'Payload CMS, Caboose CMS, WordPress, Shopify',
+        title: "CMS & Platforms",
+        body: "Payload CMS, Caboose CMS, WordPress, Shopify",
     },
     {
-        title: 'Tools & Technologies',
-        body: 'Git, Docker, AWS, Axios, Visual Studio Code, Postico',
+        title: "Tools & Technologies",
+        body: "Git, Docker, AWS, Axios, Visual Studio Code, Postico",
     },
-]
+];
 
 export const case_studies = [
     // {
@@ -107,39 +103,32 @@ export const case_studies = [
     //     tags: [],
     // },
     {
+        terminal_title: "smart_fusion.html",
         name: "Smart Fusion",
-        body: "I built the site and tailored our CMS to their needs — adding features, refining workflows, and ensuring editors could manage content easily for the long term.",
+        body: "Built a scalable website for a government financial software provider with a focus on editor empowerment and long-term maintainability. Developed custom CMS modules (Icons, Icon Categories, Color Themes) to streamline updates, improve design consistency, and allow site-wide visual changes without developer involvement.",
         image: {
             image: SmartFusion,
-            alt_text: "Image of Smart Fusion's Home Page"
+            alt_text: "Image of Smart Fusion's Home Page",
         },
         link: {
             slug: "/Resume/case-studies/smart-fusion",
-            website: "https://smartfusiongov.com/"
+            website: "https://smartfusiongov.com/",
         },
-        tags: [
-            "Website Development",
-            "New CMS Features",
-            "Full Stack Development",
-            "Workflow Improvements",
-        ],
+        tags: ["Website Development", "New CMS Features", "Full Stack Development", "Workflow Improvements"],
     },
-        {
+    {
+        terminal_title: "city_of_oxford.html",
         name: "City of Oxford",
-        body: "Case Study Coming Soon, but for now, check out their site!",
+        body: "Ongoing project focused on modernizing the city’s website by introducing new, updated content blocks with cleaner code and improved design. Reformatting existing pages for better layouts and usability, ensuring the site evolves into a more consistent, accessible, and maintainable platform for the community.",
         image: {
             image: Oxford,
-            alt_text: "Image of the City of Oxford's Home Page"
+            alt_text: "Image of the City of Oxford's Home Page",
         },
         link: {
             slug: "",
             website: "https://www.oxfordal.gov/",
         },
-        tags: [
-            "Website Upgrade",
-            "Workflow Improvements",
-            "Improved User Experience"
-        ],
+        tags: ["Website Upgrade", "Workflow Improvements", "Improved User Experience"],
     },
     // {
     //     name: "Jolly Heating & Air",
@@ -154,10 +143,7 @@ export const case_studies = [
     //     },
     //     tags: [],
     // },
-]
-
-
-
+];
 
 // export const experience = [
 //     {

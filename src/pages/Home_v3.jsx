@@ -1,7 +1,9 @@
 import HeaderWithNumber from "../components/HeaderWithNumber";
 import HeroTerminal from "../components/HeroTerminal";
 import IconCardVertical from "../components/IconCardVertical";
+import TerminalCard from "../components/TerminalCard";
 import TextWithSmallTitle from "../components/TextWithSmallTitle";
+import { case_studies } from "../data/text/Home_data";
 
 function Home_v3({}) {
     return (
@@ -74,8 +76,26 @@ function Home_v3({}) {
                 </div>
             </section> */}
 
-            <section className="project-section">
 
+
+            <section className="project-section">
+                <div className="project-inner max_width" id="featured_projects">
+                    <HeaderWithNumber number={"03"} header={"Featured Projects"} />
+
+                    <div className="project-cards">
+                        {case_studies.map((cs, idx) => (
+                            <TerminalCard 
+                                key={idx}
+                                image={cs.image}
+                                terminal_title={cs.terminal_title}
+                                project_name={cs.name}
+                                project_description={cs.body}
+                                project_website={cs.link.website}
+                                // project_case_study={cs.link.slug}
+                            />
+                        ))}
+                    </div>
+                </div>
             </section>
         </div>
     );

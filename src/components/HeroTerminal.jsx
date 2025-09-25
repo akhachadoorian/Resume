@@ -23,6 +23,17 @@ export default function HeroTerminal() {
             <div className="btns">
                 <Button
                     button_text={"View Projects"}
+                    style={"accent"}
+                    element_id={"featured_projects"}
+                    icon={"ph ph-arrow-right"}
+                    icon_position={"right"}
+                />
+                <Button
+                    button_text={"Get In Touch"}
+                    style={"accent-outline"}
+                    link={"mailto:alexkhachadoorian@gmail.com"}
+                    icon={"ph ph-envelope"}
+                    icon_position={"right"}
                 />
             </div>
         </div>

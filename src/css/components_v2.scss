@@ -108,6 +108,96 @@
 /* /////////////////// */
 
 /* /////////////////// */
+
+/* /////////////////// */
+.terminal_card {
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--code-black);
+    border: 1px solid var(--light-black);
+
+    &:hover {
+        .terminal_card-body {
+            .img_holder img {
+                transform: scale(1.25);
+            }
+        }
+    }
+
+    .terminal_card-header {
+        background: var(--light-black);
+        padding: 16px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .terminal-btns {
+            display: flex;
+            gap: 8px;
+
+            .terminal-btn {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+
+                &.red {
+                    background: #ff5f56;
+                }
+                &.yellow {
+                    background: #ffbd2e;
+                }
+                &.green {
+                    background: #27ca3f;
+                }
+            }
+        }
+
+        .terminal-title {
+            color: var(--gray);
+            font-family: "DM Mono", monospace;
+        }
+    }
+
+    .terminal_card-body {
+        padding: 32px;
+
+        .img_holder {
+            aspect-ratio: 3 / 2;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 16px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center top;
+                transition: all ease-in-out 300ms;
+            }
+        }
+
+        .text {
+            .text-section {
+                margin-bottom: 24px;
+                .comment {
+                    color: var(--accent);
+                    font-family: "DM Mono", monospace;
+                    font-size: clamp(14px, 0.972vw, 18px);
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: 0.28px;
+
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
 /* HeroTerminal */
 /* /////////////////// */
 
@@ -132,6 +222,8 @@
         align-items: center;
         justify-content: center;
         gap: 16px;
+
+        margin-top: 32px;
     }
 }
 
@@ -223,7 +315,6 @@
 
 footer {
     .footer-inner {
-
         .after-terminal {
             margin-top: 32px;
             padding-top: 32px;
@@ -238,7 +329,6 @@ footer {
                 color: var(--accent);
                 font-size: clamp(18px, 1.25vw, 22px);
             }
-
         }
     }
 }
@@ -265,7 +355,7 @@ footer {
     &:hover {
         box-shadow: 0 0 20px var(--accent);
     }
-    
+
     @media all and (max-width: 800px) {
         min-height: 200px;
     }
@@ -310,8 +400,71 @@ footer {
 /* /////////////////// */
 
 .btn {
-    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
+    width: fit-content;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all ease-in-out 300ms;
+
+    .btn-text,
+    i {
+        color: var(--black);
+        font-family: "DM Mono", monospace;
+        font-size: clamp(18px, 1.25vw, 22px);
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.28px;
+        transition: all ease-in-out 300ms;
+
+        @media all and (max-width: 800px) {
+            font-size: clamp(16px, 4.267vw, 18px);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-1px);
+    }
+
+    &.accent {
+        border: 2px solid var(--accent);
+        background-color: var(--accent);
+
+        &:hover {
+            box-shadow: 0 0 12px var(--accent);
+        }
+    }
+
+    &.accent-outline {
+        background-color: transparent;
+        border: 2px solid var(--accent);
+
+        .btn-text,
+        i {
+            color: var(--accent);
+        }
+
+        &:hover {
+            background: color-mix(in oklab, var(--accent) 14%, transparent);
+
+            .btn-text,
+            i {
+                color: var(--white);
+            }
+        }
+    }
+
+    &.small {
+        padding: 8px 16px;
+
+        .btn-text, i {
+            font-size: clamp(14px, 0.972vw, 18px);
+        }
+    }
 }
 
 /* /////////////////// */
