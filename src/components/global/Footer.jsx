@@ -10,10 +10,24 @@ export default function Footer({}) {
         {
             command: "curl -X GET contact/social",
             output: `
-                <a href="https://github.com/akhachadoorian" target="_blank" class="contact_item">GitHub</a>
-                <a href="https://linkedin.com/in/alex-khachadoorian" target="_blank" class="contact_item">LinkedIn</a>
-                <a href="mailto:alexkhachadoorian@gmail.com" class="contact_item">Email</a>
-                <a href="${ResumePDF}" target="_blank" class="contact_item">Resume</a>
+                <div class="contact_list">
+                    <a href="https://github.com/akhachadoorian" target="_blank" class="contact_item">
+                        <i class="ph ph-github-logo"></i>
+                        <p>github.com/akhachadoorian</p>
+                    </a>
+                    <a href="https://linkedin.com/in/alex-khachadoorian" target="_blank" class="contact_item">
+                        <i class="ph ph-linkedin-logo"></i>
+                        <p>linkedin.com/in/alex-khachadoorian</p>
+                    </a>
+                    <a href="mailto:alexkhachadoorian@gmail.com" class="contact_item">
+                        <i class="ph ph-paper-plane-tilt"></i>
+                        <p>alexkhachadoorian@gmail.com</p>
+                    </a>
+                    <a href="${ResumePDF}" target="_blank" class="contact_item">
+                        <i class="ph ph-read-cv-logo"></i>
+                        <p>resume.pdf</p>
+                    </a>
+                </div>
             `,
         },
     ];

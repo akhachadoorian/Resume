@@ -91,6 +91,7 @@
                     font-size: clamp(18px, 1.25vw, 22px);
                     p {
                         font-family: "DM Mono", monospace;
+                        line-height: 100%;
                     }
 
                     &:hover {
