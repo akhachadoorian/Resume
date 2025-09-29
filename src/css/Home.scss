@@ -17,7 +17,6 @@
         }
     }
 
-
     .skills-grid-vertical {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -37,67 +36,80 @@
 
 .experience-section {
     .experience-inner {
-        .experience_cards {
-            .experience_card {
-                position: relative;
+        .experience-body {
+            .experience_dashboard-header {
+                padding: 16px;
+                background: var(--code-black);
+                border: 1px solid var(--light-black);
+                border-radius: 8px;
+                overflow: hidden;
 
-                &.with_note {
-                    padding-top: 12px;
-                }
-
-                .experience_card-note {
-                    display: flex;
-                    align-items: center;
-                    gap: 4px;
-
-                    // background: var(--light-black);
-                    background: var(--accent);
-
-                    padding: 4px 8px;
-                    width: fit-content;
-                    border-radius: 6px;
-
-                    position: absolute;
-                    top: 0;
-                    right: 24px;
-
-                    p {
-                        color: var(--light-black);
-                    }
-                }
-
-                .experience_card-inner {
-                    background: var(--code-black);
-                    border: 1px solid var(--light-black);
-                    border-radius: 8px;
-                    overflow: hidden;
-                    // padding: 24px;
-
-                    .experience_card-header {
-                        padding: 24px;
-                        background: var(--light-black);
-
-                        h4 {
-                            display: flex;
-                            align-items: center;
-                            gap: 8px;
-
-                            margin-bottom: 16px;
-
-                            .accent {
-                                font-family: "Ostrich Sans";
-                            }
-                        }
-                    }
-                    .experience_card-body {
-                        padding: 24px;
-                    }
-                }
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 30px;
             }
         }
+        // .experience_cards {
+        //     .experience_card {
+        //         position: relative;
+
+        //         &.with_note {
+        //             padding-top: 12px;
+        //         }
+
+        //         .experience_card-note {
+        //             display: flex;
+        //             align-items: center;
+        //             gap: 4px;
+
+        //             // background: var(--light-black);
+        //             background: var(--accent);
+
+        //             padding: 4px 8px;
+        //             width: fit-content;
+        //             border-radius: 6px;
+
+        //             position: absolute;
+        //             top: 0;
+        //             right: 24px;
+
+        //             p {
+        //                 color: var(--light-black);
+        //             }
+        //         }
+
+        //         .experience_card-inner {
+        //             background: var(--code-black);
+        //             border: 1px solid var(--light-black);
+        //             border-radius: 8px;
+        //             overflow: hidden;
+        //             // padding: 24px;
+
+        //             .experience_card-header {
+        //                 padding: 24px;
+        //                 background: var(--light-black);
+
+        //                 h4 {
+        //                     display: flex;
+        //                     align-items: center;
+        //                     gap: 8px;
+
+        //                     margin-bottom: 16px;
+
+        //                     .accent {
+        //                         font-family: "Ostrich Sans";
+        //                     }
+        //                 }
+        //             }
+        //             .experience_card-body {
+        //                 padding: 24px;
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
-
 
 .project-section {
     .project-inner {

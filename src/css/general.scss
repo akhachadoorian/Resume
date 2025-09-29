@@ -17,11 +17,14 @@
     --pale-indigo: #C9D0FF;
     --light-indigo: #A5B0FF;
     --accent: #7c8cff;
+    --accent-hsl: 248 95% 70%;
     --darker-indigo: #5F6BD9;
     --deep-indigo: #3D45A6;
     --darkest-indigo: #1E224D;
 
     --maxw: 1440px;
+
+
 }
 
 .max_width {
@@ -74,6 +77,28 @@ p.body_small {
 p.accent,
 span.accent {
     color: var(--accent);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: underline transparent;
+    text-underline-offset: 3px;
+    transition: all ease-in-out 300ms;
+
+    font-family: "DM Mono", monospace;
+    font-size: clamp(18px, 1.25vw, 22px);
+    font-weight: 500;
+    line-height: 140%; 
+    letter-spacing: 0.28px;
+
+    @media all and (max-width: 800px) {
+        font-size: clamp(16px, 4.267vw, 18px);
+    }
+
+    &:hover {
+        color: var(--pale-indigo);
+        text-decoration-color: var(--pale-indigo);
+    }
 }
 
 ul {
@@ -152,9 +177,9 @@ h3 {
     // font-size: clamp(50px, 3.611vw, 60px);
     font-size: clamp(34px, 3.056vw, 54px); // 44
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 110%;
-    letter-spacing: 1.28px;
+    letter-spacing: 1px;
 }
 
 .s_header,

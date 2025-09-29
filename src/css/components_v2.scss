@@ -108,7 +108,7 @@
 /* /////////////////// */
 
 /* /////////////////// */
-
+// Terminal Card
 /* /////////////////// */
 .terminal_card {
     border-radius: 8px;
@@ -461,10 +461,83 @@ footer {
     &.small {
         padding: 8px 16px;
 
-        .btn-text, i {
+        .btn-text,
+        i {
             font-size: clamp(14px, 0.972vw, 18px);
         }
     }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+// Tag
+/* /////////////////// */
+
+.tag {
+    padding: 4px 12px;
+    background-color: hsl(var(--accent-hsl) / 0.2);
+    border-radius: 8px;
+    width: fit-content;
+    border: 1px solid hsl(var(--accent-hsl) / 0.3);
+
+    .tag-text {
+        color: var(--accent);
+        font-weight: 500;
+        font-size: clamp(14px, 0.972vw, 18px);
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+//  Marquee
+/* /////////////////// */
+
+.marquee-wrapper {
+    position: relative;
+    overflow: hidden;
+    // max-width: 80%;
+    margin: auto;
+
+    display: flex;
+
+    .marquee-inner {
+        overflow: hidden;
+        width: 50%;
+        padding: 16px 0;
+
+        display: flex;
+        align-items: center;
+
+        &.first {
+            background-color: var(--accent);
+        }
+    }
+.marquee {
+  display: flex;
+  gap: var(--gap);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* shift by exactly one copy */
+  }
+}
+
+/* The trick: the track is 2× width (because we duplicated items) */
+.marquee {
+  width: max-content;       /* natural width */
+}
+
+
 }
 
 /* /////////////////// */

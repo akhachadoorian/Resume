@@ -1,19 +1,15 @@
-import React from "react";
 import CopyOnly from "../components/CopyOnly";
 
-import {
-    overview,
-    c_and_g,
-    solution,
-    improved_admin_ui,
-    dynamic_color_theme,
-    // improved_admin_ui_code
-} from "../data/text/SmartFusion_data";
 import CopyCard from "../components/CopyCard";
-import LargeCards from "../components/LargeCards";
+import {
+    dynamic_color_theme,
+    improved_admin_ui,
+    overview,
+    solution
+} from "../data/text/SmartFusion_data";
+// import LargeCards from "../components/LargeCards";
 import CardWithIcon from "../components/CardWithIcon";
 import CodeBlock from "../components/CodeBlock";
-import DoubleImageCard from "../components/DoubleImageCard";
 
 function SmartFusion({}) {
     return (
@@ -61,7 +57,7 @@ function SmartFusion({}) {
 
             <section id="challenges_goals" className="with_padding">
                 <div className="challenges_goals-inner">
-                    <LargeCards
+                    {/* <LargeCards
                         header={c_and_g[0].title}
                         body={c_and_g[0].body}
                         orientation={c_and_g[0].orientation}
@@ -70,7 +66,7 @@ function SmartFusion({}) {
                         header={c_and_g[1].title}
                         body={c_and_g[1].body}
                         orientation={c_and_g[1].orientation}
-                    />
+                    /> */}
                 </div>
             </section>
 
