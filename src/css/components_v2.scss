@@ -127,11 +127,12 @@
                 .git_message-text {
                     color: var(--accent);
 
-                    display: flex;
-                    gap: 8px;
+                    // display: flex;
+                    // gap: 8px;
                     &::after {
                         content: "_";
-                        display: block;
+                        display: inline-block;
+                        margin-left: 8px;
 
                         color: var(--accent);
                         animation: 1s ease 0s infinite normal none running cursor_blink;
