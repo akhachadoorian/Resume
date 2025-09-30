@@ -49,6 +49,10 @@
         .terminal-section {
             margin-bottom: 16px;
 
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
             p.terminal-command {
                 display: flex;
                 align-items: center;
@@ -75,6 +79,10 @@
             .output {
                 margin-left: 32px;
                 font-family: "SF Mono", "DM Mono", monospace;
+
+                @media all and (max-width: 800px) {
+                    margin-left: 16px;
+                }
             }
 
             .contact_list {
@@ -601,10 +609,19 @@ footer {
         align-items: center;
         gap: 30px;
 
+        @media all and (max-width: 800px) {
+            flex-direction: column;
+        }
+
         .left {
             display: flex;
             flex-direction: column;
             gap: 16px;
+
+            @media all and (max-width: 800px) {
+                align-items: center;
+                text-align: center;
+            }
         }
         .right {
             .metric {
@@ -629,8 +646,12 @@ footer {
 
     .metric_card-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
         gap: 30px;
+
+        @media all and (max-width: 800px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     .highlight_list {
