@@ -4,7 +4,7 @@ function isHTML(str) {
 }
 
 
-export default function Terminal({ terminal_title, terminal_sections, include_blink = false }) {
+export default function Terminal({ terminal_title, terminal_sections, include_blink = false, git_message }) {
     return (
         <div className="terminal">
             <div className="terminal-header">
@@ -39,6 +39,16 @@ export default function Terminal({ terminal_title, terminal_sections, include_bl
                             <span className="prompt">$</span>
                             <span className="cursor_blink"></span>
                         </p>
+                    </div>
+                ) : null}
+
+                {git_message ? (
+                    <div className="terminal-section git_message">
+                        <p className="terminal-command code_small">
+                            <span className="prompt">$</span>
+                            <span className="">git status</span>
+                        </p>
+                        <p className="git_message-text code_small">● {git_message}</p>
                     </div>
                 ) : null}
             </div>

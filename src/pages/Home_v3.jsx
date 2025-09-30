@@ -1,12 +1,20 @@
+import ExperienceContent from "../components/ExperienceContent";
 import HeaderWithNumber from "../components/HeaderWithNumber";
 import HeroTerminal from "../components/HeroTerminal";
 import IconCardVertical from "../components/IconCardVertical";
-import Tag from "../components/Tag";
+import Terminal from "../components/Terminal";
 import TerminalCard from "../components/TerminalCard";
 import TextWithSmallTitle from "../components/TextWithSmallTitle";
 import { case_studies } from "../data/text/Home_data";
 
 function Home_v3({}) {
+    const experience_sections = [
+        {
+            command: "cat current_role.json",
+            output: <ExperienceContent />
+        },
+    ];
+
     return (
         <div class="home">
             <section className="max_width">
@@ -77,19 +85,12 @@ function Home_v3({}) {
                 <div className="experience-inner max_width">
                     <HeaderWithNumber number={"03"} header={"Current Role"} />
                     <div className="experience-body">
-                        <div className="experience_dashboard-header">
-                            <div className="left">
-                                <Tag text={"Current Role"} />
-                                <h3>Lead Full Stack Developer</h3>
-                                <a href="https://www.nine.is/" target="_blank" className="">The Nine</a>
-                            </div>
-                            <div className="right">
-                                <p>2022 — Present</p>
-                                <div className="">
+                            <Terminal 
+                                terminal_sections={experience_sections}
+                                git_message={"Currently delivering impactful solutions..."}
+                            />
 
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </section>
