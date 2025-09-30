@@ -1,0 +1,50 @@
+<div className="json-block-container">
+  <div className="terminal-prompt">
+    <span className="prompt-symbol">$</span> cat education.json
+  </div>
+  <pre className="json-code">
+    <code>
+      {"{"}<br />
+      &nbsp;&nbsp;<span className="json-key">"type"</span>: <span className="json-string">"Bachelor of Science"</span>,<br />
+      &nbsp;&nbsp;<span className="json-key">"major"</span>: <span className="json-string">"Marketing"</span>,<br />
+      &nbsp;&nbsp;<span className="json-key">"university"</span>: <span className="json-string">"University of Alabama"</span><br />
+      {"}"}
+    </code>
+  </pre>
+</div>
+
+<style>
+    .json-block-container {
+  margin: 1.5rem 0;
+  background: var(--terminal-background); /* use whatever your background is */
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.terminal-prompt {
+  color: var(--prompt-color); /* e.g. your indigo or accent color */
+  font-family: monospace;
+  margin-bottom: 0.5rem;
+}
+
+.prompt-symbol {
+  margin-right: 0.4rem;
+}
+
+.json-code {
+  font-family: monospace;
+  color: var(--json-default); /* e.g. light grey / off-white */
+  /* preserve whitespace and line breaks */
+  white-space: pre;
+  line-height: 1.4rem;
+}
+
+.json-key {
+  color: var(--json-key-color); /* e.g. light blue or accent color */
+}
+
+.json-string {
+  color: var(--json-string-color); /* e.g. light green or another muted accent */
+}
+
+</style>

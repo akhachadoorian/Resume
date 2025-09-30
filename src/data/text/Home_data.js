@@ -1,3 +1,5 @@
+import AlabamaAg from "../images/home/AlabamaAgScreenshot.jpg";
+import Jolly from "../images/home/JollyScreenshot.jpg";
 import Oxford from "../images/home/Oxford.png";
 import SmartFusion from "../images/home/SmartFusion.png";
 
@@ -29,7 +31,7 @@ export const education = [
     {
         type: "Bachelor of Science",
         major: "Marketing",
-        university: "<p>University of Alabama</p>",
+        university: "University of Alabama",
     },
 ];
 
@@ -71,25 +73,46 @@ export const experience = [
 
 export const skills = [
     {
-        title: "Languages",
-        body: "HTML, CSS, JavaScript, TypeScript, Python, Ruby, Java, SQL (PostgreSQL), NoSQL (MongoDB), Liquid",
+        icon: "paint-brush",
+        title: "Frontend",
+        body: "TypeScript, JavaScript, HTML, CSS, Liquid, React, Next.js",
+        style: "pale-indigo"
     },
     {
-        title: "Frameworks & Libraries",
-        body: "React, Next.js, Node.js, Ruby on Rails",
+        icon: "code",
+        title: "Backend",
+        body: "Python, Java, Ruby, Node.js, Ruby on Rails",
+        style: "light-indigo"
     },
     {
-        title: "CMS & Platforms",
-        body: "Payload CMS, Caboose CMS, WordPress, Shopify",
+        icon: "database",
+        title: "Databases",
+        body: "PostgreSQL, MongoDB",
+        style: ""
     },
     {
+        icon: "browsers",
+        title: "CMS Platforms",
+        body: "Payload CMS, Caboose CMS, WordPress",
+        style: "pale-indigo"
+    },
+    {
+        icon: "toolbox",
         title: "Tools & Technologies",
-        body: "Git, Docker, AWS, Axios, Visual Studio Code, Postico",
+        body: "Git, Docker, RESTful APIs, Visual Code Studio, Axios, Postman, AWS, Microsoft Word, Microsoft Excel, Clickup, Notion",
+        style: "light-indigo"
+    },
+    {
+        icon: "code-block",
+        title: "Other",
+        body: "Agile Development, Responsive Design, Cross-Functional Collaboration, Kanban Project Planning",
+        style: ""
     },
 ];
 
 export const case_studies = [
     // {
+    // terminal_title: ".html",
     //     name: "",
     //     body: "",
     //     image: {
@@ -102,6 +125,7 @@ export const case_studies = [
     //     },
     //     tags: [],
     // },
+    
     {
         terminal_title: "smart_fusion.html",
         name: "Smart Fusion",
@@ -117,6 +141,20 @@ export const case_studies = [
         tags: ["Website Development", "New CMS Features", "Full Stack Development", "Workflow Improvements"],
     },
     {
+        terminal_title: "alabama_ag.html",
+        name: "Alabama Ag",
+        body: "Developed custom CMS modules to power the “Find My Lender” tool, streamline scattered location data, and auto-generate lender pages. Assisted with domain/DNS updates and guided a phased launch when transitioning from their previous provider.",
+        image: {
+            image: AlabamaAg,
+            alt: "Alabama ag's homepage hero",
+        },
+        link: {
+            slug: "",
+            website: "https://www.alabamaagcredit.com/",
+        },
+        tags: [],
+    },
+    {
         terminal_title: "city_of_oxford.html",
         name: "City of Oxford",
         body: "Ongoing project focused on modernizing the city’s website by introducing new, updated content blocks with cleaner code and improved design. Reformatting existing pages for better layouts and usability, ensuring the site evolves into a more consistent, accessible, and maintainable platform for the community.",
@@ -130,50 +168,18 @@ export const case_studies = [
         },
         tags: ["Website Upgrade", "Workflow Improvements", "Improved User Experience"],
     },
-    // {
-    //     name: "Jolly Heating & Air",
-    //     body: "Case Study Coming Soon, but for now, check out their site!",
-    //     image: {
-    //         image: "",
-    //         alt: "",
-    //     },
-    //     link: {
-    //         slug: "",
-    //         website: "",
-    //     },
-    //     tags: [],
-    // },
+    {
+        terminal_title: "jolly_heating_air.html",
+        name: "Jolly Heating & Air",
+        body: "Redesigned the website with a modern, responsive layout that improved mobile usability, streamlined content management, and aligned with updated brand guidelines.",
+        image: {
+            image: Jolly,
+            alt: "Jolly Heating & Air homepage hero",
+        },
+        link: {
+            slug: "",
+            website: "https://jollyheatingandair.com/",
+        },
+        tags: [],
+    },
 ];
-
-// export const experience = [
-//     {
-//         company: 'The Nine',
-//         title: 'Full Stack Lead Developer',
-//         time: 'May 2024 - Present',
-//         description: [
-//             {
-//                 heading: "Leadership & Team Management",
-//                 list: [
-//                     "Co-led the web development department, overseeing team operations, setting technical direction, and aligning engineering execution with creative vision.",
-//                     "Managed project scope and task delegation; led weekly planning sessions to coordinate concurrent website builds with the Creative Director.",
-//                     "Led a team of developers to launch 16+ custom websites using agile methodologies—completing 100% of projects on time."
-//                 ]
-//             },
-//             {
-//                 heading: "Technical Contributions",
-//                 list: [
-//                     "Built reusable CMS blocks using responsive design principles—flexbox layouts, adaptive grids, and optimized media—for seamless cross-device experiences.",
-//                     "Developed and maintained key modules within the Caboose CMS, adding dynamic content features that reduced manual updates.",
-//                     "Improved internal CMS tooling (Caboose CMS) and introduced new development standards to speed up timelines and elevate quality."
-//                 ]
-//             },
-//             {
-//                 heading: "Cross-Functional Collaboration",
-//                 list: [
-//                     "Worked closely with the Creative Director to streamline workflows and ensure design consistency across projects.",
-//                     "Assisted the sales team by providing technical insights during the quoting process and contributing to project proposals."
-//                 ]
-//             }
-//         ]
-//     }
-// ]
