@@ -1,38 +1,28 @@
 {
   "files": {
-    "main.css": "/Resume/static/css/main.15f0afba.css",
-    "main.js": "/Resume/static/js/main.993b50b1.js",
+    "main.css": "/Resume/static/css/main.415f7fdd.css",
+    "main.js": "/Resume/static/js/main.fc6eae76.js",
     "static/js/453.ed3810f9.chunk.js": "/Resume/static/js/453.ed3810f9.chunk.js",
-    "static/media/Homepage_GIF.gif": "/Resume/static/media/Homepage_GIF.92229ad635222fc5c9e5.gif",
-    "static/media/FinancialPage.mp4": "/Resume/static/media/FinancialPage.7f1a185723edc260993b.mp4",
-    "static/media/PayrollPage.mp4": "/Resume/static/media/PayrollPage.85e068e1bb4a151f40d5.mp4",
     "static/media/Oxford.png": "/Resume/static/media/Oxford.c2f83a180014c0197d94.png",
     "static/media/SmartFusion.png": "/Resume/static/media/SmartFusion.8b0d55c2990519e4a420.png",
-    "static/media/Smartfusion_Homepage.png": "/Resume/static/media/Smartfusion_Homepage.8b0d55c2990519e4a420.png",
     "static/media/AlexKhachadoorian_Resume.pdf": "/Resume/static/media/AlexKhachadoorian_Resume.18e8bcdb70020a8fcdca.pdf",
-    "static/media/FinancialManagement.png": "/Resume/static/media/FinancialManagement.ff6d5b5f6c28c1e42d2c.png",
-    "static/media/Payroll.png": "/Resume/static/media/Payroll.9fc2e1568ecf67b4e88d.png",
     "static/media/AlabamaAgScreenshot.jpg": "/Resume/static/media/AlabamaAgScreenshot.460825c84cf2d2b99666.jpg",
     "static/media/JollyScreenshot.jpg": "/Resume/static/media/JollyScreenshot.1491af8362e1edf69f8e.jpg",
     "static/media/Black Mango Regular.ttf": "/Resume/static/media/Black Mango Regular.93e0b8cb943e082319e4.ttf",
-    "static/media/AdminBanner.png": "/Resume/static/media/AdminBanner.10897815a213ff83b3a6.png",
     "static/media/OstrichProper-Bold.woff": "/Resume/static/media/OstrichProper-Bold.d4845a9e684ecfb0c7b3.woff",
     "static/media/OstrichProper-SemiBold.woff": "/Resume/static/media/OstrichProper-SemiBold.daa00513e18b22703d78.woff",
     "static/media/OstrichProper-Regular.woff": "/Resume/static/media/OstrichProper-Regular.4c988a92cb258729ab1a.woff",
     "static/media/ostrich-sans-black.woff": "/Resume/static/media/ostrich-sans-black.eec1ce9a59405a01c3fd.woff",
-    "static/media/Settings.svg": "/Resume/static/media/Settings.c62e7b2a0c04e4f2678fcb1f053f18bc.svg",
-    "static/media/Filter.svg": "/Resume/static/media/Filter.3ab118dbefcf7c59dfbd18725e1f0586.svg",
-    "static/media/PaintDropper.svg": "/Resume/static/media/PaintDropper.a5607697fab3d6d8a0f9e4bdb52e79f0.svg",
-    "static/media/Block.svg": "/Resume/static/media/Block.83c8c535d6b601a9e371aadd5a8ee475.svg",
-    "static/media/Books.svg": "/Resume/static/media/Books.69c7f4afc130018f14c923c04e821d7a.svg",
+    "static/media/cursor-click-pale-indigo.svg": "/Resume/static/media/cursor-click-pale-indigo.9a32e15bc4253cff7e4c.svg",
+    "static/media/cursor-pale-indigo.svg": "/Resume/static/media/cursor-pale-indigo.e3ca64aeb2c402ef1991.svg",
     "static/media/Right_arrow.svg": "/Resume/static/media/Right_arrow.a74a09d4f7c9b04032d3.svg",
     "index.html": "/Resume/index.html",
-    "main.15f0afba.css.map": "/Resume/static/css/main.15f0afba.css.map",
-    "main.993b50b1.js.map": "/Resume/static/js/main.993b50b1.js.map",
+    "main.415f7fdd.css.map": "/Resume/static/css/main.415f7fdd.css.map",
+    "main.fc6eae76.js.map": "/Resume/static/js/main.fc6eae76.js.map",
     "453.ed3810f9.chunk.js.map": "/Resume/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15f0afba.css",
-    "static/js/main.993b50b1.js"
+    "static/css/main.415f7fdd.css",
+    "static/js/main.fc6eae76.js"
   ]
 }
