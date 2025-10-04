@@ -348,6 +348,11 @@ body {
 
 body {
     background-color: var(--black);
+    cursor: url('../data/cursors/cursor-pale-indigo.svg'), auto;
+}
+
+a, button, [role="button"] {
+  cursor: url('../data/cursors/cursor-click-pale-indigo.svg'), pointer;
 }
 
 /* /////////////////// */

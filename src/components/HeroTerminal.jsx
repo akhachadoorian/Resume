@@ -9,11 +9,11 @@ export default function HeroTerminal() {
         },
         {
             command: "cat role.txt",
-            output: "Lead Full Stack Developer",
+            output: "<p>Lead Full Stack Developer</p>",
         },
         {
             command: "ls skills/",
-            output: "Frontend / Backend / Databases / CMS",
+            output: "<p>Frontend / Backend / Databases / CMS</p>",
         },
     ];
 

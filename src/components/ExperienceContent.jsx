@@ -15,7 +15,7 @@ export default function ExperienceContent({}) {
                 <div className="right">
                     <p className="eyebrow">2022 — Present</p>
                     <div className="metric">
-                        <i class="ph ph-pulse"></i>
+                        <i className="ph ph-pulse"></i>
                         <p>Live Metrics</p>
                     </div>
                 </div>
@@ -47,23 +47,23 @@ export default function ExperienceContent({}) {
             <p className="comment code">// Key Highlights & Responsibilities:</p>
             <div className="highlight_list">
                 <div className="highlight">
-                    <i class="ph ph-users"></i>
+                    <i className="ph ph-users"></i>
                     <p className="code">Leading a two-developer team, coaching a backend-focused teammate on frontend/CMS workflows to raise velocity.</p>
                 </div>
                 <div className="highlight">
-                    <i class="ph ph-check-circle"></i>
+                    <i className="ph ph-check-circle"></i>
                     <p className="code">Running Agile/Kanban in ClickUp across concurrent projects—owning scope, timelines, and handoffs.</p>
                 </div>
                 <div className="highlight">
-                    <i class="ph ph-code"></i>
+                    <i className="ph ph-code"></i>
                     <p className="code">Architect a new React application: component architecture, styling conventions, CMS integration, and scalability.</p>
                 </div>
                 <div className="highlight">
-                    <i class="ph ph-trend-up"></i>
+                    <i className="ph ph-trend-up"></i>
                     <p className="code">Manage releases with Heroku pipelines, verifying in staging before promoting to production.</p>
                 </div>
                 <div className="highlight">
-                    <i class="ph ph-users-four"></i>
+                    <i className="ph ph-users-four"></i>
                     <p className="code">Partner with design, marketing, and creative to ship pixel-perfect builds; support sales with technical scoping and proposals.</p>
                 </div>
             </div>

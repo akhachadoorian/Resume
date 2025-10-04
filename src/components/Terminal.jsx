@@ -27,7 +27,8 @@ export default function Terminal({ terminal_title, terminal_sections, include_bl
                             < div className="output" dangerouslySetInnerHTML={{ __html: ts.output }}>
                             </div >
                         ) :
-                            <p className="output">{ts.output}</p>
+                            <div className="output">{ts.output}</div>
+
 
                         }
                     </div>

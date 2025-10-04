@@ -5,7 +5,7 @@ export default function Footer({}) {
     var terminal_sections = [
         {
             command: "exit",
-            output: "session terminated successfully",
+            output: "<p>session terminated successfully</p>",
         },
         {
             command: "curl -X GET contact/social",
@@ -37,7 +37,7 @@ export default function Footer({}) {
             <div className="footer-inner max_width">
                 <Terminal terminal_title={"contact.sh"} include_blink={true} terminal_sections={terminal_sections} />
                 <div className="after-terminal">
-                    <i class="ph ph-terminal"></i>
+                    <i className="ph ph-terminal"></i>
                     <p className="code">© 2025 Alex Khachadoorian</p>
                 </div>
             </div>

@@ -38,7 +38,7 @@ function Home_v3({}) {
     ];
 
     return (
-        <div class="home">
+        <div className="home">
             <section className="max_width">
                 <HeroTerminal />
             </section>
@@ -46,7 +46,7 @@ function Home_v3({}) {
             <section className="about-section">
                 <div className="about-inner max_width">
                     <HeaderWithNumber number={"01"} header={"About"} />
-                    <div class="about-body">
+                    <div className="about-body">
                         <TextWithSmallTitle
                             title={"About me"}
                             body={
@@ -67,7 +67,7 @@ function Home_v3({}) {
             <section className="skills-section">
                 <div className="skills-inner max_width">
                     <HeaderWithNumber number={"03"} header={"Skills"} />
-                    <div class="skills-grid-vertical">
+                    <div className="skills-grid-vertical">
                         {skills.map((s, idx) => (
                             <IconCardVertical key={idx} icon={s.icon} title={s.title} body={s.body} style={s.style} />
                         ))}

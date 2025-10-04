@@ -3,7 +3,7 @@ export default function MetricCard({stat, stat_subtext, icon, body}) {
         <div className="metric_card">
             <div className="top">
                 <div className="icon">
-                    <i class={`ph ph-${icon}`}></i>
+                    <i className={`ph ph-${icon}`}></i>
                 </div>
                 <div className="text">
                     <h6 className="stat subtext">{stat}</h6>
