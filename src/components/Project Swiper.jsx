@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Keyboard, Navigation } from "swiper/modules";
@@ -8,7 +8,18 @@ import "swiper/css/navigation";
 export default function ProjectSwiper({ projects }) {
     const [atStart, setAtStart] = useState(true);
     const [atEnd, setAtEnd] = useState(false);
+    const swiperRef = useRef(null);
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (swiperRef.current) {
+                swiperRef.current.updateAutoHeight(300); // optional duration (ms)
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
         <div className="project_swiper-wrapper">
             <div className="project_swiper">
@@ -34,6 +45,9 @@ export default function ProjectSwiper({ projects }) {
                     onSlideChange={(swiper) => {
                         setAtStart(swiper.isBeginning);
                         setAtEnd(swiper.isEnd);
+                    }}
+                    onSwiper={(swiper) => {
+                        swiperRef.current = swiper;
                     }}
                 >
                     {projects.map((p, idx) => (

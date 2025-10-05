@@ -958,7 +958,7 @@ footer {
         overflow: hidden;
         .swiper-wrapper {
             align-items: stretch;
-            transition: height 0.3s ease;
+            transition: all 0.3s ease-in-out;
         }
         .swiper-slide {
             height: auto;

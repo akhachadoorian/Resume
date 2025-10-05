@@ -2,6 +2,8 @@ import AlabamaAg from "../images/home/AlabamaAgScreenshot.jpg";
 import Jolly from "../images/home/JollyScreenshot.jpg";
 import Oxford from "../images/home/Oxford.png";
 import SmartFusion from "../images/home/SmartFusion.png";
+import Sunshine from "../images/home/Sunshine.png";
+import Marines from "../images/home/MarinesHero.png";
 
 export const basic_info = {
     title: "Lead Website Developer",
@@ -112,7 +114,7 @@ export const skills = [
 
 export const case_studies = [
     // {
-    // terminal_title: ".html",
+    //     terminal_title: ".html",
     //     name: "",
     //     body: "",
     //     image: {
@@ -123,9 +125,7 @@ export const case_studies = [
     //         slug: "",
     //         website: "",
     //     },
-    //     tags: [],
     // },
-    
     {
         terminal_title: "smart_fusion.html",
         name: "Smart Fusion",
@@ -181,5 +181,31 @@ export const case_studies = [
             website: "https://jollyheatingandair.com/",
         },
         tags: [],
+    },
+        {
+        terminal_title: "sunshine.html",
+        name: "The Sunshine Center",
+        body: "Built a dynamic website for The Sunshine Center in Caboose CMS with modular blocks, enabling flexible content management and improved mobile usability.",
+        image: {
+            image: Sunshine,
+            alt: "The Sunshine Center's Homepage hero",
+        },
+        link: {
+            slug: "",
+            website: "https://sunshinecenterpdx.com/",
+        },
+    },
+    {
+        terminal_title: "al_marines.html",
+        name: "Alabama Marines",
+        body: "Developed a fast, secure landing page optimized for performance and search visibility. Integrated a user-friendly content management system (CMS) to allow the Foundation’s team to manage updates independently. Streamlined layout and messaging to drive engagement with key initiatives such as the Tuscaloosa Gauntlet and RV fundraising",
+        image: {
+            image: Marines,
+            alt: "Alabama Marine's homepage hero",
+        },
+        link: {
+            slug: "",
+            website: "https://alamarinesfoundation.org/",
+        },
     },
 ];
