@@ -13,7 +13,7 @@ export default function ExperienceContent({}) {
                     </a>
                 </div>
                 <div className="right">
-                    <p className="eyebrow">2022 — Present</p>
+                    <p className="eyebrow timeline">2022 — Present</p>
                     <div className="metric">
                         <i className="ph ph-pulse"></i>
                         <p>Live Metrics</p>

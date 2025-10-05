@@ -137,7 +137,7 @@ function Home_v3({}) {
 
             <section className="project-section">
                 <div className="project-inner max_width" id="featured_projects">
-                    <HeaderWithNumber number={"04"} header={"Featured Projects"} />
+                    <HeaderWithNumber number={"04"} header={"Projects"} />
 
                     <div className="project-cards">
                         {case_studies.map((cs, idx) => (
