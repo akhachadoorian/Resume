@@ -1,4 +1,3 @@
-
 .skills-section {
     .skills-inner {
         .skills-header {
@@ -38,7 +37,12 @@
 .experience-section {
     .experience-inner {
         .experience-body {
-            
+            max-width: 90%;
+            margin: auto;
+
+            @media all and (max-width: 800px) {
+                max-width: none;
+            }
         }
         // .experience_cards {
         //     .experience_card {
@@ -128,7 +132,7 @@
         padding: 8px 16px;
         border-radius: 16px;
 
-        font-family: "DM Mono", monospace;
+        font-family: "Roboto Mono", monospace;
         // font-family: Ostrich Sans;
         font-size: clamp(14px, 0.972vw, 18px);
         font-weight: 400;

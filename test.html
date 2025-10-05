@@ -1,835 +1,209 @@
-<nav class="main-nav">
-  <ul class="nav-list">
-    <li class="nav-item">
-      <a href="#about" class="nav-link">
-        <span class="nav-number">01.</span> About
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#education" class="nav-link">
-        <span class="nav-number">02.</span> Education
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#experience" class="nav-link">
-        <span class="nav-number">03.</span> Experience
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#projects" class="nav-link">
-        <span class="nav-number">04.</span> Projects
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#contact" class="nav-link">
-        <span class="nav-number">05.</span> Contact
-      </a>
-    </li>
-  </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education Layouts — Options 6–9</title>
+  <style>
+    :root {
+      --black: #101010;
+      --code-black: #1e1e1e;
+      --light-black: #282828;
 
-<!-- Education Section -->
-<section id="education" class="education-section">
-  <div class="container">
-    <!-- Section Header -->
-    <div class="section-header">
-      <span class="section-tag">&lt;education&gt;</span>
-      <h2 class="section-title">Education</h2>
-    </div>
+      --white: #f0f0f0;
+      --light-gray: #cccccc;
+      --gray: #b7b7b7;
 
-    <!-- Education Timeline -->
-    <div class="education-timeline">
-      
-      <!-- Education Item 1 -->
-      <article class="education-item">
-        <div class="education-marker"></div>
-        <div class="education-content">
-          <div class="education-header">
-            <div class="education-main">
-              <h3 class="degree">Bachelor of Science in Computer Science</h3>
-              <p class="school">University Name</p>
-            </div>
-            <div class="education-meta">
-              <span class="timeline">
-                <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M8 4v4l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                2019 - 2023
-              </span>
-              <span class="location">City, State</span>
-            </div>
-          </div>
-          
-          <div class="education-details">
-            <div class="honors">
-              <span class="badge">GPA: 3.8/4.0</span>
-              <span class="badge">Cum Laude</span>
-            </div>
-            
-            <div class="coursework">
-              <p class="coursework-label">// Relevant Coursework</p>
-              <ul class="course-list">
-                <li>Data Structures & Algorithms</li>
-                <li>Software Engineering</li>
-                <li>Database Systems</li>
-                <li>Web Development</li>
-                <li>Machine Learning</li>
-                <li>Computer Networks</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Education Item 2 (Optional - for multiple degrees) -->
-      <article class="education-item">
-        <div class="education-marker"></div>
-        <div class="education-content">
-          <div class="education-header">
-            <div class="education-main">
-              <h3 class="degree">High School Diploma</h3>
-              <p class="school">High School Name</p>
-            </div>
-            <div class="education-meta">
-              <span class="timeline">
-                <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M8 4v4l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                2015 - 2019
-              </span>
-              <span class="location">City, State</span>
-            </div>
-          </div>
-          
-          <div class="education-details">
-            <div class="honors">
-              <span class="badge">Valedictorian</span>
-              <span class="badge">AP Scholar</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <!-- Closing Tag -->
-    <div class="section-footer">
-      <span class="section-tag">&lt;/education&gt;</span>
-    </div>
-  </div>
-</section>
-
-<style>
-  :root {
-    --black: #101010;
-    --code-black: #1e1e1e;
-    --light-black: #282828;
-
-    --white: #f0f0f0;
-    --light-gray: #cccccc;
-    --gray: #b7b7b7;
-
-    --indigo-tint: #e6e9ff;
-    --pale-indigo: #c9d0ff;
-    --light-indigo: #a5b0ff;
-    --accent: #7c8cff;
-    --accent-hsl: 232.7 100% 74.3%;
-    --darker-indigo: #5f6bd9;
-    --deep-indigo: #3d45a6;
-    --darkest-indigo: #1e224d;
-
-    --maxw: 1440px;
-}
-.main-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--black);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--light-black);
-  z-index: 1000;
-  transition: all 0.3s ease;
-
-  &.scrolled {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  }
-
-  .nav-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    list-style: none;
-    padding: 1.5rem 2rem;
-    margin: 0;
-  }
-
-  .nav-item {
-    position: relative;
-  }
-
-  .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--light-gray);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    position: relative;
-
-    .nav-number {
-      font-family: 'Fira Code', 'Courier New', monospace;
-      color: var(--accent);
-      font-size: 0.85rem;
-      font-weight: 600;
+      --indigo-tint: #e6e9ff;
+      --pale-indigo: #c9d0ff;
+      --light-indigo: #a5b0ff;
+      --accent: #7c8cff;
+      --accent-hsl: 232.7 100% 74.3%;
+      --darker-indigo: #5f6bd9;
+      --deep-indigo: #3d45a6;
+      --darkest-indigo: #1e224d;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--light-indigo));
-      transition: width 0.3s ease;
-    }
-
-    &:hover {
+    body {
+      background-color: var(--black);
       color: var(--white);
-      background-color: var(--light-black);
-
-      &::before {
-        width: 80%;
-      }
-
-      .nav-number {
-        color: var(--light-indigo);
-      }
-    }
-
-    &.active {
-      color: var(--white);
-      background: linear-gradient(135deg, 
-        rgba(124, 140, 255, 0.1), 
-        rgba(95, 107, 217, 0.05)
-      );
-      border: 1px solid var(--accent);
-
-      &::before {
-        width: 80%;
-      }
-
-      .nav-number {
-        color: var(--light-indigo);
-      }
-    }
-  }
-}
-
-
-@media (max-width: 768px) {
-  .main-nav {
-    .nav-list {
-      gap: 0.5rem;
-      padding: 1rem;
-      overflow-x: auto;
-      justify-content: flex-start;
-    }
-
-    .nav-link {
-      padding: 0.5rem 0.75rem;
-      font-size: 0.875rem;
-      white-space: nowrap;
-
-      .nav-number {
-        font-size: 0.75rem;
-      }
-    }
-  }
-}
-.education-section {
-  padding: 6rem 0;
-  background-color: var(--black);
-  position: relative;
-
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  
-  .section-header {
-    margin-bottom: 4rem;
-    
-    .section-tag {
-      display: inline-block;
-      font-family: 'Fira Code', 'Courier New', monospace;
-      font-size: 0.875rem;
-      color: var(--light-indigo);
-      margin-bottom: 0.5rem;
-      opacity: 0.8;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--white);
-      margin: 0;
-      position: relative;
-      display: inline-block;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background: linear-gradient(90deg, var(--accent), var(--darker-indigo));
-        border-radius: 2px;
-      }
-    }
-  }
-
-
-  .education-timeline {
-    position: relative;
-    
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 20px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(180deg, 
-        var(--accent) 0%, 
-        var(--darker-indigo) 50%, 
-        var(--deep-indigo) 100%
-      );
-      opacity: 0.3;
-    }
-  }
-
-
-  .education-item {
-    position: relative;
-    padding-left: 60px;
-    margin-bottom: 3rem;
-    
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .education-marker {
-      position: absolute;
-      left: 11px;
-      top: 8px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: var(--code-black);
-      border: 3px solid var(--accent);
-      box-shadow: 0 0 0 4px var(--black),
-                  0 0 20px rgba(124, 140, 255, 0.3);
-      transition: all 0.3s ease;
-      z-index: 1;
-    }
-
-    .education-content {
-      background-color: var(--code-black);
-      border: 1px solid var(--light-black);
-      border-radius: 8px;
+      font-family: 'Courier New', Courier, monospace;
       padding: 2rem;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-
-  
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: linear-gradient(90deg, 
-          transparent, 
-          var(--accent), 
-          transparent
-        );
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      &:hover {
-        border-color: var(--accent);
-        box-shadow: 0 8px 24px rgba(124, 140, 255, 0.15);
-        transform: translateY(-2px);
-
-        &::before {
-          opacity: 1;
-        }
-      }
     }
 
-
-    &:hover .education-marker {
-      background-color: var(--accent);
-      box-shadow: 0 0 0 4px var(--black),
-                  0 0 30px rgba(124, 140, 255, 0.5);
-      transform: scale(1.2);
-    }
-  }
-
-
-  .education-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-  }
-
-  .education-main {
-    flex: 1;
-    min-width: 250px;
-
-    .degree {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--white);
-      margin: 0 0 0.5rem 0;
-      line-height: 1.3;
+    section {
+      margin-bottom: 4rem;
     }
 
-    .school {
-      font-size: 1.125rem;
-      color: var(--light-indigo);
-      margin: 0;
-      font-weight: 500;
-    }
-  }
-
-  .education-meta {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-
-    .timeline,
-    .location {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--light-gray);
-      font-family: 'Fira Code', 'Courier New', monospace;
-    }
-
-    .icon {
+    h2 {
       color: var(--accent);
-      flex-shrink: 0;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
     }
-  }
 
+    .section-heading {
+      color: var(--accent);
+    }
 
-  .education-details {
-    border-top: 1px solid var(--light-black);
-    padding-top: 1.5rem;
-    margin-top: 1rem;
-  }
+    .cursor {
+      color: var(--accent);
+      animation: blink 1s step-end infinite;
+    }
 
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
 
-  .honors {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
+    .code-block {
+      background-color: var(--light-black);
+      color: var(--pale-indigo);
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--darker-indigo);
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      box-shadow: 0 0 10px rgba(124, 140, 255, 0.1);
+    }
 
-    .badge {
+    /* Option 7 Grid */
+    .edu-grid {
+      display: grid;
+      gap: 1.2rem;
+      font-family: 'Courier New', monospace;
+      background-color: var(--light-black);
+      padding: 1rem;
+      border-left: 3px solid var(--accent);
+      border-radius: 5px;
+    }
+
+    .edu-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .edu-left {
+      flex: 1 1 40%;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    .edu-right {
+      flex: 1 1 60%;
+      color: var(--pale-indigo);
+    }
+
+    /* Option 9 Tabs */
+    .tabs-ui {
+      background-color: var(--light-black);
+      border: 1px solid var(--darker-indigo);
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .tab {
       display: inline-block;
       padding: 0.5rem 1rem;
-      background: linear-gradient(135deg, 
-        var(--deep-indigo), 
-        var(--darker-indigo)
-      );
-      color: var(--indigo-tint);
-      font-size: 0.875rem;
-      font-weight: 600;
-      border-radius: 6px;
-      border: 1px solid var(--accent);
-      font-family: 'Fira Code', 'Courier New', monospace;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background: linear-gradient(135deg, 
-          var(--darker-indigo), 
-          var(--accent)
-        );
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(124, 140, 255, 0.3);
-      }
-    }
-  }
-
-  .coursework {
-    .coursework-label {
-      font-family: 'Fira Code', 'Courier New', monospace;
-      font-size: 0.875rem;
-      color: var(--accent);
-      margin: 0 0 1rem 0;
-      opacity: 0.9;
+      background-color: var(--code-black);
+      color: var(--gray);
+      border-right: 1px solid var(--darker-indigo);
     }
 
-    .course-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0.75rem;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li {
-        padding: 0.5rem 0.75rem;
-        background-color: var(--light-black);
-        color: var(--light-gray);
-        font-size: 0.9rem;
-        border-radius: 4px;
-        border-left: 3px solid var(--accent);
-        transition: all 0.2s ease;
-
-        &:hover {
-          background-color: var(--light-black);
-          color: var(--white);
-          border-left-color: var(--light-indigo);
-          transform: translateX(4px);
-        }
-
-        &::before {
-          content: '▹';
-          color: var(--accent);
-          margin-right: 0.5rem;
-          font-weight: bold;
-        }
-      }
+    .tab.active {
+      background-color: var(--darkest-indigo);
+      color: var(--light-gray);
+      font-weight: bold;
     }
-  }
 
-  .section-footer {
-    margin-top: 3rem;
-    text-align: left;
-
-    .section-tag {
-      font-family: 'Fira Code', 'Courier New', monospace;
-      font-size: 0.875rem;
-      color: var(--light-indigo);
-      opacity: 0.8;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 1;
-      }
+    .tab-content {
+      padding: 1rem;
+      color: var(--light-gray);
     }
-  }
+
+    .tab-content pre {
+      white-space: pre-wrap;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Option 6 -->
+  <section>
+    <h2 class="section-heading">// Option 6: education() function<span class="cursor">_</span></h2>
+    <pre class="code-block">
+function education() {
+  return [
+    {
+      institution: "University of Example Tech",
+      degree: "B.Sc. Computer Science",
+      years: "2017–2021",
+      GPA: 3.9,
+    },
+    {
+      institution: "Example Community College",
+      degree: "A.A. Mathematics",
+      years: "2015–2017",
+      GPA: 3.8,
+    }
+  ];
 }
+    </pre>
+  </section>
 
+  <!-- Option 7 -->
+  <section>
+    <h2 class="section-heading">// Option 7: Grid Columns Layout<span class="cursor">_</span></h2>
+    <div class="edu-grid">
+      <div class="edu-row">
+        <div class="edu-left">🎓 University of Example Tech</div>
+        <div class="edu-right">B.Sc. Computer Science (2017–2021)<br>GPA: 3.9</div>
+      </div>
+      <div class="edu-row">
+        <div class="edu-left">🏫 Example Community College</div>
+        <div class="edu-right">A.A. Mathematics (2015–2017)<br>GPA: 3.8</div>
+      </div>
+    </div>
+  </section>
 
-@media (max-width: 768px) {
-  .education-section {
-    padding: 4rem 0;
+  <!-- Option 8 -->
+  <section>
+    <h2 class="section-heading">// Option 8: Memory Dump Format<span class="cursor">_</span></h2>
+    <pre class="code-block">
+0x0000 | INST: University of Example Tech
+0x0001 | DEG:  B.Sc. Computer Science
+0x0002 | YRS:  2017–2021
+0x0003 | GPA:  3.9
 
-    .section-header {
-      margin-bottom: 3rem;
+0x0004 | INST: Example Community College
+0x0005 | DEG:  A.A. Mathematics
+0x0006 | YRS:  2015–2017
+0x0007 | GPA:  3.8
+    </pre>
+  </section>
 
-      .section-title {
-        font-size: 2rem;
-      }
-    }
+  <!-- Option 9 -->
+  <section>
+    <h2 class="section-heading">// Option 9: Tab UI Style<span class="cursor">_</span></h2>
+    <div class="tabs-ui">
+      <div>
+        <div class="tab active">university.md</div>
+        <div class="tab">college.md</div>
+      </div>
+      <div class="tab-content">
+        <pre>
+### 🎓 University of Example Tech
+B.Sc. in Computer Science  
+2017–2021 | GPA: 3.9
 
-    .education-timeline::before {
-      left: 10px;
-    }
+### 🏫 Example Community College
+A.A. in Mathematics  
+2015–2017 | GPA: 3.8
+        </pre>
+      </div>
+    </div>
+  </section>
 
-    .education-item {
-      padding-left: 40px;
-
-      .education-marker {
-        left: 1px;
-        width: 18px;
-        height: 18px;
-      }
-
-      .education-content {
-        padding: 1.5rem;
-      }
-    }
-
-    .education-header {
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .education-meta {
-      align-items: flex-start;
-    }
-
-    .coursework .course-list {
-      grid-template-columns: 1fr;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .education-section {
-    .container {
-      padding: 0 1rem;
-    }
-
-    .section-header .section-title {
-      font-size: 1.75rem;
-    }
-
-    .education-main .degree {
-      font-size: 1.25rem;
-    }
-
-    .honors {
-      gap: 0.5rem;
-
-      .badge {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.8rem;
-      }
-    }
-  }
-}
-</style>
-
-<script>
-  // ==========================================
-// Smooth Scrolling & Active Section Highlighting
-// ==========================================
-
-class NavigationController {
-  constructor() {
-    this.nav = document.querySelector('.main-nav');
-    this.navLinks = document.querySelectorAll('.nav-link');
-    this.sections = document.querySelectorAll('section[id]');
-    this.scrollThreshold = 100;
-    
-    this.init();
-  }
-
-  init() {
-    this.setupSmoothScroll();
-    this.setupScrollSpy();
-    this.setupScrollHeader();
-  }
-
-  // Smooth scroll to sections
-  setupSmoothScroll() {
-    this.navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-          const navHeight = this.nav.offsetHeight;
-          const targetPosition = targetSection.offsetTop - navHeight;
-          
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-
-          // Update active state immediately
-          this.updateActiveLink(link);
-        }
-      });
-    });
-  }
-
-  // Highlight active section in navigation
-  setupScrollSpy() {
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -70% 0px',
-      threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.getAttribute('id');
-          const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-          
-          if (activeLink) {
-            this.updateActiveLink(activeLink);
-          }
-        }
-      });
-    }, observerOptions);
-
-    this.sections.forEach(section => {
-      observer.observe(section);
-    });
-  }
-
-  // Update active link styling
-  updateActiveLink(activeLink) {
-    this.navLinks.forEach(link => {
-      link.classList.remove('active');
-    });
-    activeLink.classList.add('active');
-  }
-
-  // Add shadow to navigation on scroll
-  setupScrollHeader() {
-    let lastScroll = 0;
-    
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-
-      // Add/remove scrolled class
-      if (currentScroll > this.scrollThreshold) {
-        this.nav.classList.add('scrolled');
-      } else {
-        this.nav.classList.remove('scrolled');
-      }
-
-      lastScroll = currentScroll;
-    });
-  }
-}
-
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  new NavigationController();
-});
-
-
-// ==========================================
-// Education Section Animations (Optional)
-// ==========================================
-
-class EducationAnimations {
-  constructor() {
-    this.educationItems = document.querySelectorAll('.education-item');
-    this.init();
-  }
-
-  init() {
-    this.setupScrollAnimations();
-  }
-
-  setupScrollAnimations() {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.15
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          // Add staggered animation delay
-          setTimeout(() => {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }, index * 150);
-          
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    // Set initial state and observe
-    this.educationItems.forEach(item => {
-      item.style.opacity = '0';
-      item.style.transform = 'translateY(30px)';
-      item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(item);
-    });
-  }
-}
-
-// Initialize education animations
-document.addEventListener('DOMContentLoaded', () => {
-  new EducationAnimations();
-});
-
-
-// ==========================================
-// Alternative: Vanilla JS Smooth Scroll (Simpler)
-// ==========================================
-
-/*
-// If you prefer a simpler implementation without classes:
-
-document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('.nav-link');
-  const nav = document.querySelector('.main-nav');
-  
-  // Smooth scroll
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      const navHeight = nav.offsetHeight;
-      
-      window.scrollTo({
-        top: target.offsetTop - navHeight,
-        behavior: 'smooth'
-      });
-    });
-  });
-  
-  // Scroll spy
-  window.addEventListener('scroll', () => {
-    let current = '';
-    
-    document.querySelectorAll('section[id]').forEach(section => {
-      const sectionTop = section.offsetTop - nav.offsetHeight - 100;
-      if (window.pageYOffset >= sectionTop) {
-        current = section.getAttribute('id');
-      }
-    });
-    
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
-    
-    // Scrolled state
-    if (window.pageYOffset > 100) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
-});
-*/
-</script>
+</body>
+</html>
