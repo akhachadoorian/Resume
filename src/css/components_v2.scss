@@ -709,6 +709,15 @@ footer {
             font-size: clamp(14px, 0.972vw, 18px);
         }
     }
+
+    &.disabled {
+        opacity: 40%;
+
+        &:hover {
+            box-shadow: none;
+            transform: none;
+        }
+    }
 }
 
 /* /////////////////// */
@@ -934,6 +943,78 @@ footer {
         display: flex;
 
         .edu {
+        }
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+// Project Swiper
+/* /////////////////// */
+
+.project_swiper-wrapper {
+    .project_swiper {
+        overflow: hidden;
+        .swiper-wrapper {
+            align-items: stretch;
+            transition: height 0.3s ease;
+        }
+        .swiper-slide {
+            height: auto;
+
+            .terminal_card {
+                height: 100%;
+            }
+        }
+    }
+
+    .project_swiper-navigation {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        margin-top: 32px;
+
+        button {
+            appearance: none;
+            // border: none;
+            // background: none;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            width: fit-content;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all ease-in-out 300ms;
+
+            &.prev-btn {
+                
+                i {
+                    transform: rotate(-45deg);
+                }
+                &:not(.disabled):hover {
+                    gap: 12px;
+                    i {
+                        transform: rotate(-5deg);
+                    }
+                }
+            }
+
+            &.next-btn {
+                i {
+                    transform: rotate(135deg);
+                }
+                &:not(.disabled):hover {
+                        gap: 12px;
+                    i {
+                        transform: rotate(105deg);
+                    }
+                }
+            }
         }
     }
 }

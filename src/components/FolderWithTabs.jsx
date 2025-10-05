@@ -40,7 +40,7 @@ export default function FolderWithTabs({ tabs, slides }) {
                         keyboard={{ enabled: true }}
                         speed={350}
                         resistanceRatio={0.65}
-                        allowTouchMove={true} // swipe on mobile
+                        allowTouchMove={true}
                         simulateTouch={true}
                     >
                         <Swiper>

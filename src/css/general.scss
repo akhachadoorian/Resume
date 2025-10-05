@@ -6,6 +6,7 @@
 
 @import url("https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css");
 @import url("https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css");
+@import url("https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/duotone/style.css");
 
 :root {
     --black: #101010;
@@ -190,9 +191,7 @@ h2 {
 
 .m_header,
 h3 {
-    // font-family: "Black Mango";
     font-family: "Roboto Mono", monospace;
-    // font-size: clamp(50px, 3.611vw, 60px);
     font-size: clamp(34px, 3.056vw, 54px); // 44
     font-style: normal;
     font-weight: 500;
@@ -206,9 +205,7 @@ h3 {
 
 .s_header,
 h4 {
-    // font-family: "Black Mango";
     font-family: "Roboto Mono", monospace;
-    // font-size: clamp(45px, 3.333vw, 55px);
     font-size: clamp(25px, 2.431vw, 45px); // 35
     font-style: normal;
     font-weight: 400;

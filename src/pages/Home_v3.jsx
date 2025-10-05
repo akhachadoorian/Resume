@@ -3,6 +3,7 @@ import FolderWithTabs from "../components/FolderWithTabs";
 import HeaderWithNumber from "../components/HeaderWithNumber";
 import HeroTerminal from "../components/HeroTerminal";
 import IconCardVertical from "../components/IconCardVertical";
+import ProjectSwiper from "../components/Project Swiper";
 import Terminal from "../components/Terminal";
 import TerminalCard from "../components/TerminalCard";
 import { case_studies, skills } from "../data/text/Home_data";
@@ -140,17 +141,9 @@ function Home_v3({}) {
                     <HeaderWithNumber number={"04"} header={"Projects"} />
 
                     <div className="project-cards">
-                        {case_studies.map((cs, idx) => (
-                            <TerminalCard
-                                key={idx}
-                                image={cs.image}
-                                terminal_title={cs.terminal_title}
-                                project_name={cs.name}
-                                project_description={cs.body}
-                                project_website={cs.link.website}
-                                // project_case_study={cs.link.slug}
-                            />
-                        ))}
+                        <ProjectSwiper 
+                            projects={case_studies}
+                        />
                     </div>
                 </div>
             </section>
