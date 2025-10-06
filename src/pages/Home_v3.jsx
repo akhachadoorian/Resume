@@ -5,7 +5,6 @@ import HeroTerminal from "../components/HeroTerminal";
 import IconCardVertical from "../components/IconCardVertical";
 import ProjectSwiper from "../components/Project Swiper";
 import Terminal from "../components/Terminal";
-import TerminalCard from "../components/TerminalCard";
 import { case_studies, skills } from "../data/text/Home_data";
 
 function Home_v3({}) {
@@ -40,80 +39,74 @@ function Home_v3({}) {
     ];
 
     const slides = [
-  {
-    id: "panel-about",
-    label: "tab-about",
-    type: "about",
-    content: (
-      <div className="slide-inner">
-        <p className="code">
-          I’m a full-stack developer who loves bringing websites to life with clean design and
-          smooth functionality. With a background in both computer science and marketing, I enjoy
-          building projects that are not only technically solid but also engaging and easy to use.
-          From responsive layouts to custom CMS features, I like solving problems that make websites
-          faster, easier to edit, and better for users.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: "panel-edu",
-    label: "tab-edu",
-    type: "education",
-    content: (
-      <div className="slide-inner">
-        <div className="education">
-          <div className="degree">
-            <div className="upper">
-              <h5>Computer Science</h5>
-              <p className="eyebrow">Bachelor of Science</p>
-            </div>
-            <div className="university">
-              <p className="body_small">[</p>
-              <p className="body_small">University of Alabama</p>
-              <p className="body_small">]</p>
-            </div>
-          </div>
+        {
+            id: "panel-about",
+            label: "tab-about",
+            type: "about",
+            content: (
+                <div className="slide-inner">
+                    <p className="code">
+                        I’m a full-stack developer who loves bringing websites to life with clean design and smooth
+                        functionality. With a background in both computer science and marketing, I enjoy building
+                        projects that are not only technically solid but also engaging and easy to use. From responsive
+                        layouts to custom CMS features, I like solving problems that make websites faster, easier to
+                        edit, and better for users.
+                    </p>
+                </div>
+            ),
+        },
+        {
+            id: "panel-edu",
+            label: "tab-edu",
+            type: "education",
+            content: (
+                <div className="slide-inner">
+                    <div className="education">
+                        <div className="degree">
+                            <div className="upper">
+                                <h5>Computer Science</h5>
+                                <p className="eyebrow">Bachelor of Science</p>
+                            </div>
+                            <div className="university">
+                                <p className="body_small">[</p>
+                                <p className="body_small">University of Alabama</p>
+                                <p className="body_small">]</p>
+                            </div>
+                        </div>
 
-          <div className="degree">
-            <div className="upper">
-              <h5>Marketing</h5>
-              <p className="eyebrow">Bachelor of Science</p>
-            </div>
-            <div className="university">
-              <p className="body_small">[</p>
-              <p className="body_small">University of Alabama</p>
-              <p className="body_small">]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
-  },
-];
-
+                        <div className="degree">
+                            <div className="upper">
+                                <h5>Marketing</h5>
+                                <p className="eyebrow">Bachelor of Science</p>
+                            </div>
+                            <div className="university">
+                                <p className="body_small">[</p>
+                                <p className="body_small">University of Alabama</p>
+                                <p className="body_small">]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ),
+        },
+    ];
 
     return (
         <div className="home">
-            <section className="max_width">
+            <section className="hero-section max_width">
                 <HeroTerminal />
             </section>
 
-
-            <section className="about-section">
+            <section className="reveal about-section" id="about">
                 <div className="about-inner max_width">
                     <HeaderWithNumber number={"01"} header={"About"} />
                     <div className="about-body">
-
-                        <FolderWithTabs 
-                            tabs={tabs}
-                            slides={slides}
-                        />
+                        <FolderWithTabs tabs={tabs} slides={slides} />
                     </div>
                 </div>
             </section>
 
-            <section className="skills-section">
+            <section className="reveal skills-section" id="skills">
                 <div className="skills-inner max_width">
                     <HeaderWithNumber number={"02"} header={"Skills"} />
                     <div className="skills-grid-vertical">
@@ -124,7 +117,7 @@ function Home_v3({}) {
                 </div>
             </section>
 
-            <section className="experience-section">
+            <section className="reveal experience-section" id="current_role">
                 <div className="experience-inner max_width">
                     <HeaderWithNumber number={"03"} header={"Current Role"} />
                     <div className="experience-body">
@@ -136,14 +129,12 @@ function Home_v3({}) {
                 </div>
             </section>
 
-            <section className="project-section">
+            <section className="reveal project-section" id="projects">
                 <div className="project-inner max_width" id="featured_projects">
                     <HeaderWithNumber number={"04"} header={"Projects"} />
 
                     <div className="project-cards">
-                        <ProjectSwiper 
-                            projects={case_studies}
-                        />
+                        <ProjectSwiper projects={case_studies} />
                     </div>
                 </div>
             </section>

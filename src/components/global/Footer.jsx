@@ -34,7 +34,7 @@ export default function Footer({}) {
 
     return (
         <footer>
-            <div className="footer-inner max_width">
+            <div className="reveal footer-inner max_width">
                 <Terminal terminal_title={"contact.sh"} include_blink={true} terminal_sections={terminal_sections} />
                 <div className="after-terminal">
                     <i className="ph ph-terminal"></i>

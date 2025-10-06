@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 @import url("https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css");
 @import url("https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css");
@@ -260,7 +259,6 @@ h6 {
     }
 }
 
-
 /* /////////////////// */
 /* Overall Styling */
 /* /////////////////// */
@@ -278,34 +276,138 @@ body {
 
 body {
     background-color: var(--black);
-    cursor: url('../data/cursors/cursor-indigo-tint.svg'), auto;
+    cursor: url("../data/cursors/cursor-indigo-tint.svg"), auto;
 }
 
 /* Links / clickable elements */
-a, button, [role="button"] {
-  cursor: url('../data/cursors/cursor-click-indigo-tint.svg'), pointer;
+a,
+button,
+[role="button"] {
+    cursor: url("../data/cursors/cursor-click-indigo-tint.svg"), pointer;
 }
 
-
 /* Text selection */
-input[type="text"], textarea, [contenteditable="true"] {
-  cursor: url('../data/cursors/text.svg'), text;
+input[type="text"],
+textarea,
+[contenteditable="true"] {
+    cursor: url("../data/cursors/text.svg"), text;
 }
 
 /* Move or drag elements */
 .draggable {
-  cursor: url('../data/cursors/grab.svg'), grab;
+    cursor: url("../data/cursors/grab.svg"), grab;
 }
 .draggable:active {
-//   cursor: url('../data/cursors/cursor-grabbing.svg') 36 36, grabbing;
+    //   cursor: url('../data/cursors/cursor-grabbing.svg') 36 36, grabbing;
 }
 
 /* Resize cursors */
 .resizable-ew {
-  cursor: url('../data/cursors/resize.svg'), ew-resize;
+    cursor: url("../data/cursors/resize.svg"), ew-resize;
 }
 .resizable-ns {
-//   cursor: url('../data/cursors/cursor-resize-v.svg') 36 36, ns-resize;
+    //   cursor: url('../data/cursors/cursor-resize-v.svg') 36 36, ns-resize;
+}
+
+/* /////////////////// */
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; transform: none; }
+}
+
+
+/* /////////////////// */
+// Navigation V2
+/* /////////////////// */
+
+.navigation-wrapper {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+
+    .navigation-inner {
+        margin: 16px auto;
+        max-width: var(--maxw);
+
+        nav {
+            padding: 4px 8px;
+            border-radius: 8px;
+            background-color: #0a0a0a;
+            border: 1px solid var(--code-black);
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            button {
+                appearance: none;
+                border: none;
+                background: transparent;
+                padding: 4px 8px;
+
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                i {
+                    font-size: clamp(14px, 0.972vw, 16px);
+                    transition: all ease-in-out 300ms;
+                }
+                p {
+                    font-size: clamp(14px, 0.972vw, 16px);
+                    transition: all ease-in-out 300ms;
+                }
+
+                &:hover {
+                    i, p {
+                        color: var(--accent);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* /////////////////// */
+
+/* /////////////////// */
+// Footer
+/* /////////////////// */
+
+footer {
+    .footer-inner {
+        .after-terminal {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--light-black);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            i {
+                color: var(--accent);
+                font-size: clamp(18px, 1.25vw, 22px);
+            }
+        }
+    }
 }
 
 /* /////////////////// */

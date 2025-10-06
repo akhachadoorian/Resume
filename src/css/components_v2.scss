@@ -539,32 +539,6 @@
 /* /////////////////// */
 
 /* /////////////////// */
-// Footer
-/* /////////////////// */
-
-footer {
-    .footer-inner {
-        .after-terminal {
-            margin-top: 32px;
-            padding-top: 32px;
-            border-top: 1px solid var(--light-black);
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-
-            i {
-                color: var(--accent);
-                font-size: clamp(18px, 1.25vw, 22px);
-            }
-        }
-    }
-}
-
-/* /////////////////// */
-
-/* /////////////////// */
 // IconCardVertical
 /* /////////////////// */
 
@@ -649,7 +623,7 @@ footer {
 
     width: fit-content;
     padding: 12px 24px;
-    border-radius: 8px;
+    // border-radius: 8px
     text-decoration: none;
     transition: all ease-in-out 300ms;
 
@@ -676,9 +650,11 @@ footer {
     &.accent {
         border: 2px solid var(--accent);
         background-color: var(--accent);
-
+        box-shadow: 4px 4px 0px var(--light-indigo);
         &:hover {
-            box-shadow: 0 0 12px var(--accent);
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--light-indigo);
+            // box-shadow: 0 0 12px var(--accent);
         }
     }
 
