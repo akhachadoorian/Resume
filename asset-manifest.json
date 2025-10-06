@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/Resume/static/css/main.13e14277.css",
-    "main.js": "/Resume/static/js/main.ce00390e.js",
+    "main.css": "/Resume/static/css/main.fbec3c4f.css",
+    "main.js": "/Resume/static/js/main.8d842693.js",
     "static/js/453.ed3810f9.chunk.js": "/Resume/static/js/453.ed3810f9.chunk.js",
+    "static/media/Sunshine.png": "/Resume/static/media/Sunshine.be008a2837a98d2a102c.png",
     "static/media/Oxford.png": "/Resume/static/media/Oxford.c2f83a180014c0197d94.png",
+    "static/media/MarinesHero.png": "/Resume/static/media/MarinesHero.e8c250c61e063d7b0034.png",
     "static/media/SmartFusion.png": "/Resume/static/media/SmartFusion.8b0d55c2990519e4a420.png",
     "static/media/AlexKhachadoorian_Resume.pdf": "/Resume/static/media/AlexKhachadoorian_Resume.18e8bcdb70020a8fcdca.pdf",
     "static/media/AlabamaAgScreenshot.jpg": "/Resume/static/media/AlabamaAgScreenshot.460825c84cf2d2b99666.jpg",
@@ -21,12 +23,12 @@
     "static/media/Right_arrow.svg": "/Resume/static/media/Right_arrow.a74a09d4f7c9b04032d3.svg",
     "index.html": "/Resume/index.html",
     "static/media/dash.svg": "/Resume/static/media/dash.57f94ff02d58c7e34055.svg",
-    "main.13e14277.css.map": "/Resume/static/css/main.13e14277.css.map",
-    "main.ce00390e.js.map": "/Resume/static/js/main.ce00390e.js.map",
+    "main.fbec3c4f.css.map": "/Resume/static/css/main.fbec3c4f.css.map",
+    "main.8d842693.js.map": "/Resume/static/js/main.8d842693.js.map",
     "453.ed3810f9.chunk.js.map": "/Resume/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13e14277.css",
-    "static/js/main.ce00390e.js"
+    "static/css/main.fbec3c4f.css",
+    "static/js/main.8d842693.js"
   ]
 }
