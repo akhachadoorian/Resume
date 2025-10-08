@@ -4,7 +4,10 @@ import HeaderWithNumber from "../components/HeaderWithNumber";
 import HeroTerminal from "../components/HeroTerminal";
 import IconCardVertical from "../components/IconCardVertical";
 import ProjectSwiper from "../components/Project Swiper";
+import Stat from "../components/Stat";
+import Tag from "../components/Tag";
 import Terminal from "../components/Terminal";
+import TerminalCard from "../components/TerminalCard";
 import { case_studies, skills } from "../data/text/Home_data";
 
 function Home_v3({}) {
@@ -97,8 +100,8 @@ function Home_v3({}) {
                 <HeroTerminal />
             </section>
 
-            <section className="reveal about-section" id="about">
-                <div className="about-inner max_width">
+            <section className=" about-section max_width" id="about">
+                <div className="reveal about-inner">
                     <HeaderWithNumber number={"01"} header={"About"} />
                     <div className="about-body">
                         <FolderWithTabs tabs={tabs} slides={slides} />
@@ -121,10 +124,96 @@ function Home_v3({}) {
                 <div className="experience-inner max_width">
                     <HeaderWithNumber number={"03"} header={"Current Role"} />
                     <div className="experience-body">
-                        <Terminal
+                        {/* <Terminal
                             terminal_sections={experience_sections}
                             git_message={"Currently delivering impactful solutions..."}
-                        />
+                        /> */}
+                        <div className="text">
+                            <Tag text={"Current Role"} theme={"white"} />
+                            <h3>Lead Full-Stack Developer</h3>
+                            <a href="https://www.nine.is/" target="_blank" className="eyebrow">
+                                The Nine
+                            </a>
+                        </div>
+                        <div className="div_line"></div>
+                        <div className="stat-grid">
+                            <Stat stat={"8"} body={"Website Launches as Lead Developer"} />
+                            <Stat stat={"9.2%"} body={"Faster Average Development Time"} />
+                            <Stat stat={"99.86%"} body={"Reduction in a Query's Execution Time"} />
+                        </div>
+                    </div>
+                    <div className="experience-hl">
+                        <div className="highlight_list">
+                            <div className="highlight">
+                                <div className="icon">
+                                    <i className="ph ph-users"></i>
+                                </div>
+
+                                <div className="lower">
+                                    <p className="title code">Team Leadership</p>
+                                    <p className="body code_small">
+                                        Leading a two-developer team, coaching a backend-focused teammate on
+                                        frontend/CMS workflows to raise velocity.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="highlight">
+                                <div className="icon">
+                                    <i className="ph ph-check-circle"></i>
+                                </div>
+
+                                <div className="lower">
+                                    <p className="title code">Project Management</p>
+                                    <p className="body code_small">
+                                        Running Agile/Kanban in ClickUp across concurrent projects—owning scope,
+                                        timelines, and handoffs.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="highlight">
+                                <div className="icon">
+                                    <i className="ph ph-code"></i>
+                                </div>
+
+                                <div className="lower">
+                                    <p className="title code">Architecture Design</p>
+                                    <p className="body code_small">
+                                        Architect a new React application: component architecture, styling conventions,
+                                        CMS integration, and scalability.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="highlight">
+                                <div className="icon">
+                                    <i className="ph ph-trend-up"></i>
+                                </div>
+
+                                <div className="lower">
+                                    <p className="title code">Release Management</p>
+                                    <p className="body code_small">
+                                        Manage releases with Heroku pipelines, verifying in staging before promoting to
+                                        production.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="highlight">
+                                <div className="icon">
+                                    <i className="ph ph-users-four"></i>
+                                </div>
+
+                                <div className="lower">
+                                    <p className="title code">Cross-functional Collaboration</p>
+                                    <p className="body code_small">
+                                        Partner with design, marketing, and creative to ship pixel-perfect builds;
+                                        support sales with technical scoping and proposals.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -133,8 +222,21 @@ function Home_v3({}) {
                 <div className="project-inner max_width" id="featured_projects">
                     <HeaderWithNumber number={"04"} header={"Projects"} />
 
-                    <div className="project-cards">
+                    {/* <div className="project-cards">
                         <ProjectSwiper projects={case_studies} />
+                    </div> */}
+                    <div className="project-cards">
+                        {case_studies.map((cs, idx) => (
+                            <TerminalCard
+                                key={idx}
+                                image={cs.image}
+                                terminal_title={cs.terminal_title}
+                                project_name={cs.name}
+                                project_description={cs.body}
+                                project_website={cs.link.website}
+                                // project_case_study={cs.link.slug}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>
