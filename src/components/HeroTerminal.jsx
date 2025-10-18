@@ -1,39 +1,24 @@
 import Button from "./Button";
 import Terminal from "./Terminal";
 
-export default function HeroTerminal() {
-    var terminal_sections = [
-        {
-            command: "whoami",
-            output: "<h1 style='word-break: break-word'>Alex Khachadoorian</h1>",
-        },
-        {
-            command: "cat role.txt",
-            output: "<p>Lead Full Stack Developer</p>",
-        },
-        {
-            command: "ls skills/",
-            output: "<p>Frontend / Backend / Databases / CMS</p>",
-        },
-    ];
-
+export default function HeroTerminal({terminal_sections, button1, button2}) {
     return (
         <div className="hero_terminal">
             <Terminal include_blink={true} terminal_sections={terminal_sections} />
             <div className="btns">
                 <Button
-                    button_text={"View Projects"}
+                    button_text={button1.text}
                     style={"accent"}
-                    element_id={"featured_projects"}
-                    icon={"ph ph-arrow-right"}
-                    icon_position={"right"}
+                    element_id={button1.element_id ? button1.element_id : button1.link }
+                    icon={button1.icon}
+                    icon_position={button1.icon_position}
                 />
                 <Button
-                    button_text={"Get In Touch"}
+                    button_text={button2.text}
                     style={"accent-outline"}
-                    link={"mailto:alexkhachadoorian@gmail.com"}
-                    icon={"ph ph-envelope"}
-                    icon_position={"right"}
+                    link={button2.element_id ? button1.element_id : button1.link}
+                    icon={button2.icon}
+                    icon_position={button2.icon_position}
                 />
             </div>
         </div>

@@ -5,7 +5,7 @@ import "./css/App.css";
 import "./css/components.scss";
 import "./css/general.scss";
 import "./css/Home.scss";
-import "./css/CaseStudies.css";
+import "./css/CaseStudies.scss";
 import "./css/components_v2.scss";
 
 import 'aos/dist/aos.css';

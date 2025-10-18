@@ -31,7 +31,7 @@
 .max_width {
     max-width: var(--maxw);
     margin: auto;
-    padding: 60px;
+    padding: 120px 60px;
 
     @media all and (max-width: 800px) {
         padding: 48px 16px;
@@ -366,6 +366,7 @@ textarea,
                 gap: 4px;
 
                 i {
+                    color: var(--light-indigo);
                     font-size: clamp(14px, 0.972vw, 16px);
                     transition: all ease-in-out 300ms;
                 }

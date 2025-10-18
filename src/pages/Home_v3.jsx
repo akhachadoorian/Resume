@@ -94,10 +94,43 @@ function Home_v3({}) {
         },
     ];
 
+    var terminal_sections = [
+        {
+            command: "whoami",
+            output: "<h1 style='word-break: break-word'>Alex Khachadoorian</h1>",
+        },
+        {
+            command: "cat role.txt",
+            output: "<p>Lead Full Stack Developer</p>",
+        },
+        {
+            command: "ls skills/",
+            output: "<p>Frontend / Backend / Databases / CMS</p>",
+        },
+    ];
+
+    var hero_btn1 = {
+        text: "View Projects",
+        element_id: "featured_projects",
+        icon: "ph ph-arrow-right",
+        icon_position: "right"
+    }
+
+    var hero_btn2 = {
+        text: "Get In Touch",
+        link: "mailto:alexkhachadoorian@gmail.com",
+        icon: "ph ph-envelope",
+        icon_position: "right"
+    }
+
     return (
         <div className="home">
             <section className="hero-section max_width">
-                <HeroTerminal />
+                <HeroTerminal 
+                    terminal_sections={terminal_sections}
+                    button1={hero_btn1}
+                    button2={hero_btn2}
+                />
             </section>
 
             <section className=" about-section max_width" id="about">
