@@ -44,6 +44,7 @@ export default function TerminalCard({
                             target="_blank"
                             icon={"ph ph-arrow-square-out"}
                             icon_position={"right"}
+                            link={project_website}
                         />
                     ) : null}
                 </div>
