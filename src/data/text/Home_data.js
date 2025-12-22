@@ -4,6 +4,7 @@ import Oxford from "../images/home/Oxford.png";
 import SmartFusion from "../images/home/SmartFusion.png";
 import Sunshine from "../images/home/Sunshine.png";
 import Marines from "../images/home/MarinesHero.png";
+import Shapiro from '../images/home/Shapiro.png'
 
 export const basic_info = {
     title: "Lead Website Developer",
@@ -77,7 +78,7 @@ export const skills = [
     {
         icon: "paint-brush",
         title: "Frontend",
-        body: "TypeScript, JavaScript, HTML, CSS, Liquid, React, Next.js",
+        body: "TypeScript, JavaScript, HTML, CSS, Liquid, React, Next.js, Vite, TailwindCSS",
         style: "pale-indigo"
     },
     {
@@ -127,6 +128,33 @@ export const case_studies = [
     //     },
     // },
     {
+        terminal_title: "shapiro_metals.html",
+        name: "Shapiro Metals",
+        body: "Developed and launched a Caboose CMS website (May 2025) and partnered with our lead gen team to drive results—41 leads generated and 6 closed since launch.",
+        image: {
+            image: Shapiro,
+            alt: "A screenshot of the Shapiro Metal's homepage.",
+        },
+        link: {
+            slug: "",
+            website: "https://shapirometals.com/",
+        },
+    },
+    {
+        terminal_title: "alabama_ag.html",
+        name: "Alabama Ag",
+        body: "Developed custom CMS modules to power the “Find My Lender” tool, streamline scattered location data, and auto-generate lender pages. Assisted with domain/DNS updates and guided a phased launch when transitioning from their previous provider.",
+        image: {
+            image: AlabamaAg,
+            alt: "A screenshot of the Alabama Ag's homepage.",
+        },
+        link: {
+            slug: "",
+            website: "https://www.alabamaagcredit.com/",
+        },
+        tags: [],
+    },
+    {
         terminal_title: "smart_fusion.html",
         name: "Smart Fusion",
         body: "Built a scalable website for a government financial software provider with a focus on editor empowerment and long-term maintainability. Developed custom CMS modules (Icons, Icon Categories, Color Themes) to streamline updates, improve design consistency, and allow site-wide visual changes without developer involvement.",
@@ -139,20 +167,6 @@ export const case_studies = [
             website: "https://smartfusiongov.com/",
         },
         tags: ["Website Development", "New CMS Features", "Full Stack Development", "Workflow Improvements"],
-    },
-    {
-        terminal_title: "alabama_ag.html",
-        name: "Alabama Ag",
-        body: "Developed custom CMS modules to power the “Find My Lender” tool, streamline scattered location data, and auto-generate lender pages. Assisted with domain/DNS updates and guided a phased launch when transitioning from their previous provider.",
-        image: {
-            image: AlabamaAg,
-            alt: "Alabama ag's homepage hero",
-        },
-        link: {
-            slug: "",
-            website: "https://www.alabamaagcredit.com/",
-        },
-        tags: [],
     },
     {
         terminal_title: "city_of_oxford.html",
