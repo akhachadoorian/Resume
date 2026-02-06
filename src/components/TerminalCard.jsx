@@ -23,7 +23,12 @@ export default function TerminalCard({
                 <div className="terminal-title">{terminal_title ? terminal_title : "featured_project.html"}</div>
             </div>
             <div className="terminal_card-body">
-                <div className="img_holder">{image ? <img src={image.image} alt={image.alt} /> : null}</div>
+                {/* <div className="img_holder">{image ? <img src={image.image} alt={image.alt} /> : null}</div> */}
+                <div
+                    className="img_holder"
+                    style={image?.image ? { backgroundImage: `url(${image.image})` } : undefined}
+                />
+
                 <div className="text">
                     <div className="text-section">
                         <p className="comment">// Project Name</p>

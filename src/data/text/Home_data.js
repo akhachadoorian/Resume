@@ -4,7 +4,10 @@ import Oxford from "../images/home/Oxford.png";
 import SmartFusion from "../images/home/SmartFusion.png";
 import Sunshine from "../images/home/Sunshine.png";
 import Marines from "../images/home/MarinesHero.png";
-import Shapiro from '../images/home/Shapiro.png'
+import Shapiro from '../images/ShapiroHome.png'
+import BREN from "../images/home/BRENDirectory.png"
+import WelcomeTable from "../images/home/WelcomeTable.png"
+import UA_Edu from "../images/home/UA_education.png"
 
 export const basic_info = {
     title: "Lead Website Developer",
@@ -222,4 +225,44 @@ export const case_studies = [
             website: "https://alamarinesfoundation.org/",
         },
     },
+    {
+        terminal_title: "acre_ccap.html",
+        name: "ACRE CCAP",
+        body: "Redesigned the homepage and overall site layout by thoughtfully blending legacy elements with updated, client-driven aesthetics to improve visual appeal and navigation across devices; built 49 content-rich subpages using custom HTML blocks in Caboose CMS to maintain brand consistency while scaling UX; designed and implemented student and ambassador tables in PostgreSQL with secure frontend forms for seamless data entry and system integration; and developed automated, stage-based email workflows tied to the ambassador approval process to streamline communication and reduce manual administrative follow-ups.",
+        image: {
+            image: BREN,
+            alt: "Screenshot of the BREN directory on the ACRE CCAP page",
+        },
+        link: {
+            slug: "",
+            website: "https://acreccap.com",
+        },
+    },
+    {
+        terminal_title: "welcome_table.html",
+        name: "The Welcome Table",
+        body: "Developed The Welcome Table homepage to deliver a polished, donation-ready experience that has generated $18,900 to date (9% of the $200,000 goal) in the initial launch phase, and am currently building Phase 2 subpages to expand the site with cohesive design, consistent functionality, and a seamless user experience.",
+        image: {
+            image: WelcomeTable,
+            alt: "Screenshot of the Welcome Table's homepage.",
+        },
+        link: {
+            slug: "",
+            website: "https://www.thewelcometable.life/",
+        },
+    },
+    {
+        terminal_title: "ua_education.html",
+        name: "University of Alabama College of Education",
+        body: "Collaborated with the design team to migrate the UA College of Education website (education.ua.edu) to WordPress, helping define and implement a new style guide that ensured a cohesive look and feel while supporting flexible, maintainable page building. Applied WordPress design and development best practices to deliver responsive, user-friendly templates and front-end components aligned with the updated brand.",
+        image: {
+            image: UA_Edu,
+            alt: "Screenshot of the University of Alabama's College of Education homepage.",
+        },
+        link: {
+            slug: "",
+            website: "https://education.ua.edu/",
+        },
+    },
+
 ];
