@@ -18,6 +18,7 @@ import SmartFusion from "./pages/SmartFusion";
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 import { useReveal } from './components/global/UseReveal';
+import AlabamaAg from "./pages/AlabamaAg";
 
 
 function App() {
@@ -38,7 +39,8 @@ function App() {
           <Navigation_V2 />
           <Routes>
             <Route path="/" element={<Home_v3 />} />
-            <Route path="/case-studies/smart-fusion" element={<SmartFusion/>} />
+            {/* <Route path='/case-studies/alabama-ag' element={<AlabamaAg />} /> */}
+            {/* <Route path="/case-studies/smart-fusion" element={<SmartFusion/>} /> */}
           </Routes>
           <Footer />
         </Router>
