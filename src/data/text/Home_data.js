@@ -78,7 +78,7 @@ export const skills = [
     {
         icon: "code",
         title: "Backend",
-        body: "Python, Java, Ruby, Node.js, Ruby on Rails",
+        body: "Python, Java, Ruby, Node.js, Ruby on Rails, PHP",
         style: "light-indigo",
     },
     {
