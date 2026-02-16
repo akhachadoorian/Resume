@@ -8,6 +8,8 @@ import Shapiro from '../images/ShapiroHome.png'
 import BREN from "../images/home/BRENDirectory.png"
 import WelcomeTable from "../images/home/WelcomeTable.png"
 import UA_Edu from "../images/home/UA_education.png"
+import BWPWS from "../images/home/BWPWS.png"
+import Portland from "../images/home/Portland.jpg"
 
 export const basic_info = {
     title: "Lead Website Developer",
@@ -130,6 +132,32 @@ export const case_studies = [
     //         website: "",
     //     },
     // },
+    {
+        terminal_title: "black_warrior_pet_waste.html",
+        name: "Black Warrior Pet Waste Solutions",
+        body: "Built and launched the new Black Warrior Pet Waste Services website using Caboose CMS, taking the project from page buildout through interactive front-end polish. Implemented smooth scrolling and GSAP-powered animations to create a modern, fluid browsing experience, with attention to performance and responsive behavior across devices. Also set up an embedded form workflow so submissions are captured cleanly and reliably, ensuring an easy lead-intake process for the client.",
+        image: {
+            image: BWPWS,
+            alt: "Black Warrior Pet Waste Solutions homepage",
+        },
+        link: {
+            slug: "",
+            website: "https://blackwarriorpws.com",
+        },
+    },
+    {
+        terminal_title: "portland_rescue_mission.html",
+        name: "Portland Rescue Mission",
+        body: "Built and launched the Portland Rescue Mission website in Caboose CMS, handling full site build-out and implementation with a focus on performance, usability, and scalable content management. Developed a smooth, modern front-end experience using smooth scrolling and GSAP animations, ensuring responsive behavior across devices. On the backend, created and extended custom Ruby on Rails modules to support site-specific features and data needs, enabling the team to manage content efficiently while keeping the platform maintainable and ready for future growth.",
+        image: {
+            image: Portland,
+            alt: "Portland Rescue Mission Homepage",
+        },
+        link: {
+            slug: "",
+            website: "https://portlandrescuemission.org/",
+        },
+    },
     {
         terminal_title: "shapiro_metals.html",
         name: "Shapiro Metals",
