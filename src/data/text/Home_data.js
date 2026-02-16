@@ -1,15 +1,4 @@
-import AlabamaAg from "../images/home/AlabamaAgScreenshot.jpg";
-import Jolly from "../images/home/JollyScreenshot.jpg";
-import Oxford from "../images/home/Oxford.png";
-import SmartFusion from "../images/home/SmartFusion.png";
-import Sunshine from "../images/home/Sunshine.png";
-import Marines from "../images/home/MarinesHero.png";
-import Shapiro from '../images/ShapiroHome.png'
-import BREN from "../images/home/BRENDirectory.png"
-import WelcomeTable from "../images/home/WelcomeTable.png"
-import UA_Edu from "../images/home/UA_education.png"
-import BWPWS from "../images/home/BWPWS.png"
-import Portland from "../images/home/Portland.jpg"
+import { images } from "../text/images";
 
 export const basic_info = {
     title: "Lead Website Developer",
@@ -84,37 +73,37 @@ export const skills = [
         icon: "paint-brush",
         title: "Frontend",
         body: "TypeScript, JavaScript, HTML, CSS, Liquid, React, Next.js, Vite, TailwindCSS",
-        style: "pale-indigo"
+        style: "pale-indigo",
     },
     {
         icon: "code",
         title: "Backend",
         body: "Python, Java, Ruby, Node.js, Ruby on Rails",
-        style: "light-indigo"
+        style: "light-indigo",
     },
     {
         icon: "database",
         title: "Databases",
         body: "PostgreSQL, MongoDB",
-        style: ""
+        style: "",
     },
     {
         icon: "browsers",
         title: "CMS Platforms",
         body: "Payload CMS, Caboose CMS, WordPress",
-        style: "pale-indigo"
+        style: "pale-indigo",
     },
     {
         icon: "toolbox",
         title: "Tools & Technologies",
         body: "Git, Docker, RESTful APIs, Visual Code Studio, Axios, Postman, AWS, Microsoft Word, Microsoft Excel, Clickup, Notion",
-        style: "light-indigo"
+        style: "light-indigo",
     },
     {
         icon: "code-block",
         title: "Other",
         body: "Agile Development, Responsive Design, Cross-Functional Collaboration, Kanban Project Planning",
-        style: ""
+        style: "",
     },
 ];
 
@@ -136,10 +125,7 @@ export const case_studies = [
         terminal_title: "black_warrior_pet_waste.html",
         name: "Black Warrior Pet Waste Solutions",
         body: "Built and launched the new Black Warrior Pet Waste Services website using Caboose CMS, taking the project from page buildout through interactive front-end polish. Implemented smooth scrolling and GSAP-powered animations to create a modern, fluid browsing experience, with attention to performance and responsive behavior across devices. Also set up an embedded form workflow so submissions are captured cleanly and reliably, ensuring an easy lead-intake process for the client.",
-        image: {
-            image: BWPWS,
-            alt: "Black Warrior Pet Waste Solutions homepage",
-        },
+        image: images.BWPWS,
         link: {
             slug: "",
             website: "https://blackwarriorpws.com",
@@ -149,10 +135,7 @@ export const case_studies = [
         terminal_title: "portland_rescue_mission.html",
         name: "Portland Rescue Mission",
         body: "Built and launched the Portland Rescue Mission website in Caboose CMS, handling full site build-out and implementation with a focus on performance, usability, and scalable content management. Developed a smooth, modern front-end experience using smooth scrolling and GSAP animations, ensuring responsive behavior across devices. On the backend, created and extended custom Ruby on Rails modules to support site-specific features and data needs, enabling the team to manage content efficiently while keeping the platform maintainable and ready for future growth.",
-        image: {
-            image: Portland,
-            alt: "Portland Rescue Mission Homepage",
-        },
+        image: images.Portland,
         link: {
             slug: "",
             website: "https://portlandrescuemission.org/",
@@ -162,10 +145,7 @@ export const case_studies = [
         terminal_title: "shapiro_metals.html",
         name: "Shapiro Metals",
         body: "Developed and launched a Caboose CMS website (May 2025) and partnered with our lead gen team to drive results—41 leads generated and 6 closed since launch.",
-        image: {
-            image: Shapiro,
-            alt: "A screenshot of the Shapiro Metal's homepage.",
-        },
+        image: images.Shapiro,
         link: {
             slug: "",
             website: "https://shapirometals.com/",
@@ -175,10 +155,7 @@ export const case_studies = [
         terminal_title: "alabama_ag.html",
         name: "Alabama Ag",
         body: "Developed custom CMS modules to power the “Find My Lender” tool, streamline scattered location data, and auto-generate lender pages. Assisted with domain/DNS updates and guided a phased launch when transitioning from their previous provider.",
-        image: {
-            image: AlabamaAg,
-            alt: "A screenshot of the Alabama Ag's homepage.",
-        },
+        image:  images.AlAg,
         link: {
             slug: "",
             website: "https://www.alabamaagcredit.com/",
@@ -189,10 +166,7 @@ export const case_studies = [
         terminal_title: "smart_fusion.html",
         name: "Smart Fusion",
         body: "Built a scalable website for a government financial software provider with a focus on editor empowerment and long-term maintainability. Developed custom CMS modules (Icons, Icon Categories, Color Themes) to streamline updates, improve design consistency, and allow site-wide visual changes without developer involvement.",
-        image: {
-            image: SmartFusion,
-            alt_text: "Image of Smart Fusion's Home Page",
-        },
+        image:  images.SmartFusion,
         link: {
             slug: "/Resume/case-studies/smart-fusion",
             website: "https://smartfusiongov.com/",
@@ -203,10 +177,7 @@ export const case_studies = [
         terminal_title: "city_of_oxford.html",
         name: "City of Oxford",
         body: "Ongoing project focused on modernizing the city’s website by introducing new, updated content blocks with cleaner code and improved design. Reformatting existing pages for better layouts and usability, ensuring the site evolves into a more consistent, accessible, and maintainable platform for the community.",
-        image: {
-            image: Oxford,
-            alt_text: "Image of the City of Oxford's Home Page",
-        },
+        image: images.Oxford,
         link: {
             slug: "",
             website: "https://www.oxfordal.gov/",
@@ -217,24 +188,18 @@ export const case_studies = [
         terminal_title: "jolly_heating_air.html",
         name: "Jolly Heating & Air",
         body: "Redesigned the website with a modern, responsive layout that improved mobile usability, streamlined content management, and aligned with updated brand guidelines.",
-        image: {
-            image: Jolly,
-            alt: "Jolly Heating & Air homepage hero",
-        },
+        image: images.Jolly,
         link: {
             slug: "",
             website: "https://jollyheatingandair.com/",
         },
         tags: [],
     },
-        {
+    {
         terminal_title: "sunshine.html",
         name: "The Sunshine Center",
         body: "Built a dynamic website for The Sunshine Center in Caboose CMS with modular blocks, enabling flexible content management and improved mobile usability.",
-        image: {
-            image: Sunshine,
-            alt: "The Sunshine Center's Homepage hero",
-        },
+        image: images.Sunshine,
         link: {
             slug: "",
             website: "https://sunshinecenterpdx.com/",
@@ -244,10 +209,7 @@ export const case_studies = [
         terminal_title: "al_marines.html",
         name: "Alabama Marines",
         body: "Developed a fast, secure landing page optimized for performance and search visibility. Integrated a user-friendly content management system (CMS) to allow the Foundation’s team to manage updates independently. Streamlined layout and messaging to drive engagement with key initiatives such as the Tuscaloosa Gauntlet and RV fundraising",
-        image: {
-            image: Marines,
-            alt: "Alabama Marine's homepage hero",
-        },
+        image: images.Marines,
         link: {
             slug: "",
             website: "https://alamarinesfoundation.org/",
@@ -257,10 +219,7 @@ export const case_studies = [
         terminal_title: "acre_ccap.html",
         name: "ACRE CCAP",
         body: "Redesigned the homepage and overall site layout by thoughtfully blending legacy elements with updated, client-driven aesthetics to improve visual appeal and navigation across devices; built 49 content-rich subpages using custom HTML blocks in Caboose CMS to maintain brand consistency while scaling UX; designed and implemented student and ambassador tables in PostgreSQL with secure frontend forms for seamless data entry and system integration; and developed automated, stage-based email workflows tied to the ambassador approval process to streamline communication and reduce manual administrative follow-ups.",
-        image: {
-            image: BREN,
-            alt: "Screenshot of the BREN directory on the ACRE CCAP page",
-        },
+        image: images.BREN,
         link: {
             slug: "",
             website: "https://acreccap.com",
@@ -270,10 +229,7 @@ export const case_studies = [
         terminal_title: "welcome_table.html",
         name: "The Welcome Table",
         body: "Developed The Welcome Table homepage to deliver a polished, donation-ready experience that has generated $18,900 to date (9% of the $200,000 goal) in the initial launch phase, and am currently building Phase 2 subpages to expand the site with cohesive design, consistent functionality, and a seamless user experience.",
-        image: {
-            image: WelcomeTable,
-            alt: "Screenshot of the Welcome Table's homepage.",
-        },
+        image: images.WelcomeTable,
         link: {
             slug: "",
             website: "https://www.thewelcometable.life/",
@@ -283,14 +239,10 @@ export const case_studies = [
         terminal_title: "ua_education.html",
         name: "University of Alabama College of Education",
         body: "Collaborated with the design team to migrate the UA College of Education website (education.ua.edu) to WordPress, helping define and implement a new style guide that ensured a cohesive look and feel while supporting flexible, maintainable page building. Applied WordPress design and development best practices to deliver responsive, user-friendly templates and front-end components aligned with the updated brand.",
-        image: {
-            image: UA_Edu,
-            alt: "Screenshot of the University of Alabama's College of Education homepage.",
-        },
+        image: images.UA_Edu,
         link: {
             slug: "",
             website: "https://education.ua.edu/",
         },
     },
-
 ];
