@@ -13,7 +13,7 @@ export function useReveal(selector = '.reveal', options = {}) {
           io.unobserve(entry.target);
         }
       });
-    }, { root: null, threshold: 0.12, rootMargin: '0px 0px -8% 0px', ...options });
+    }, { root: null, threshold: 0, rootMargin: '0px 0px -5% 0px', ...options });
 
     const els = document.querySelectorAll(selector);
     els.forEach((el) => io.observe(el));

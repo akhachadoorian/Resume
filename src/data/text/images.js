@@ -14,6 +14,7 @@ import Portland from "../images/home/Portland.jpg";
 import JP from "../images/home/JPConstruction.png";
 import ARSEA from "../images/home/ARSEA.png";
 import Barndo from "../images/home/HomesteadBarn.png";
+import Placeholder from "../images/Placeholder.png"
 
 // export const images = {
 //   AlabamaAg,
@@ -31,6 +32,10 @@ import Barndo from "../images/home/HomesteadBarn.png";
 // };
 
 export const images = {
+    Placeholder: {
+        image: Placeholder,
+        alt: ""
+    },
     AlAg: {
         image: AlabamaAg,
         alt: "A screenshot of the Alabama Ag's homepage."    

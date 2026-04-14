@@ -134,6 +134,16 @@ export const case_studies = [
     //     },
     // },
     {
+        terminal_title: "evolve.html",
+        name: "EVOLVE — UA Power & Mobility Center",
+        body: "Architecting and developing a new React web application for the UA Power & Mobility Center — establishing component architecture, design system conventions, and Payload CMS integration strategy to deliver a scalable technical foundation for further growth and expansion.",
+        image: images.Placeholder ,
+        link: {
+            slug: "",
+            website: "",
+        },
+    },
+    {
         terminal_title: "homestead_barndominiums.html",
         name: "Homestead Barndominiums",
         body: "Sole developer on the Homestead Barndominiums website — Alabama's original barndominium builder — taking the project from design handoff to client-approved delivery in under a month. Built in Caboose CMS, the site features dedicated service pages for five build categories, a structured project gallery, and an integrated Cognito Forms consultation workflow to streamline lead capture and connect prospective clients with the Homestead team.",
@@ -195,7 +205,7 @@ export const case_studies = [
     },
     {
         terminal_title: "alabama_ag.html",
-        name: "Alabama Ag",
+        name: "Alabama Ag Credit Union",
         body: "Developed custom CMS modules to power the “Find My Lender” tool, streamline scattered location data, and auto-generate lender pages. Assisted with domain/DNS updates and guided a phased launch when transitioning from their previous provider.",
         image:  images.AlAg,
         link: {
