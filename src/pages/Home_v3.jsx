@@ -158,7 +158,7 @@ function Home_v3({}) {
 
             <section className="reveal experience-section" id="current_role">
                 <div className="experience-inner max_width">
-                    <HeaderWithNumber number={"03"} header={"Current Role"} />
+                    <HeaderWithNumber number={"03"} header={"Experience"} />
                     <div className="experience-body">
                         {/* <Terminal
                             terminal_sections={experience_sections}
