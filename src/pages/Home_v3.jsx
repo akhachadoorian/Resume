@@ -1,23 +1,13 @@
-import ExperienceContent from "../components/ExperienceContent";
 import FolderWithTabs from "../components/FolderWithTabs";
 import HeaderWithNumber from "../components/HeaderWithNumber";
 import HeroTerminal from "../components/HeroTerminal";
 import IconCardVertical from "../components/IconCardVertical";
-import ProjectSwiper from "../components/Project Swiper";
 import Stat from "../components/Stat";
 import Tag from "../components/Tag";
-import Terminal from "../components/Terminal";
 import TerminalCard from "../components/TerminalCard";
-import { case_studies, skills } from "../data/text/Home_data";
+import { case_studies, skills, experience } from "../data/text/Home_data";
 
 function Home_v3({}) {
-    const experience_sections = [
-        {
-            command: "cat current_role.json",
-            output: <ExperienceContent />,
-        },
-    ];
-
     const tabs = [
         {
             id: "about",
@@ -49,11 +39,14 @@ function Home_v3({}) {
             content: (
                 <div className="slide-inner">
                     <p className="code">
-                        I’m a full-stack developer who loves bringing websites to life with clean design and smooth
-                        functionality. With a background in both computer science and marketing, I enjoy building
-                        projects that are not only technically solid but also engaging and easy to use. From responsive
-                        layouts to custom CMS features, I like solving problems that make websites faster, easier to
-                        edit, and better for users.
+                        I’m a full-stack developer who loves bringing websites
+                        to life with clean design and smooth functionality. With
+                        a background in both computer science and marketing, I
+                        enjoy building projects that are not only technically
+                        solid but also engaging and easy to use. From responsive
+                        layouts to custom CMS features, I like solving problems
+                        that make websites faster, easier to edit, and better
+                        for users.
                     </p>
                 </div>
             ),
@@ -72,7 +65,9 @@ function Home_v3({}) {
                             </div>
                             <div className="university">
                                 <p className="body_small">[</p>
-                                <p className="body_small">University of Alabama</p>
+                                <p className="body_small">
+                                    University of Alabama
+                                </p>
                                 <p className="body_small">]</p>
                             </div>
                         </div>
@@ -84,7 +79,9 @@ function Home_v3({}) {
                             </div>
                             <div className="university">
                                 <p className="body_small">[</p>
-                                <p className="body_small">University of Alabama</p>
+                                <p className="body_small">
+                                    University of Alabama
+                                </p>
                                 <p className="body_small">]</p>
                             </div>
                         </div>
@@ -113,20 +110,20 @@ function Home_v3({}) {
         text: "View Projects",
         element_id: "featured_projects",
         icon: "ph ph-arrow-right",
-        icon_position: "right"
-    }
+        icon_position: "right",
+    };
 
     var hero_btn2 = {
         text: "Get In Touch",
         link: "mailto:alexkhachadoorian@gmail.com",
         icon: "ph ph-envelope",
-        icon_position: "right"
-    }
+        icon_position: "right",
+    };
 
     return (
         <div className="home">
             <section className="hero-section max_width">
-                <HeroTerminal 
+                <HeroTerminal
                     terminal_sections={terminal_sections}
                     button1={hero_btn1}
                     button2={hero_btn2}
@@ -147,7 +144,13 @@ function Home_v3({}) {
                     <HeaderWithNumber number={"02"} header={"Skills"} />
                     <div className="skills-grid-vertical">
                         {skills.map((s, idx) => (
-                            <IconCardVertical key={idx} icon={s.icon} title={s.title} body={s.body} style={s.style} />
+                            <IconCardVertical
+                                key={idx}
+                                icon={s.icon}
+                                title={s.title}
+                                body={s.body}
+                                style={s.style}
+                            />
                         ))}
                     </div>
                 </div>
@@ -162,90 +165,50 @@ function Home_v3({}) {
                             git_message={"Currently delivering impactful solutions..."}
                         /> */}
                         <div className="text">
-                            <Tag text={"Current Role"} theme={"white"} />
-                            <h3>Lead Full-Stack Developer</h3>
-                            <a href="https://www.nine.is/" target="_blank" className="eyebrow">
-                                The Nine
+                            <Tag text={experience[0].time} theme={"white"} />
+                            <h3>{experience[0].title}</h3>
+                            <a
+                                href={experience[0].companyWebsite}
+                                target="_blank"
+                                className="eyebrow"
+                            >
+                                {experience[0].company}
                             </a>
                         </div>
                         <div className="div_line"></div>
                         <div className="stat-grid">
-                            <Stat stat={"8"} body={"Website Launches as Lead Developer"} />
-                            <Stat stat={"9.2%"} body={"Faster Average Development Time"} />
-                            <Stat stat={"99.86%"} body={"Reduction in a Query's Execution Time"} />
+                            <Stat
+                                stat={"8"}
+                                body={"Website Launches as Lead Developer"}
+                            />
+                            <Stat
+                                stat={"9.2%"}
+                                body={"Faster Average Development Time"}
+                            />
+                            <Stat
+                                stat={"99.86%"}
+                                body={"Reduction in a Query's Execution Time"}
+                            />
                         </div>
                     </div>
                     <div className="experience-hl">
                         <div className="highlight_list">
-                            <div className="highlight">
-                                <div className="icon">
-                                    <i className="ph ph-users"></i>
-                                </div>
+                            {experience[0].details.map((d, idx) => (
+                                <div key={idx} className="highlight">
+                                    <div className="icon">
+                                        <i className={`ph ph-${d.icon}`}></i>
+                                    </div>
 
-                                <div className="lower">
-                                    <p className="title code">Team Leadership</p>
-                                    <p className="body code_small">
-                                        Leading a two-developer team, coaching a backend-focused teammate on
-                                        frontend/CMS workflows to raise velocity.
-                                    </p>
+                                    <div className="lower">
+                                        <p className="title code">{d.title}</p>
+                                        <p className="body code_small">
+                                            {d.bullet}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            ))}
 
-                            <div className="highlight">
-                                <div className="icon">
-                                    <i className="ph ph-check-circle"></i>
-                                </div>
-
-                                <div className="lower">
-                                    <p className="title code">Project Management</p>
-                                    <p className="body code_small">
-                                        Running Agile/Kanban in ClickUp across concurrent projects—owning scope,
-                                        timelines, and handoffs.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="highlight">
-                                <div className="icon">
-                                    <i className="ph ph-code"></i>
-                                </div>
-
-                                <div className="lower">
-                                    <p className="title code">Architecture Design</p>
-                                    <p className="body code_small">
-                                        Architect a new React application: component architecture, styling conventions,
-                                        CMS integration, and scalability.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="highlight">
-                                <div className="icon">
-                                    <i className="ph ph-trend-up"></i>
-                                </div>
-
-                                <div className="lower">
-                                    <p className="title code">Release Management</p>
-                                    <p className="body code_small">
-                                        Manage releases with Heroku pipelines, verifying in staging before promoting to
-                                        production.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="highlight">
-                                <div className="icon">
-                                    <i className="ph ph-users-four"></i>
-                                </div>
-
-                                <div className="lower">
-                                    <p className="title code">Cross-functional Collaboration</p>
-                                    <p className="body code_small">
-                                        Partner with design, marketing, and creative to ship pixel-perfect builds;
-                                        support sales with technical scoping and proposals.
-                                    </p>
-                                </div>
-                            </div>
+    
                         </div>
                     </div>
                 </div>

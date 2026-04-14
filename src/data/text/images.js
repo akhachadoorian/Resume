@@ -11,6 +11,9 @@ import WelcomeTable from "../images/home/WelcomeTable.png";
 import UA_Edu from "../images/home/UA_education.png";
 import BWPWS from "../images/home/BWPWS.png";
 import Portland from "../images/home/Portland.jpg";
+import JP from "../images/home/JPConstruction.png";
+import ARSEA from "../images/home/ARSEA.png";
+import Barndo from "../images/home/HomesteadBarn.png";
 
 // export const images = {
 //   AlabamaAg,
@@ -76,4 +79,20 @@ export const images = {
         image: Portland,
         alt: "Portland Rescue Mission homepage"    
     },
+    JP: {
+        image: JP,
+        alt: "J & P Construction homepage"
+    },
+    ARSEA: {
+        image: ARSEA,
+        alt: "ARSEA APEAL's homepage"
+    },
+    Barndo: {
+        image: Barndo,
+        alt: "Homestead Barndominium homepage"
+    },
+//     ARSEA: {
+//         image: ,
+//         alt: ""
+//     },
 }

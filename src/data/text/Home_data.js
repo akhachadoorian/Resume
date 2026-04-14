@@ -35,34 +35,49 @@ export const education = [
 export const experience = [
     {
         company: "The Nine",
-        title: "Full Stack Lead Developer",
-        time: "May 2024 - Present",
-        description: [
+        companyWebsite: "https://www.nine.is/",
+        title: "Lead, Full Stack Developer",
+        time: "May 2024 - April 2026",
+        details: [
+            // {
+            //     icon: "",
+            //     title: "",
+            //     bullet: ""
+            // },
             {
-                heading: "Leadership & Project Management",
-                list: [
-                    "<li>Led a team of two developers, ensuring timely, high-quality deliverables while mentoring a backend-focused teammate in frontend CMS workflows—accelerating development and increasing team velocity.</li>",
-                    "<li>Led Agile/Kanban workflows in ClickUp to deliver 16+ custom websites, managing timelines, task prioritization, and cross-functional collaboration across multiple concurrent projects.</li>",
-                    "<li>Assisted the sales team by contributing technical insights for client quotes and drafting project proposals.</li>",
-                ],
+                icon: "users",
+                title: "Team Leadership",
+                bullet: "Managed a two-developer team, introduced standardized CMS conventions, and cut average site development time by 9.2% (~80h → ~72h per site)."
             },
             {
-                heading: "Technical Development & Engineering",
-                list: [
-                    "<li>Built and maintained responsive frontend components (flexbox layouts, adaptive grids, optimized media), creating a design system to ensure seamless, cross-device user experiences.</li>",
-                    "<li>Developed and maintained key modules within the Caboose CMS, implementing dynamic content features that reduced manual content updates.</li>",
-                    "<li>Leading development of a new React web application, defining component architecture, styling conventions, and CMS integration while ensuring future scalability.</li>",
-                    "<li>Worked with Heroku pipelines to manage deployments from staging to production, verifying stability in staging before promoting builds.</li>",
-                ],
+                icon: "kanban",
+                title: "Project Management",
+                bullet: "Led Agile/Kanban workflows in ClickUp to deliver 20+ custom websites across concurrent client projects, coordinating development from kickoff to launch."
             },
             {
-                heading: "Process & Performance Improvements",
-                list: [
-                    "<li>Collaborating with the backend developer to improve server performance and reliability by adding database indexes, optimizing queries, and introducing unit testing.</li>",
-                    "<li>Standardized CMS build processes by creating repeatable conventions for heading styles, classes, and layout structures—reducing build time, improving design consistency, and enhancing the client editing experience.</li>",
-                    "<li>Improved documentation practices by writing post-launch build notes and maintaining ongoing documentation for new code additions, making future builds more efficient and onboarding smoother.</li>",
-                    "<li>Partnered with UI/UX designers, marketers, and the Creative Director to align visual design with functionality, ensuring pixel-perfect implementation from Figma to deployment.</li>",
-                ],
+                icon: "squares-four",
+                title: "Architecture & Design System",
+                bullet: "Established component architecture, design system conventions, and CMS integration strategy for a new React application, then built the reusable content block library and responsive component system that standardized frontend patterns and reduced per-site QA cycles."
+            },
+            {
+                icon: "gauge",
+                title: "Performance Optimization",
+                bullet: "Reduced a hot query's execution time by 99.86% (142.2ms → 0.205ms) via composite indexes and query optimization."
+            },
+            {
+                icon: "magnifying-glass",
+                title: "SEO & Migrations",
+                bullet: "Implemented on-page SEO best practices and managed redirect configurations across client launches, supporting smooth domain migrations and preserving search rankings."
+            },
+            {
+                icon: "shuffle",
+                title: "Cross-functional Collaboration",
+                bullet: "Collaborated with clients and stakeholders on UX decisions during scoping and delivery, translating design intent into functional, accessible frontend implementations."
+            },
+            {
+                icon: "rocket-launch",
+                title: "Release Management",
+                bullet: "Managed Heroku deployments from staging to production and maintained DNS configurations with client IT teams."
             },
         ],
     },
@@ -72,7 +87,7 @@ export const skills = [
     {
         icon: "paint-brush",
         title: "Frontend",
-        body: "TypeScript, JavaScript, HTML, CSS, Liquid, React, Next.js, Vite, TailwindCSS",
+        body: "TypeScript, JavaScript, HTML, CSS/SCSS, Liquid, React, Next.js, Vite, TailwindCSS, GSAP, Liquid",
         style: "pale-indigo",
     },
     {
@@ -90,13 +105,13 @@ export const skills = [
     {
         icon: "browsers",
         title: "CMS Platforms",
-        body: "Payload CMS, Caboose CMS, WordPress",
+        body: "Payload CMS, Caboose CMS, WordPress, Shopify, Webflow",
         style: "pale-indigo",
     },
     {
         icon: "toolbox",
         title: "Tools & Technologies",
-        body: "Git, Docker, RESTful APIs, Visual Code Studio, Axios, Postman, AWS, Microsoft Word, Microsoft Excel, Clickup, Notion",
+        body: "Git, Docker, RESTful APIs, Visual Code Studio, Axios, Postman, AWS, Fastly CDN, Vercel, Microsoft Word, Microsoft Excel, Clickup, Notion",
         style: "light-indigo",
     },
     {
@@ -112,15 +127,42 @@ export const case_studies = [
     //     terminal_title: ".html",
     //     name: "",
     //     body: "",
-    //     image: {
-    //         image: "",
-    //         alt: "",
-    //     },
+    //     image: images. ,
     //     link: {
     //         slug: "",
     //         website: "",
     //     },
     // },
+    {
+        terminal_title: "homestead_barndominiums.html",
+        name: "Homestead Barndominiums",
+        body: "Sole developer on the Homestead Barndominiums website — Alabama's original barndominium builder — taking the project from design handoff to client-approved delivery in under a month. Built in Caboose CMS, the site features dedicated service pages for five build categories, a structured project gallery, and an integrated Cognito Forms consultation workflow to streamline lead capture and connect prospective clients with the Homestead team.",
+        image: images.Barndo ,
+        link: {
+            slug: "",
+            website: "https://www.homesteadbarndominiums.com/",
+        },
+    },
+    {
+        terminal_title: "arsea_apeal.html",
+        name: "Alabama Retired State Employees' Association ",
+        body: "Primary developer on the ARSEA/APEAL website — Alabama's leading advocacy organization for retired and active public employees, serving a 17,000+ member community. Built in Caboose CMS with a password-protected member portal giving verified members exclusive access to resources, publications, and benefits. Stripe is integrated directly into the membership signup flow for seamless registration and dues payment in a single experience. Managed the migration from the previous site, configuring 100+ permanent redirects to preserve SEO equity. Achieved Lighthouse scores of 94 Accessibility, 92 Best Practices, and 79 Performance — with the accessibility score reflecting particular attention to usability across a broad and diverse membership base.",
+        image: images.ARSEA,
+        link: {
+            slug: "",
+            website: "https://www.arsea.org/",
+        },
+    },
+    {
+        terminal_title: "jandp_construction.html",
+        name: "J & P Construction",
+        body: "Sole developer on the J&P Construction website — a Tuscaloosa-based water and wastewater contractor with over 60 years of infrastructure experience across the Southeast. Took the project from design handoff to launch in under a month, coordinating directly with their third-party server and DNS team to ensure a smooth deployment. Built in Caboose CMS with dedicated service pages for each core specialty and a structured project gallery organized by category. Configured redirect rules during the launch.",
+        image: images.JP,
+        link: {
+            slug: "",
+            website: "https://www.jandpconstruction.com/",
+        },
+    },
     {
         terminal_title: "black_warrior_pet_waste.html",
         name: "Black Warrior Pet Waste Solutions",
@@ -144,7 +186,7 @@ export const case_studies = [
     {
         terminal_title: "shapiro_metals.html",
         name: "Shapiro Metals",
-        body: "Developed and launched a Caboose CMS website (May 2025) and partnered with our lead gen team to drive results—41 leads generated and 6 closed since launch.",
+        body: "Collaborated with the design team and a fellow developer to build modular, reusable site blocks in Caboose CMS, ensuring consistency and flexibility across page builds. Partnered with the lead gen team post-launch to drive results — 41 leads generated and 6 closed since May 2025.",
         image: images.Shapiro,
         link: {
             slug: "",
