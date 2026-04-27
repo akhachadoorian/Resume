@@ -134,7 +134,44 @@ function Home_v3({}) {
                 <div className="reveal about-inner">
                     <HeaderWithNumber number={"01"} header={"About"} />
                     <div className="about-body">
-                        <FolderWithTabs tabs={tabs} slides={slides} />
+                        <div className="about-card summary">
+                            <p className="eyebrow">// Professional Summary</p>
+
+                            <p>
+                                Full stack developer with dual degrees in Computer
+                                Science and Marketing, bringing 2 years of agency
+                                experience leading development teams and delivering
+                                20+ client websites end-to-end. Proven track record
+                                of performance optimization (99.86% query speed
+                                improvement) and reducing development cycles through
+                                scalable CMS architecture and Agile workflows
+                            </p>
+                        </div>
+
+                        <div className="about-card education">
+                            <p className="eyebrow">// Education</p>
+
+                            <div className="educations">
+                                <div className="education-card">
+                                    <div className="education-left">
+                                        <p className="degree_type">Bachelor of Science</p>
+                                        <p>Computer Science</p>
+                                    </div>
+                                    <div className="education-right">
+                                        <p className="uni">University of Alabama</p>
+                                    </div>
+                                </div>
+                                <div className="education-card">
+                                    <div className="education-left">
+                                        <p className="degree_type">Bachelor of Science</p>
+                                        <p>Marketing</p>
+                                    </div>
+                                    <div className="education-right">
+                                        <p className="uni">University of Alabama</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
