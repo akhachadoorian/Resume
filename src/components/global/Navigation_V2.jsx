@@ -16,9 +16,9 @@ export default function Navigation_V2({}) {
                     <i class="ph ph-folder"></i>
                     <p className="code_small">./skills</p>
                 </button>
-                <button onClick={() => scrollToBlockById('current_role')}>
+                <button onClick={() => scrollToBlockById('experience')}>
                     <i class="ph ph-folder"></i>
-                    <p className="code_small">./current_role</p>
+                    <p className="code_small">./experience</p>
                 </button>
                 <button onClick={() => scrollToBlockById('projects')}>
                     <i class="ph ph-folder"></i>

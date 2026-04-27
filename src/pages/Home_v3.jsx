@@ -193,7 +193,7 @@ function Home_v3({}) {
                 </div>
             </section>
 
-            <section className="reveal experience-section" id="current_role">
+            <section className="reveal experience-section" id="experience">
                 <div className="experience-inner max_width">
                     <HeaderWithNumber number={"03"} header={"Experience"} />
                     <div className="experience-body">
