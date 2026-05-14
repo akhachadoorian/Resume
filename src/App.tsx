@@ -1,16 +1,14 @@
-import { useEffect, useRef, useState } from 'react'
-import { Route, BrowserRouter } from "react-router-dom";
-
+import { useEffect, useRef } from 'react'
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "lenis/dist/lenis.css";
 import { ReactLenis } from "lenis/react";
 import type { LenisRef } from "lenis/react";
-import { Router, Routes } from 'react-router-dom';
 
-import './styles/main.scss';
-
+import Home from './pages/Home/Home';
+import Navigation from './layout/Navigation/Navigation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,19 +25,17 @@ function App() {
         return () => gsap.ticker.remove(update);
     }, []);
 
-  const [count, setCount] = useState(0)
-
   return (
     <ReactLenis root options={{ autoRaf: false, duration: 1.2, anchors: true, smoothWheel: true, syncTouch: false, naiveDimensions: true, stopInertiaOnNavigate: true }} ref={lenisRef}>
-                <Route>
-                    {/* <Navigation /> */}
+                <Router>
+                    <Navigation />
                     <main>
                         <Routes>
-                            {/* <BrowserRouter path="/" element={<Home loaded={loaded} />} /> */}
+                            <Route path="/" element={<Home />} />
                         </Routes>
                     </main>
                     {/* <Footer /> */}
-                </Route>
+                </Router>
       
             </ReactLenis>
   )

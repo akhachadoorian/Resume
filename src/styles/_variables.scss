@@ -1,82 +1,135 @@
+// ============================================================================
+// _variables.scss
+// SCSS $ variables mirroring the CSS custom properties in base.scss.
+// Import this file first so all other partials can reference these tokens.
+// ============================================================================
+
+// ── Forwards ───────────────────────────────────────────────────────────────────
+
 @forward 'mixins';
 @forward 'tokens/breakpoints';
 @forward 'tokens/spacing';
 @forward 'tokens/layout';
-@forward 'tokens/typography';
+@forward 'tokens/type_sizes';
+@forward 'tokens/radii';
 
-// ── SCSS variables ────────────────────────────────────────────
+ 
+// ── Google Fonts ─────────────────────────────────────────────────────────────
+// @import is handled in base.scss; listed here for reference only.
+// @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+// ── Layout ───────────────────────────────────────────────────────────────────
+ 
 $max-width: 1600px;
-
-// ──── Fonts ───────────────────────────────────
-// $font-display: "Barlow Condensed", sans-serif;
-// $font-sans: "Barlow", sans-serif;
-$font-sans: 'Jost', sans-serif;
-// $font-body: "Inter", sans-serif;
-$font-body: 'Jost', sans-serif;
-// $font-mono: "JetBrains Mono", monospace;
-$font-mono: "Space Grotesk", monospace;
-
-// ──── Color primitives ────────────────────────
-// Orange
-$orange-100:  var(--orange-100);
-$orange-200:  var(--orange-200);
-$orange-300:  var(--orange-300);
-$orange-400:  var(--orange-400);
-$orange-450:  var(--orange-450);
-$orange-500:  var(--orange-500);
-$orange-600:  var(--orange-600);
-$orange-650:  var(--orange-650);
-$orange-700:  var(--orange-700);
-$orange-800:  var(--orange-800);
-$orange-850:  var(--orange-850);
-$orange-900:  var(--orange-900);
-$orange-1000: var(--orange-1000);
  
-// Oxblood
-$oxblood-100:  var(--oxblood-100);
-$oxblood-200:  var(--oxblood-200);
-$oxblood-300:  var(--oxblood-300);
-$oxblood-400:  var(--oxblood-400);
-$oxblood-500:  var(--oxblood-500);
-$oxblood-600:  var(--oxblood-600);
-$oxblood-650:  var(--oxblood-650);
-$oxblood-700:  var(--oxblood-700);
-$oxblood-800:  var(--oxblood-800);
-$oxblood-850:  var(--oxblood-850);
-$oxblood-900:  var(--oxblood-900);
-$oxblood-1000: var(--oxblood-1000);
+// ── Color — primitives ───────────────────────────────────────────────────────
  
-// Stone
-$stone-000:  var(--stone-000);
-$stone-100:  var(--stone-100);
-$stone-200:  var(--stone-200);
-$stone-300:  var(--stone-300);
-$stone-400:  var(--stone-400);
-$stone-500:  var(--stone-500);
-$stone-600:  var(--stone-600);
-$stone-700:  var(--stone-700);
-$stone-800:  var(--stone-800);
-$stone-850:  var(--stone-850);
-$stone-900:  var(--stone-900);
-$stone-950:  var(--stone-950);
-$stone-1000: var(--stone-1000);
-
-// ──── Semantic aliases ────────────────────────
-$orange:       $orange-500;
-// $orange-hover: $orange-600;
-$oxblood:      $oxblood-800;
-// $oxblood-bg:   $oxblood-1000;
-$stone:        $stone-000;
-$body-text:    $stone-900;
-
-// ──── Utility ─────────────────────────────────
-$overlay-bg:   rgba(#3d0f0f, 0.45);
-$default-br:   3px;
+// Primary · "Cobalt" — bold electric indigo
+$cobalt-50:  #eef0ff;
+$cobalt-200: #b6beff;
+$cobalt-500: #4338f5; // brand (light)
+$cobalt-700: #2a1fc8;
+$cobalt-900: #14107a;
+ 
+// Neutral · "Slate-warm" — cool gray with a hint of warmth
+$neutral-000:  #ffffff;
+$neutral-050:  #f7f7f5;
+$neutral-100:  #ecece8;
+$neutral-300:  #c9c9c2;
+$neutral-400:  #c9c9c2;
+$neutral-500:  #75756e;
+$neutral-700:  #3d3d38;
+$neutral-800:  #23232c;
+$neutral-900:  #16161a;
+$neutral-1000: #0b0b0f;
+ 
+// Accent · "Citron" — punchy chartreuse for tags, links, highlights
+$citron-500: #dcff50;
+$citron-600: #c2e63b; // darker for hover on light surfaces
+ 
+ 
+// ── Color — semantic tokens (light mode) ─────────────────────────────────────
+ 
+$bg:               $neutral-050;
+$surface:          $neutral-050;
+$surface-raised:   $neutral-000;
+$surface-sunken:   $neutral-100;
+$surface-inverted: $neutral-900;
+ 
+$border:           $neutral-100;
+$border-strong:    $neutral-300;
+$border-focus:     $cobalt-500;
+ 
+$text-primary:     $neutral-900;
+$text-muted:       $neutral-500;
+$text-inverted:    $neutral-050;
+$text-link:        $cobalt-500;
+$text-link-hover:  $cobalt-700;
+ 
+$accent:           $citron-500;
+$accent-ink:       $neutral-900; // text on accent
+ 
+$brand:            $cobalt-500;
+$brand-ink:        $neutral-000; // text on brand
+ 
+ 
+// ── Color — semantic tokens (dark mode overrides) ────────────────────────────
+ 
+$dark-bg:               $neutral-1000;
+$dark-surface:          $neutral-1000;
+$dark-surface-raised:   $neutral-900;
+$dark-surface-sunken:   #08080b;
+$dark-surface-inverted: $neutral-050;
+ 
+$dark-border:           $neutral-800;
+$dark-border-strong:    #3a3a45;
+$dark-border-focus:     $citron-500;
+ 
+$dark-text-primary:     $neutral-050;
+$dark-text-muted:       #95958e;
+$dark-text-inverted:    $neutral-900;
+$dark-text-link:        $citron-500;
+$dark-text-link-hover:  #ebff7a;
+ 
+$dark-accent:           $citron-500;
+$dark-accent-ink:       $neutral-900;
+ 
+$dark-brand:            #6e64ff; // lifted cobalt for dark bg
+$dark-brand-ink:        $neutral-000;
+ 
+ 
+// ── Typography — families ─────────────────────────────────────────────────────
+ 
+$font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+$font-body:    "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-mono:    "Geist Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+ 
+ 
+// ── Font weights ─────────────────────────────────────────────────────────────
+ 
+$fw-light:    300;
+$fw-regular:  400;
+$fw-medium:   500;
+$fw-semibold: 600;
+$fw-bold:     700;
+ 
+// ── Shadows ──────────────────────────────────────────────────────────────────
+ 
+// Light mode
+$shadow-xs:    0 1px 0 rgba(22, 22, 26, 0.04);
+$shadow-sm:    0 1px 2px rgba(22, 22, 26, 0.06), 0 1px 0 rgba(22, 22, 26, 0.04);
+$shadow-md:    0 6px 16px -4px rgba(22, 22, 26, 0.1), 0 2px 4px rgba(22, 22, 26, 0.04);
+$shadow-lg:    0 24px 48px -16px rgba(22, 22, 26, 0.18), 0 4px 12px rgba(22, 22, 26, 0.06);
+$shadow-focus: 0 0 0 3px rgba(67, 56, 245, 0.25);
+ 
+// Dark mode
+$dark-shadow-xs:    0 1px 0 rgba(0, 0, 0, 0.4);
+$dark-shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(0, 0, 0, 0.4);
+$dark-shadow-md:    0 6px 16px -4px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+$dark-shadow-lg:    0 24px 48px -16px rgba(0, 0, 0, 0.7), 0 4px 12px rgba(0, 0, 0, 0.3);
+$dark-shadow-focus: 0 0 0 3px rgba(220, 255, 80, 0.35);
+ 
+// ──── Utility / Other ─────────────────────────────────
 $transition:   all ease-in-out 300ms;
- 
-$hero-bg:      var(--oxblood-800);
-$hero-pattern: var(--orange-500);
-$nav-bg:       var(--oxblood-900);
 
-// ──── Other ─────────────────────────────────
 

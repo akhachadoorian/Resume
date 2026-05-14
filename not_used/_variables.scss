@@ -1,0 +1,74 @@
+@forward 'mixins';
+@forward 'tokens/breakpoints';
+@forward 'tokens/spacing';
+@forward 'tokens/layout';
+@forward 'tokens/type_sizes';
+
+// ── SCSS variables ────────────────────────────────────────────
+$max-width: 1600px;
+
+// ──── Fonts ───────────────────────────────────
+$font-display: "Syne", sans-serif;
+$font-body: "Space Grotesk", monospace;
+$font-mono: "Space Mono", monospace;
+
+// ──── Color primitives ────────────────────────
+// white
+// $white-100:  var(--white-100);
+// $white-200:  var(--white-200);
+$white-300:  var(--white-300);
+$white-400:  var(--white-400);
+$white-500:  var(--white-500);
+$white-600:  var(--white-600);
+$white-650:  var(--white-650);
+$white-700:  var(--white-700);
+$white-800:  var(--white-800);
+// $white-850:  var(--white-850);
+// $white-900:  var(--white-900);
+// $white-1000: var(--white-1000);
+ 
+// black
+// $black-100:  var(--black-100);
+// $black-200:  var(--black-200);
+// $black-300:  var(--black-300);
+// $black-400:  var(--black-400);
+$black-500:  var(--black-500);
+$black-600:  var(--black-600);
+$black-650:  var(--black-650);
+$black-700:  var(--black-700);
+$black-800:  var(--black-800);
+$black-900:  var(--black-900);
+$black-1000: var(--black-1000);
+ 
+// purple
+// $purple-000:  var(--purple-000);
+// $purple-100:  var(--purple-100);
+// $purple-200:  var(--purple-200);
+$purple-300:  var(--purple-300);
+$purple-400:  var(--purple-400);
+$purple-500:  var(--purple-500);
+$purple-600:  var(--purple-600);
+$purple-700:  var(--purple-700);
+// $purple-800:  var(--purple-800);
+// $purple-850:  var(--purple-850);
+// $purple-900:  var(--purple-900);
+// $purple-950:  var(--purple-950);
+// $purple-1000: var(--purple-1000);
+
+// ──── Semantic aliases ────────────────────────
+$white: $white-300;
+$black: $black-900;
+$black-bg: $black-1000;
+$purple: $purple-500;
+
+// ──── Utility ─────────────────────────────────
+// $overlay-bg:   rgba(#3d0f0f, 0.45);
+// $default-br:   3px;
+$transition:   all ease-in-out 300ms;
+ 
+// $hero-bg:      var(--black-800);
+// $hero-pattern: var(--white-500);
+// $nav-bg:       var(--black-900);
+
+// ──── Other ─────────────────────────────────
+
