@@ -215,7 +215,7 @@ function Home_v3({}) {
                         <div className="div_line"></div>
                         <div className="stat-grid">
                             <Stat
-                                stat={"8"}
+                                stat={"12"}
                                 body={"Website Launches as Lead Developer"}
                             />
                             <Stat

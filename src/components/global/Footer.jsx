@@ -32,13 +32,15 @@ export default function Footer({}) {
         },
     ];
 
+    const today = new Date();
+
     return (
         <footer>
             <div className="reveal footer-inner max_width">
                 <Terminal terminal_title={"contact.sh"} include_blink={true} terminal_sections={terminal_sections} />
                 <div className="after-terminal">
                     <i className="ph ph-terminal"></i>
-                    <p className="code">© 2025 Alex Khachadoorian</p>
+                    <p className="code">© {today.getFullYear()} Alex Khachadoorian</p>
                 </div>
             </div>
 
