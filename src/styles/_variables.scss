@@ -25,27 +25,33 @@ $max-width: 1600px;
 // ── Color — primitives ───────────────────────────────────────────────────────
  
 // Primary · "Cobalt" — bold electric indigo
-$cobalt-50:  #eef0ff;
-$cobalt-200: #b6beff;
-$cobalt-500: #4338f5; // brand (light)
-$cobalt-700: #2a1fc8;
-$cobalt-900: #14107a;
+$cobalt-050:  var(--cobalt-050);
+$cobalt-200:  var(--cobalt-200);
+$cobalt-500:  var(--cobalt-500);
+$cobalt-700:  var(--cobalt-700);
+$cobalt-900:  var(--cobalt-900);
  
 // Neutral · "Slate-warm" — cool gray with a hint of warmth
-$neutral-000:  #ffffff;
-$neutral-050:  #f7f7f5;
-$neutral-100:  #ecece8;
-$neutral-300:  #c9c9c2;
-$neutral-400:  #c9c9c2;
-$neutral-500:  #75756e;
-$neutral-700:  #3d3d38;
-$neutral-800:  #23232c;
-$neutral-900:  #16161a;
-$neutral-1000: #0b0b0f;
+$neutral-000:  var(--neutral-000);
+$neutral-050:  var(--neutral-050);
+$neutral-100:  var(--neutral-100);
+$neutral-300:  var(--neutral-300);
+$neutral-400:  var(--neutral-400);
+$neutral-500:  var(--neutral-500);
+$neutral-700:  var(--neutral-700);
+$neutral-800:  var(--neutral-800);
+$neutral-850:  var(--neutral-850);
+$neutral-900:  var(--neutral-900);
+$neutral-925:  var(--neutral-925);
+$neutral-950:  var(--neutral-950);
+$neutral-1000:  var(--neutral-1000);
  
-// Accent · "Citron" — punchy chartreuse for tags, links, highlights
-$citron-500: #dcff50;
-$citron-600: #c2e63b; // darker for hover on light surfaces
+/* Accent · "Vermillion" — warm red-orange punch for tags, links, highlights */
+$vermillion-300: var(--vermillion-300);
+$vermillion-500: var(--vermillion-500);
+$vermillion-600: var(--vermillion-600);
+// $vermillion-light: #FF5C48; /* used as accent on dark mode */
+
  
  
 // ── Color — semantic tokens (light mode) ─────────────────────────────────────
@@ -66,8 +72,8 @@ $text-inverted:    $neutral-050;
 $text-link:        $cobalt-500;
 $text-link-hover:  $cobalt-700;
  
-$accent:           $citron-500;
-$accent-ink:       $neutral-900; // text on accent
+$accent:           $vermillion-500;
+$accent-ink:       $neutral-000; // text on accent
  
 $brand:            $cobalt-500;
 $brand-ink:        $neutral-000; // text on brand
@@ -100,27 +106,27 @@ $dark-brand-ink:        $neutral-000;
  
 // ── Typography — families ─────────────────────────────────────────────────────
  
-$font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-$font-body:    "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-$font-mono:    "Geist Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+$font-display: var(--font-display);
+$font-body: var(--font-body);
+$font-mono: var(--font-mono);
  
  
 // ── Font weights ─────────────────────────────────────────────────────────────
  
-$fw-light:    300;
-$fw-regular:  400;
-$fw-medium:   500;
-$fw-semibold: 600;
-$fw-bold:     700;
+$fw-light: var(--fw-light);
+$fw-regular: var(--fw-regular);
+$fw-medium: var(--fw-medium);
+$fw-semibold: var(--fw-semibold);
+$fw-bold: var(--fw-bold);
  
 // ── Shadows ──────────────────────────────────────────────────────────────────
  
 // Light mode
-$shadow-xs:    0 1px 0 rgba(22, 22, 26, 0.04);
-$shadow-sm:    0 1px 2px rgba(22, 22, 26, 0.06), 0 1px 0 rgba(22, 22, 26, 0.04);
-$shadow-md:    0 6px 16px -4px rgba(22, 22, 26, 0.1), 0 2px 4px rgba(22, 22, 26, 0.04);
-$shadow-lg:    0 24px 48px -16px rgba(22, 22, 26, 0.18), 0 4px 12px rgba(22, 22, 26, 0.06);
-$shadow-focus: 0 0 0 3px rgba(67, 56, 245, 0.25);
+$shadow-xs: var(--shadow-xs);
+$shadow-sm: var(--shadow-sm);
+$shadow-md: var(--shadow-md);
+$shadow-lg: var(--shadow-lg);
+$shadow-focus: var(--shadow-focus);
  
 // Dark mode
 $dark-shadow-xs:    0 1px 0 rgba(0, 0, 0, 0.4);

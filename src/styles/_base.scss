@@ -4,120 +4,138 @@
 // All raw values live in _variables.scss; nothing is hardcoded here.
 // ============================================================================
 
-@use 'variables' as *;
-
+@use "variables" as *;
 
 // ── Google Fonts ─────────────────────────────────────────────────────────────
 
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
 
-
 // ── Root — CSS custom properties ─────────────────────────────────────────────
 
 :root {
+    // ── Layout ────────────────────────────────────────────────────────────────
+    --max-width: #{$max-width};
 
-  // ── Layout ────────────────────────────────────────────────────────────────
-  --max-width: #{$max-width};
+    // ── Color — primitives ────────────────────────────────────────────────────
 
-  // ── Color — primitives ────────────────────────────────────────────────────
+    /* Primary · "Cobalt" — bold electric indigo, 5 stops */
+    --cobalt-050: #eef0ff;
+    --cobalt-200: #b6beff;
+    --cobalt-500: #4338f5; /* brand */
+    --cobalt-700: #2a1fc8;
+    --cobalt-900: #14107a;
 
-  // Cobalt
-  --cobalt-50:  #eef0ff;
-  --cobalt-200: #b6beff;
-  --cobalt-500: #4338f5;
-  --cobalt-700: #{$cobalt-700};
-  --cobalt-900: #{$cobalt-900};
+    /* Neutral · "Slate-warm" — cool gray with a hint of warmth, 6 stops */
 
-  // Neutral
-  --neutral-000:  #{$neutral-000};
-  --neutral-050:  #{$neutral-050};
-  --neutral-100:  #{$neutral-100};
-  --neutral-300:  #{$neutral-300};
-  --neutral-400:  #{$neutral-400};
-  --neutral-500:  #{$neutral-500};
-  --neutral-600:  #{$neutral-600};
-  --neutral-700:  #{$neutral-700};
-  --neutral-800:  #{$neutral-800};
-  --neutral-900:  #{$neutral-900};
-  --neutral-1000: #{$neutral-1000};
+    /* Neutral · "Slate-warm" — warm-tinted grayscale, 10 stops
+     Daylight (50–900) leans warm; deep stops (950/1000) cool slightly
+     so dark surfaces don't read muddy. */
+    --neutral-000: #fffff;
+    --neutral-050: #f7f7f5;
+    --neutral-100: #ecece8;
+    --neutral-300: #c9c9c2;
+    --neutral-400: #95958e; /* muted text on dark */
+    --neutral-500: #75756e;
+    --neutral-700: #3d3d38;
+    --neutral-800: #3a3a45; /* strong border on dark */
+    --neutral-850: #23232c; /* hairline border on dark */
+    --neutral-900: #16161a;
+    --neutral-925: #16161c; /* raised surface on dark */
+    --neutral-950: #0b0b0f; /* default bg on dark */
+    --neutral-1000: #08080b; /* sunken surface on dark */
 
-  // Citron
-  --citron-500: #{$citron-500};
-  --citron-600: #{$citron-600};
+    /* Accent · "Vermillion" — warm red-orange punch for tags, links, highlights */
+    --vermillion-300: #ffb4a8; /* lifted; for accent text on dark surfaces */
+    --vermillion-500: #d63b2f; /* canonical accent */
+    --vermillion-600: #a82e24; /* darker for hover on light surfaces */
+    --vermillion-light: #ff5c48; /* used as accent on dark mode */
 
-  // ── Color — semantic tokens (light mode default) ───────────────────────────
-  --bg:               #{$bg};
-  --surface:          #{$surface};
-  --surface-raised:   #{$surface-raised};
-  --surface-sunken:   #{$surface-sunken};
-  --surface-inverted: #{$surface-inverted};
+    // ── Color — semantic tokens (light mode default) ───────────────────────────
+    --bg: var(--neutral-050);
+    --surface: var(--neutral-050);
+    --surface-raised: var(--neutral-000);
+    --surface-sunken: var(--neutral-100);
+    --surface-inverted: var(--neutral-900);
 
-  --border:           #{$border};
-  --border-strong:    #{$border-strong};
-  --border-focus:     #{$border-focus};
+    --border: var(--neutral-100);
+    --border-strong: var(--neutral-300);
+    --border-focus: var(--cobalt-500);
 
-  --text-primary:    #{$text-primary};
-  --text-muted:      #{$text-muted};
-  --text-inverted:   #{$text-inverted};
-  --text-link:       #{$text-link};
-  --text-link-hover: #{$text-link-hover};
+    --text-primary: var(--neutral-900);
+    --text-muted: var(--neutral-500);
+    --text-inverted: var(--neutral-50);
+    --text-link: var(--cobalt-500);
+    --text-link-hover: var(--cobalt-700);
 
-  --accent:     #{$accent};
-  --accent-ink: #{$accent-ink};
+    --accent: var(--vermillion-500);
+    --accent-ink: var(--neutral-000); /* text on accent */
 
-  --brand:     #{$brand};
-  --brand-ink: #{$brand-ink};
+    --brand: var(--cobalt-500);
+    --brand-ink: var(--neutral-000); /* text on brand */
 
-  // ── Typography — families ─────────────────────────────────────────────────
-  --font-display: #{$font-display};
-  --font-body:    #{$font-body};
-  --font-mono:    #{$font-mono};
+    /* -----------------------------------------------------------------------
+     TYPOGRAPHY — families
+     ----------------------------------------------------------------------- */
+    --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --font-body:
+        "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono:
+        "Geist Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
 
-  // ── Font weights ──────────────────────────────────────────────────────────
-  --fw-light:    #{$fw-light};
-  --fw-regular:  #{$fw-regular};
-  --fw-medium:   #{$fw-medium};
-  --fw-semibold: #{$fw-semibold};
-  --fw-bold:     #{$fw-bold};
+    /* WEIGHTS */
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
 
-  // ── Shadows ───────────────────────────────────────────────────────────────
-  --shadow-xs:    #{$shadow-xs};
-  --shadow-sm:    #{$shadow-sm};
-  --shadow-md:    #{$shadow-md};
-  --shadow-lg:    #{$shadow-lg};
-  --shadow-focus: #{$shadow-focus};
+    /* -----------------------------------------------------------------------
+     SHADOWS — restrained; rely on contrast and borders, not blur
+     ----------------------------------------------------------------------- */
+    --shadow-xs: 0 1px 0 rgba(22, 22, 26, 0.04);
+    --shadow-sm:
+        0 1px 2px rgba(22, 22, 26, 0.06), 0 1px 0 rgba(22, 22, 26, 0.04);
+    --shadow-md:
+        0 6px 16px -4px rgba(22, 22, 26, 0.1), 0 2px 4px rgba(22, 22, 26, 0.04);
+    --shadow-lg:
+        0 24px 48px -16px rgba(22, 22, 26, 0.18),
+        0 4px 12px rgba(22, 22, 26, 0.06);
+    --shadow-focus: 0 0 0 3px rgba(67, 56, 245, 0.25);
 }
 
-
-// ── Dark mode — semantic token overrides ─────────────────────────────────────
-
+/* ===========================================================================
+   DARK MODE — token overrides
+   =========================================================================== */
 :root[data-theme="dark"],
 .theme-dark {
-  --bg:               #{$dark-bg};
-  --surface:          #{$dark-surface};
-  --surface-raised:   #{$dark-surface-raised};
-  --surface-sunken:   #{$dark-surface-sunken};
-  --surface-inverted: #{$dark-surface-inverted};
+    --bg: var(--neutral-950);
+    --surface: var(--neutral-950);
+    --surface-raised: var(--neutral-925);
+    --surface-sunken: var(--neutral-1000);
+    --surface-inverted: var(--neutral-050);
 
-  --border:        #{$dark-border};
-  --border-strong: #{$dark-border-strong};
-  --border-focus:  #{$dark-border-focus};
+    --border: var(--neutral-850);
+    --border-strong: var(--neutral-800);
+    --border-focus: var(--vermillion-light);
 
-  --text-primary:    #{$dark-text-primary};
-  --text-muted:      #{$dark-text-muted};
-  --text-inverted:   #{$dark-text-inverted};
-  --text-link:       #{$dark-text-link};
-  --text-link-hover: #{$dark-text-link-hover};
+    --text-primary: var(--neutral-50);
+    --text-muted: var(--neutral-400);
+    --text-inverted: var(--neutral-900);
+    --text-link: var(--vermillion-light); /* vermillion lifts on dark */
+    --text-link-hover: #ff7762;
 
-  --accent:     #{$dark-accent};
-  --accent-ink: #{$dark-accent-ink};
+    --accent: var(--vermillion-light);
+    --accent-ink: var(--neutral-000);
+    --citron-500: var(--vermillion-light); /* back-compat */
 
-  --brand:     #{$dark-brand};
-  --brand-ink: #{$dark-brand-ink};
+    --brand: #6e64ff; /* lifted cobalt for dark bg */
+    --brand-ink: var(--neutral-000);
 
-  --shadow-xs:    #{$dark-shadow-xs};
-  --shadow-sm:    #{$dark-shadow-sm};
-  --shadow-md:    #{$dark-shadow-md};
-  --shadow-lg:    #{$dark-shadow-lg};
-  --shadow-focus: #{$dark-shadow-focus};
+    --shadow-xs: 0 1px 0 rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(0, 0, 0, 0.4);
+    --shadow-md:
+        0 6px 16px -4px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-lg:
+        0 24px 48px -16px rgba(0, 0, 0, 0.7), 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-focus: 0 0 0 3px rgba(255, 92, 72, 0.35);
 }

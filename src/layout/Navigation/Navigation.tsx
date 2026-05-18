@@ -7,8 +7,9 @@ export default function Navigation({}) {
         <header className="">
             <div className="navigation">
                 <LenisLink to={"/"} className="navigation-name">
-                    <p className="">Alex Khachadoorian</p>
+                    <p className="">Alex</p>
                 </LenisLink>
+
                 <nav className="">
                     {NAV_ITEMS.map((item, idx) => (
                         <LenisLink
@@ -20,27 +21,12 @@ export default function Navigation({}) {
                         </LenisLink>
                     ))}
                 </nav>
-                <div className="navigation-work">
-                    {/* <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                    >
-                        <circle
-                            opacity="0.75"
-                            cx="6"
-                            cy="6"
-                            r="6"
-                            fill="var(--purple-500)"
-                        />
-                    </svg> */}
 
-                    <div className="pulsating-circle"></div>
+                    {/* <div className=""> */}
+                        {/* TODO: light/dark toggle */}
 
-                    <p className="body-s">Open to Work</p>
-                </div>
+                        {/* TODO: Link to contact */}
+                    {/* </div> */}
             </div>
         </header>
     );
